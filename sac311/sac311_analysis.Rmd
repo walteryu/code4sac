@@ -107,6 +107,9 @@ train_reduced = train_data[1:5000,]
 train_col = train_reduced[, c(
   "CategoryHierarchy",
   "CategoryName",
+  "CategoryLevel1",
+  "CategoryLevel2",
+  "CategoryLevel3",
   "CouncilDistrictNumber",
   "SourceLevel1",
   "Neighborhood",
@@ -116,13 +119,12 @@ train_col = train_reduced[, c(
 )]
 
 cat("\n")
-cat("*** output dataset dim ***")
+cat("*** remove na values ***")
 cat("\n")
 
 # verify dim and drop NA; train_data:
 # which(is.na(train_col))
-dim(train_col)
-
+# dim(train_col)
 # train_col = na.omit(train_col)
 # dim(train_col)
 
@@ -131,22 +133,65 @@ cat("*** output summary; train_data ***")
 cat("\n")
 
 # EDA; train_data:
+dim(train_col)
 str(train_col)
 summary(train_col)
+
+cat("\n")
+cat("*** encode factors ***")
+cat("\n")
+
+# Encode categorial variables as factors:
+# https://stats.idre.ucla.edu/r/modules/coding-for-categorical-variables-in-regression-models/
+
+# Selected columns:
+# "CategoryHierarchy",
+# "CategoryName",
+# "CategoryLevel1",
+# "CategoryLevel2",
+# "CategoryLevel3",
+# "CouncilDistrictNumber",
+# "SourceLevel1",
+# "Neighborhood",
+# "StatusType",
+# "ServiceLevelName",
+# "ZIP"
+
+train_col$cat_heir.f <- factor(train_col$CategoryHierarchy)
+is.factor(train_col$cat_heir.f)
+
+train_col$cat_name.f <- factor(train_col$CategoryName)
+is.factor(train_col$cat_name.f)
+
+train_col$cat_1.f <- factor(train_col$CategoryLevel1)
+is.factor(train_col$cat_1.f)
+
+train_col$cat_2.f <- factor(train_col$CategoryLevel2)
+is.factor(train_col$cat_2.f)
+
+train_col$cat_3.f <- factor(train_col$CategoryLevel3)
+is.factor(train_col$cat_3.f)
+
+train_col$district.f <- factor(train_col$CouncilDistrictNumber)
+is.factor(train_col$district.f)
+
+train_col$source.f <- factor(train_col$SourceLevel1)
+is.factor(train_col$source.f)
+
+train_col$neighborhood.f <- factor(train_col$Neighborhood)
+is.factor(train_col$neighborhood.f)
+
+train_col$status.f <- factor(train_col$StatusType)
+is.factor(train_col$status.f)
+
+train_col$service.f <- factor(train_col$ServiceLevelName)
+is.factor(train_col$service.f)
 
 cat("\n")
 cat("*** output summary; train_col and zipcode ***")
 cat("\n")
 
-# EDA; train_col$ZIP:
-# summary(train_col$ZIP)
-
-cat("\n")
-cat("*** output summary; train_col and district***")
-cat("\n")
-
-# EDA; train_col$CouncilDistrictNumber:
-# summary(train_col$CouncilDistrictNumber)
+summary(train_col)
 
 # import test_data:
 # test_data <- read.table(
@@ -196,7 +241,7 @@ END **
 
 # Create historgram for continous variables to evaluate distribution:
 # hist(
-#   train_data$ZIP,
+#   train_col$zip.f,
 #   main='ZIP',
 #   col='purple',
 #   xlab='Continuous Variable - Zipcode',
@@ -357,19 +402,7 @@ cat("\n")
 
 # logistic regression model fit:
 glm_train = glm(
-  Neighborhood~SourceLevel1,
-  data=train_col,
-  family=binomial
-)
-summary(glm_train)
-
-cat("\n")
-cat("*** logistic regression model fit ***")
-cat("\n")
-
-# logistic regression model fit:
-glm_train = glm(
-  ZIP~SourceLevel1,
+  Neighborhood~source.f,
   data=train_col,
   family=binomial
 )
@@ -377,7 +410,7 @@ summary(glm_train)
 
 # logistic regression model fit:
 glm_train = glm(
-  ZIP~ServiceLevelName,
+  Neighborhood~service.f,
   data=train_col,
   family=binomial
 )
@@ -385,7 +418,7 @@ summary(glm_train)
 
 # logistic regression model fit:
 glm_train = glm(
-  ZIP~CategoryName,
+  Neighborhood~cat_1.f,
   data=train_col,
   family=binomial
 )
@@ -393,24 +426,56 @@ summary(glm_train)
 
 # logistic regression model fit:
 glm_train = glm(
-  Neighborhood~SourceLevel1,
+  Neighborhood~cat_2.f,
+  data=train_col,
+  family=binomial
+)
+summary(glm_train)
+
+# logistic regression model fit:
+glm_train = glm(
+  Neighborhood~cat_3.f,
+  data=train_col,
+  family=binomial
+)
+summary(glm_train)
+
+# logistic regression model fit:
+glm_train = glm(
+  ZIP~source.f,
+  data=train_col,
+  family=binomial
+)
+summary(glm_train)
+
+# logistic regression model fit:
+glm_train = glm(
+  ZIP~service.f,
+  data=train_col,
+  family=binomial
+)
+summary(glm_train)
+
+# logistic regression model fit:
+glm_train = glm(
+  ZIP~cat_1.f,
+  data=train_col,
+  family=binomial
+)
+summary(glm_train)
+
+# logistic regression model fit:
+glm_train = glm(
+  ZIP~cat_2.f,
+  data=train_col,
+  family=binomial
+)
+summary(glm_train)
+
+# logistic regression model fit:
+glm_train = glm(
+  ZIP~cat_3.f,
   data=train_data,
-  family=binomial
-)
-summary(glm_train)
-
-# logistic regression model fit:
-glm_train = glm(
-  Neighborhood~ServiceLevelName,
-  data=train_data,
-  family=binomial
-)
-summary(glm_train)
-
-# logistic regression model fit:
-glm_train = glm(
-  Neighborhood~CategoryName,
-  data=train_col,
   family=binomial
 )
 summary(glm_train)
@@ -443,32 +508,18 @@ Observations:
 *** Plot variance for top 5 PCA ***
 
 *** Evaluate largest loading for first PC ***
-      ptj
-0.5793067
 
 *** Evaluate largest loading for second PC ***
-      vuu
-0.6895659
 
 *** Evaluate largest loading for third PC ***
-       zq
-0.7718774
 
 *** Evaluate largest loading for fourth PC ***
-       id
-0.9438584
 
 *** Evaluate largest loading for fifth PC ***
-       mt
-0.7508143
 
 *** summary() function output for train_data$ptj ***
-   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  1.315   1.659   1.749   1.792   1.879   4.720
 
 *** summary() function output for train_data$vuu ***
-   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  0.000   2.830   3.320   3.024   3.610   3.740
 
 END **  
 
@@ -479,8 +530,13 @@ cat("*** Plot variance for first several PCA ***")
 cat("\n")
 
 # Scale/dummy data prior to plot:
-train_scaled = train_data %>% mutate_if(is.numeric, scale)
+# train_scaled = train_data %>% mutate_if(is.numeric, scale)
+train_numeric = as.numeric(train_col$zip.f)
+train_scaled = train_numeric %>% mutate_if(is.numeric, scale)
 train_dummy = model.matrix(noyes ~., train_scaled)[,-1]
+
+# train_scaled = train_data %>% mutate_if(is.numeric, scale)
+# train_dummy = model.matrix(noyes ~., train_scaled)[,-1]
 
 # Create plot below:
 prcomp_plot = prcomp(train_dummy)
@@ -613,68 +669,18 @@ END **
 ```{r final-p1.5}
 
 cat("\n")
-cat("*** T-Test for continous variables, mt: ***")
+cat("*** T-Test for continous variables ***")
 cat("\n")
-
-# *** significant factors based on p-values (1.6, logistic regression) ***
-# categorial = cle, kbc, gb, xxp, rao, at, fq
-# numerical = mt, zq, zf, ihj
 
 # Chi-Squared test for continuous variables, mt:
 t.test(
-  as.numeric(train_data$noyes),
-  train_data$mt
+  as.numeric(train_col$neighborhood.f),
+  train_data$service.f
 )
 
 cat("\n")
-cat("*** T-Test for continous variables, zq: ***")
+cat("*** Chi-Squared test for categorical variables ***")
 cat("\n")
-
-# *** significant factors based on p-values (1.6, logistic regression) ***
-# categorial = cle, kbc, gb, xxp, rao, at, fq
-# numerical = mt, zq, zf, ihj
-
-# Chi-Squared test for continuous variables, zq:
-t.test(
-  as.numeric(train_data$noyes),
-  train_data$zq
-)
-
-cat("\n")
-cat("*** T-Test for continous variables, zf: ***")
-cat("\n")
-
-# *** significant factors based on p-values (1.6, logistic regression) ***
-# categorial = cle, kbc, gb, xxp, rao, at, fq
-# numerical = mt, zq, zf, ihj
-
-# Chi-Squared test for continuous variables, zf:
-t.test(
-  as.numeric(train_data$noyes),
-  train_data$zf
-)
-
-cat("\n")
-cat("*** T-Test for continous variables, ihj: ***")
-cat("\n")
-
-# *** significant factors based on p-values (1.6, logistic regression) ***
-# categorial = cle, kbc, gb, xxp, rao, at, fq
-# numerical = mt, zq, zf, ihj
-
-# Chi-Squared test for continuous variables, ihj:
-t.test(
-  as.numeric(train_data$noyes),
-  train_data$ihj
-)
-
-cat("\n")
-cat("*** Chi-Squared test for categorical variables, cle: ***")
-cat("\n")
-
-# *** significant factors based on p-values (1.6, logistic regression) ***
-# categorial = cle, kbc, gb, xxp, rao, at, fq
-# numerical = mt, zq, zf, ihj
 
 # Chi-Squared test for categorical variables, cle:
 chisq.test(
