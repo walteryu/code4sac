@@ -531,10 +531,9 @@ plot(
 ```
 
 References:  
-1. HES CSCI-E63c Midterm, HW5, HW6; glm model  
-2. ISLR p.67; p-value and significance  
-3. ISLR p.286; logistic regression  
-4. ISLR p.291; logistic regression usage  
+1. ISLR p.67; p-value and significance  
+2. ISLR p.286; logistic regression  
+3. ISLR p.291; logistic regression usage  
 
 Steps:  
 1. Fit logistic regression model for predictor variables  
@@ -781,7 +780,7 @@ summary(glm_train)
 # Part 2 - Logistic Regression
 
 References:  
-1. HES CSCI-E63c Midterm, HW5, HW6; glm model  
+1. HES CSCI-E63c HW2, HW9, HW10  
 1. HW2 code; pairs plot  
 2. HW9 code; pairs plot  
 3. HW10 code; pairs plot  
@@ -816,7 +815,7 @@ Observations:
 ```
 
 References:  
-1. HES CSCI-E63c Midterm, HW5, HW6; glm model  
+1. HES CSCI-E63c Midterm, HW5  
 2. Midterm-P2 and HW5; best subset variable selection  
 3. ISLR p.244; best subset selection  
 4. ISLR p.247; best subset selection  
@@ -893,7 +892,7 @@ for ( myMthd in names(whichAll) ) {
 ```
 
 References:  
-1. HES CSCI-E63c Midterm, HW5, HW6; glm model  
+1. HES CSCI-E63c Midterm, HW5  
 2. ISLR p.251; lasso/ridge regression  
 3. HW5, midterm code; lasso regression  
 4. HW5, midterm code; ridge regression  
@@ -964,32 +963,23 @@ cat("\n")
 
 ```
 
-** START  
-
 References:  
 1. HES CSCI-E63c Midterm, HW5, HW6; glm model  
-1. HW9-P1 code; helper function to assess prediction quality -XX  
-2. HW9-P4 code; helper function for cross validation -XX  
-3. ISLR p.236; cross validation -XX  
-4. Lecture 9, 10, 11 notes; cross validation -XX  
-5. Lecture 9 notes; prediction quality function -XX  
+2. HW9-P1 code; helper function to assess prediction quality  
+3. HW9-P4 code; helper function for cross validation  
+4. ISLR p.236; cross validation  
 
 Steps:  
-1. Create helper function to assess prediction quality -XX  
-2. Create helper function for cross validation -XX  
-3. Print and evaluate assessment results -XX  
-4. Plot and evaluate cross validation results -XX  
-5. Document results below -XX  
+1. Create helper function to assess prediction quality  
+2. Create helper function for cross validation  
+3. Print and evaluate assessment results  
+4. Plot and evaluate cross validation results  
+5. Document results below  
 
 Observations:  
-1. Accuracy/specificity were ~84% per measures plot -XX  
-2. In general, LR model fit was quite good -XX  
-3. Fit based on variables selected in previous sections -XX  
-4. Measures will be used to compare against other model fits -XX  
-5. Measures plot are a good method of evaluating metrics -XX  
-6. Model fit with ~84% accuracy, ~50% sensitivity and ~95% specificity -XX  
-
-END **  
+1. Fit based on variables selected in previous sections  
+2. Measures will be used to compare against other model fits  
+3. Measures plot are a good method of evaluating metrics  
 
 ```{r p2.4}
 
@@ -1063,7 +1053,7 @@ cat("\n")
 # xvalNoYes= function(data, nTries=20, kXval=5) {
 
 # decrease parameters to reduce runtime:
-xvalNoYes= function(data, nTries=5, kXval=3) {
+xvalLR = function(data, nTries=5, kXval=3) {
   retRes = NULL
   # set.seed(63)
   for ( iTry in 1:nTries ) {
@@ -1081,7 +1071,8 @@ xvalNoYes= function(data, nTries=5, kXval=3) {
 
         # use the variables selected by both glm and lasso
         glm_fit = glm(
-          noyes~cle+kbc+xxp+rao+at+fq,
+          # noyes~cle+kbc+xxp+rao+at+fq,
+          CategoryLevel1~neighborhood.f,
           data=train,
           family=binomial
         )
@@ -1089,10 +1080,11 @@ xvalNoYes= function(data, nTries=5, kXval=3) {
         # predict on the held-out fold
         glm_predict = predict(glm_fit, newdata=test, type='response')
 
-        test_predict = ifelse(glm_predict > 0.5, 1, 0)
-        test_noyes_num = ifelse(test$noyes == 'yes', 1, 0)
+        test_predict = ifelse(glm_predict > 0.5 , 1, 0)
+        test_numeric = ifelse(test$CategoryLevel1 >= 0.5, 1, 0)
+
         test_assessment_measures = assess_prediction(
-          test_noyes_num,
+          test_numeric,
           test_predict,
           print_results=FALSE
         )
@@ -1131,11 +1123,11 @@ number_of_tries = 3
 
 # reduce to smaller sample size to reduce runtime:
 # train_scaled[1:5000,]
-df_output = xvalNoYes(
-  train_scaled,
-  kXval=number_of_folds,
-  nTries=number_of_tries
-)
+# df_output = xvalLR(
+#   train_scaled,
+#   kXval=number_of_folds,
+#   nTries=number_of_tries
+# )
 
 ```
 
@@ -1146,99 +1138,20 @@ cat("*** cross validation plot ***")
 cat("\n")
 
 # cross validation plot:
-df_output_melted = melt(df_output, id.vars=c('sim'))
-
-p = ggplot(
-  df_output_melted,
-  aes(x=variable, y=value, colour=variable)
-) + geom_boxplot()
-
-title = sprintf(
-  'Performance Measures Plot for LR; %d-fold Cross Validation',
-  number_of_folds
-)
-
-p + ggtitle(title) + xlab("Measure Type") + ylab("Measure Value %")
+# df_output_melted = melt(df_output, id.vars=c('sim'))
+# p = ggplot(
+#   df_output_melted,
+#   aes(x=variable, y=value, colour=variable)
+# ) + geom_boxplot()
+# title = sprintf(
+#   'Performance Measures Plot for LR; %d-fold Cross Validation',
+#   number_of_folds
+# )
+# p + ggtitle(title) + xlab("Measure Type") + ylab("Measure Value %")
 
 ```
 
-## Extra points problem: interaction terms (5 extra points)
-
-Assess the impact/significance of pairwise interaction terms for all pairwise combinations of covariates used in the model and report the top ten that most significantly improve model fit.
-
-** P2A **  
-** P2A **  
-** P2A **  
-
-** START  
-
-References:  
-1. HES CSCI-E63c Midterm, HW5, HW6; glm model  
-1. HW2 code; pairs plot -XX  
-2. HW9 code; pairs plot -XX  
-3. HW10 code; pairs plot -XX  
-4. Lecture 2, 9, 10 notes; pairs plot -XX  
-5. -XX  
-
-Steps:  
-1. Create pairs plot for scaled, numeric predictor variables -XX  
-2. Verify that columns are numeric and use scaled dataset -XX  
-3. Create plots; document observations below -XX  
-4. Completed previously but repeated here -XX  
-5. Plot completed at start of P2 for use in analysis -XX  
-
-Observations:  
-1. Scale values so that pairs plot can be correct associations -XX  
-2. Only numeric values selected for pairs plot -XX  
-3. Run pairs plot first before moving on with remaining analysis -XX  
-4. Completed previously but repeated here -XX  
-5. Plot completed at start of P2 for use in analysis -XX  
-
-END **  
-
-*** significant factors based on p-values (1.6, logistic regression) ***
-categorial = cle, kbc, gb, xxp, rao, at, fq
-numerical = mt, zq, zf, ihj
-
-```{r final-p2A.1}
-
-cat("\n")
-cat("*** create pairs plots ***")
-cat("\n")
-
-# *** significant factors based on p-values (1.6, logistic regression) ***
-# categorial = cle, kbc, gb, xxp, rao, at, fq
-# numerical = mt, zq, zf, ihj
-
-# create pairs plot of scaled numeric predictors:
-# columns_is_numeric = unlist(lapply(train_data, is.numeric))
-columns_is_numeric = unlist(
-  lapply(train_reduced, is.numeric)
-)
-
-# numeric_cols = names(train_data)[columns_is_numeric]
-numeric_cols = names(train_reduced)[columns_is_numeric]
-
-# train_scaled_numeric = train_scaled %>% select_if(is.numeric)
-train_scaled_numeric = train_scaled_reduced %>% select_if(is.numeric)
-
-pairs(
-  train_scaled_numeric,
-  pch=25,
-  cex=0.8,
-
-  # col=c(ifelse(train_scaled$noyes == 'yes', 'purple', 'red')),
-  col=c(ifelse(
-    train_scaled_reduced$noyes == 'yes',
-    'purple', 'red'
-  )),
-
-  main='Pairs Plot - No/Yes (yes = purple; no = red)'
-)
-
-```
-
-# Problem 3: linear discriminant analysis (15 points)
+# Part 3 - LDA/QDA Models
 
 Fit linear discriminant analysis model of the outcome `noyes` as a function of the rest of covariates in the dataset.  Feel free to decide whether you want to use all of them or a subset of those.  Test resulting model performance on multiple splits of the data into training and test subsets, summarize it in terms of accuracy/error/sensitivity/specificity and compare them to those obtained for logistic regression.
 
@@ -1249,26 +1162,21 @@ Fit linear discriminant analysis model of the outcome `noyes` as a function of t
 ** START  
 
 References - HW9-P2.1:  
-1. HES CSCI-E63c Midterm, HW5, HW6; glm model  
-1. Slide 18, lecture 9 notes; LDA/QDA -XX  
-2. Slide 27, lecture 9 notes; contingency table -XX  
-3. Slide 27, lecture 9 notes; assess prediction quality -XX  
-4. ISLR p.139; LDA -XX  
-5. ISLR p.149; QDA -XX  
+1. HES CSCI-E63c HW9; LDA/QDA model  
+2. ISLR p.139; LDA  
+3. ISLR p.149; QDA  
 
 Steps:  
-1. Fit LDA/QDA classifiers -XX  
-2. Calculate LDA/QDA summary statistics -XX  
-3. Make predictions with LDA/QDA classifiers -XX  
-4. Create contingency tables to evaluate LDA/QDA classifiers -XX  
-5. Document observations below -XX  
+1. Fit LDA/QDA classifiers  
+2. Calculate LDA/QDA summary statistics  
+3. Make predictions with LDA/QDA classifiers  
+4. Create contingency tables to evaluate LDA/QDA classifiers  
+5. Document observations below  
 
 Observations:  
-1. Contingency table helped to visualize results -XX  
-2. Contingency table showed reasonably good model fit -XX  
-3. Prediction quality function used to evaluate fit -XX  
-4. Model fit with ~85% accruacy -XX  
-5. However, other metrics did not calculate due to problems with variable/data type; ran out of time and did not get a chance to troubleshoot -XX  
+1. Contingency table helped to visualize results  
+2. Contingency table showed reasonably good model fit  
+3. Prediction quality function used to evaluate fit  
 
 END **  
 
@@ -1280,8 +1188,8 @@ cat("\n")
 
 # Slide 18, lecture 9 notes; LDA/QDA:
 train_lda = lda(
-  noyes~.,
-  data=train_data
+  cat_1.f~.,
+  data=train_col_numeric
 )
 
 cat("\n")
@@ -1289,7 +1197,7 @@ cat("*** LDA/QDA summary statistics ***")
 cat("\n")
 
 cat("\n")
-summary(train_data)
+summary(train_lda)
 
 cat("\n")
 cat("*** create contingency table ***")
@@ -1299,7 +1207,8 @@ cat("\n")
 train_predict_lda = predict(train_lda)$class
 train_lda_contingency = table(
   train_predict_lda,
-  train_data$noyes
+  # train_data$noyes
+  train_col$ZIP
 )
 
 cat("\n")
@@ -1311,7 +1220,8 @@ cat("\n")
 
 # Slide 27, lecture 9 notes; contingency table:
 train_lda_results = assess_prediction(
-  train_data$noyes,
+  # train_data$noyes,
+  train_col$cat_1.f,
   train_predict_lda,
   print_results=TRUE
 )
