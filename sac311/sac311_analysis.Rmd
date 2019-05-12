@@ -561,7 +561,7 @@ glm_train = glm(
 summary(glm_train)
 
 cat("\n")
-cat("*** LR: cat_1 ~ neighborhood ***")
+cat("*** LR: cat_1 ~ district ***")
 cat("\n")
 
 # logistic regression model fit:
@@ -572,6 +572,10 @@ glm_train = glm(
 )
 summary(glm_train)
 
+cat("\n")
+cat("*** LR: cat_1 ~ zipcode ***")
+cat("\n")
+
 # logistic regression model fit:
 glm_train = glm(
   CategoryLevel1~zip.f,
@@ -579,6 +583,10 @@ glm_train = glm(
   family=binomial
 )
 summary(glm_train)
+
+cat("\n")
+cat("*** LR: cat_2 ~ neighborhood ***")
+cat("\n")
 
 # logistic regression model fit:
 glm_train = glm(
@@ -588,6 +596,10 @@ glm_train = glm(
 )
 summary(glm_train)
 
+cat("\n")
+cat("*** LR: cat_2 ~ district ***")
+cat("\n")
+
 # logistic regression model fit:
 glm_train = glm(
   CategoryLevel2~district.f,
@@ -595,6 +607,10 @@ glm_train = glm(
   family=binomial
 )
 summary(glm_train)
+
+cat("\n")
+cat("*** LR: cat_2 ~ zipcode ***")
+cat("\n")
 
 # logistic regression model fit:
 glm_train = glm(
@@ -604,6 +620,10 @@ glm_train = glm(
 )
 summary(glm_train)
 
+cat("\n")
+cat("*** LR: cat_3 ~ neighborhood ***")
+cat("\n")
+
 # logistic regression model fit:
 glm_train = glm(
   CategoryLevel3~neighborhood.f,
@@ -611,6 +631,10 @@ glm_train = glm(
   family=binomial
 )
 summary(glm_train)
+
+cat("\n")
+cat("*** LR: cat_3 ~ district ***")
+cat("\n")
 
 # logistic regression model fit:
 glm_train = glm(
@@ -620,6 +644,10 @@ glm_train = glm(
 )
 summary(glm_train)
 
+cat("\n")
+cat("*** LR: cat_3 ~ zipcode ***")
+cat("\n")
+
 # logistic regression model fit:
 glm_train = glm(
   CategoryLevel3~zip.f,
@@ -627,6 +655,10 @@ glm_train = glm(
   family=binomial
 )
 summary(glm_train)
+
+cat("\n")
+cat("*** LR: neighborhood ~ cat_1 ***")
+cat("\n")
 
 # logistic regression model fit:
 glm_train = glm(
@@ -636,6 +668,10 @@ glm_train = glm(
 )
 summary(glm_train)
 
+cat("\n")
+cat("*** LR: neighborhood ~ cat_2 ***")
+cat("\n")
+
 # logistic regression model fit:
 glm_train = glm(
   Neighborhood~cat_2.f,
@@ -643,6 +679,10 @@ glm_train = glm(
   family=binomial
 )
 summary(glm_train)
+
+cat("\n")
+cat("*** LR: neighborhood ~ cat_3 ***")
+cat("\n")
 
 # logistic regression model fit:
 glm_train = glm(
@@ -652,6 +692,10 @@ glm_train = glm(
 )
 summary(glm_train)
 
+cat("\n")
+cat("*** LR: neighborhood ~ service level ***")
+cat("\n")
+
 # logistic regression model fit:
 glm_train = glm(
   Neighborhood~service.f,
@@ -659,6 +703,10 @@ glm_train = glm(
   family=binomial
 )
 summary(glm_train)
+
+cat("\n")
+cat("*** LR: neighborhood ~ source ***")
+cat("\n")
 
 # logistic regression model fit:
 glm_train = glm(
@@ -668,6 +716,10 @@ glm_train = glm(
 )
 summary(glm_train)
 
+cat("\n")
+cat("*** LR: zipcode ~ cat_1 ***")
+cat("\n")
+
 # logistic regression model fit:
 glm_train = glm(
   ZIP~cat_1.f,
@@ -675,6 +727,10 @@ glm_train = glm(
   family=binomial
 )
 summary(glm_train)
+
+cat("\n")
+cat("*** LR: zipcode ~ cat_2 ***")
+cat("\n")
 
 # logistic regression model fit:
 glm_train = glm(
@@ -684,6 +740,10 @@ glm_train = glm(
 )
 summary(glm_train)
 
+cat("\n")
+cat("*** LR: zipcode ~ cat_3 ***")
+cat("\n")
+
 # logistic regression model fit:
 glm_train = glm(
   ZIP~cat_3.f,
@@ -692,6 +752,10 @@ glm_train = glm(
 )
 summary(glm_train)
 
+cat("\n")
+cat("*** LR: zipcode ~ service level ***")
+cat("\n")
+
 # logistic regression model fit:
 glm_train = glm(
   ZIP~service.f,
@@ -699,6 +763,10 @@ glm_train = glm(
   family=binomial
 )
 summary(glm_train)
+
+cat("\n")
+cat("*** LR: zipcode ~ source ***")
+cat("\n")
 
 # logistic regression model fit:
 glm_train = glm(
@@ -741,18 +809,17 @@ Observations:
 #   train_scaled_numeric,
 #   pch=25,
 #   cex=0.8,
-#   col=c(ifelse(train_scaled$noyes == 'yes', 'purple', 'red')),
-#   main='Pairs Plot - No/Yes (yes = purple; no = red)'
+#   col=c(ifelse(train_scaled$source.f == '>1', 'purple', 'red')),
+#   main='Pairs Plot - Source Level '
 # )
 
 ```
 
 References:  
 1. HES CSCI-E63c Midterm, HW5, HW6; glm model  
-1. Midterm-P2 and HW5; best subset variable selection  
-2. ISLR p.244; best subset selection  
-3. ISLR p.247; best subset selection  
-4. Lecture 9, 12, 13 notes; best subset  
+2. Midterm-P2 and HW5; best subset variable selection  
+3. ISLR p.244; best subset selection  
+4. ISLR p.247; best subset selection  
 
 Steps:  
 1. Use variable selection to identify best predictors  
@@ -766,8 +833,6 @@ Observations:
 3. Results confirm previous findings/analysis/conjecture  
 4. Significant variables will be useful for fitting other models  
 5. Best subset plot visualizes results for evaluation  
-
-END **  
 
 ```{r p2.2}
 
@@ -783,11 +848,10 @@ my_methods = c('backward', 'forward', 'seqrep')
 for ( myMthd in my_methods ) {
   method_metrics = NULL
   rsRes <- regsubsets(
-    noyes~.,
-    # train_scaled,
-    train_scaled_reduced,
+    Neighborhood~.,
+    train_scaled,
     method=myMthd,
-    nvmax=ncol(train_scaled_reduced)-1
+    nvmax=ncol(train_scaled)-1
   )
   summRes <- summary(rsRes)
   whichAll[[myMthd]] <- summRes$which
@@ -828,97 +892,75 @@ for ( myMthd in names(whichAll) ) {
 
 ```
 
-** START  
-
 References:  
 1. HES CSCI-E63c Midterm, HW5, HW6; glm model  
-1. ISLR p.251; lasso/ridge regression -XX  
-2. HW5, midterm code; lasso regression -XX  
-3. HW5, midterm code; ridge regression -XX  
-4. Lecture 5 notes; lasso/ridge -XX  
-5. -XX  
+2. ISLR p.251; lasso/ridge regression  
+3. HW5, midterm code; lasso regression  
+4. HW5, midterm code; ridge regression  
 
 Steps:  
-1. Fit logistic regression model and calculate summary statistics -XX  
-2. Fit and plot lasso model -XX  
-3. Determine best lambda values -XX  
-4. Determine lambda value; 1 SD away -XX  
-5. Document observations below -XX  
+1. Fit and plot lasso model  
+2. Determine best lambda values  
+3. Determine lambda value; 1 SD away  
+4. Document observations below  
 
 Observations:  
-1. Make calculations using scaled data -XX  
-2. Additional calculations made to evaluate error rates -XX  
-3. Error rate also calculated for 1SD away -XX  
+1. Make calculations using scaled data  
+2. Additional calculations made to evaluate error rates  
+3. Error rate also calculated for 1SD away  
 
-END **  
-
-```{r final-p2.3}
-
-cat("\n")
-cat("*** fit logistic regression model and calculate summary statistics ***")
-cat("\n")
-
-# fit logistic regression model and calculate summary statistics (scaled):
-train_glm_scaled = glm(
-  noyes~.,
-  # data=train_scaled,
-  data=train_scaled_reduced,
-  family=binomial
-)
-summary(train_glm_scaled)
+```{r p2.3}
 
 cat("\n")
 cat("*** fit and plot lasso model ***")
 cat("\n")
 
 # fit and plot lasso model:
-# x = model.matrix(noyes~., train_scaled)[,-1]
-x = model.matrix(noyes~., train_scaled_reduced)[,-1]
+# x = model.matrix(noyes~., train_scaled_reduced)[,-1]
+# y = train_scaled_reduced[,'noyes']
 
-# y = train_scaled[,'noyes']
-y = train_scaled_reduced[,'noyes']
+x = model.matrix(Neighborhood~., train_scaled)[,-1]
+y = train_scaled[1:4973 ,'Neighborhood']
 
-lasso_fit_lr = glmnet(
-  x, y,
-  alpha=1,
-  family='binomial'
-)
-plot(lasso_fit_lr)
+# lasso_fit_lr = glmnet(
+#   x, y,
+#   alpha=1,
+#   family='binomial'
+# )
+# plot(lasso_fit_lr)
 
 cat("\n")
 cat("*** determine best lambda values ***")
 cat("\n")
 
 # determine best lambda values:
-cv_lasso_fit_lr = cv.glmnet(
-  x, y,
-  family='binomial',
-  type.measure='class'
-)
-plot(cv_lasso_fit_lr)
+# cv_lasso_fit_lr = cv.glmnet(
+#   x, y,
+#   family='binomial',
+#   type.measure='class'
+# )
+# plot(cv_lasso_fit_lr)
 
 cat("\n")
 cat("*** determine lambda value; 1 SD away ***")
 cat("\n")
 
 # determine best lambda values; 1 SD away:
-lowest_error_plus_one_sd_lambda = cv_lasso_fit_lr$lambda.1se
+# lowest_error_plus_one_sd_lambda = cv_lasso_fit_lr$lambda.1se
 
 # evaluate which dashed lines is best:
-print(
-  log(lowest_error_plus_one_sd_lambda)
-)
+# print(log(lowest_error_plus_one_sd_lambda))
 
 cat("\n")
 cat("*** lasso model prediction ***")
 cat("\n")
 
 # determine best lambda values; 1 SD away:
-predict(
-  lasso_fit_lr,
-  type='coefficients',
-  s=lowest_error_plus_one_sd_lambda
-)
+# predict(
+#   lasso_fit_lr,
+#   type='coefficients',
+#   s=lowest_error_plus_one_sd_lambda
+# )
 
 ```
 
@@ -949,7 +991,7 @@ Observations:
 
 END **  
 
-```{r final-p2.4}
+```{r p2.4}
 
 cat("\n")
 cat("*** helper function to predict model quality ***")
