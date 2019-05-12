@@ -188,11 +188,25 @@ is.factor(train_col$status.f)
 train_col$service.f <- factor(train_col$ServiceLevelName)
 is.factor(train_col$service.f)
 
+train_col$zip.f <- factor(train_col$ZIP)
+is.factor(train_col$zip.f)
+
+# convert into numeric values:
+train_col_numeric = train_col
+# train_col_numeric %>% mutate_if(is.factor, as.numeric)
+
+# convert with lapply function:
+# https://stackoverflow.com/questions/47922184/convert-categorical-variables-to-numeric-in-r
+i <- sapply(train_col_numeric, is.factor)
+train_col_numeric[i] <- lapply(train_col_numeric[i], as.numeric)
+str(train_col_numeric)
+
+
 cat("\n")
-cat("*** output summary; train_col and zipcode ***")
+cat("*** summary statistics for numeric values ***")
 cat("\n")
 
-summary(train_col)
+summary(train_col_numeric)
 
 # save code in case prediction/validation is necessary:
 # import test_data:
@@ -238,33 +252,36 @@ Observations:
 ```{r p1.2A}
 
 # Create historgram for continous variables to evaluate distribution:
-# hist(
-#   train_col$zip.f,
-#   main='ZIP',
-#   col='purple',
-#   xlab='Continuous Variable - Zipcode',
-#   breaks=30
-# )
 
-# hist(
-#   train_data$CouncilDistrictNumber,
-#   main='CouncilDistrictNumber',
-#   col='purple',
-#   xlab='Continuous Variable - Council District Number',
-#   breaks=30
-# )
+head(train_col_numeric, 5)
+
+hist(
+  train_col_numeric$district.f,
+  main='Council District',
+  col='purple',
+  xlab='Continuous Variable - Council District',
+  breaks=30
+)
+
+hist(
+  train_col_numeric$service.f,
+  main='311 Service Level',
+  col='purple',
+  xlab='Continuous Variable - 311 Service Level',
+  breaks=10
+)
 
 # Create histogram, stacked bar chart; remaining variables
 qplot_district = (qplot(
-  train_data$CouncilDistrictNumber,
+  train_col_numeric$district.f,
   binwidth = 1,
-  fill=train_data$ZIP,
-  main='Outcome Variable - Zipcode')
+  fill=train_col_numeric$service.f,
+  main='Outcome Variable - 311 Service Level')
   + scale_fill_manual(values=c('purple', 'red'))
   + theme(legend.position='top')
   + xlab('Predictor Variable - Council District Number')
 )
-# qplot_district
+qplot_district
 
 ```
 
@@ -510,12 +527,12 @@ cat("\n")
 # train_dummy = model.matrix(noyes ~., train_scaled)[,-1]
 
 # Scale/dummy data prior to plot:
+# train_numeric = as.numeric(train_col$zip.f)
+# train_scaled = train_numeric %>% mutate_if(is.numeric, scale)
+# train_dummy = model.matrix(noyes ~., train_scaled)[,-1]
 
-```
-
-train_numeric = as.numeric(train_col$zip.f)
-train_scaled = train_numeric %>% mutate_if(is.numeric, scale)
-train_dummy = model.matrix(noyes ~., train_scaled)[,-1]
+train_scaled = train_col_numeric %>% mutate_if(is.numeric, scale)
+train_dummy = model.matrix(Neighborhood ~., train_scaled)[,-1]
 
 prcomp_plot = prcomp(train_dummy)
 plot(
@@ -566,15 +583,15 @@ biplot(
 )
 
 cat("\n")
-cat("*** PCA Plot for noyes and ptj ***")
+cat("*** PCA Plot ***")
 cat("\n")
 
 plot(
   prcomp_plot$x[,1:2],
-  main='PCA Plot: noyes and ptj (yes = red, no = purple)',
-  col=c(ifelse(train_data$noyes == 'yes', 'red', 'purple')),
+  main='PCA Plot: and ptj (yes = red, no = purple)',
+  col=c(ifelse(train_col_numeric$Neighborhood== '>=10', 'red', 'purple')),
   cex=1.0,
-  pch=ifelse(train_data$ptj == '>=1.75', '*', '+')
+  pch=ifelse(train_col_numeric$ServiceLevelName== '>=1.75', '*', '+')
 )
 
 cat("\n")
@@ -588,6 +605,8 @@ plot(
   cex=1.0,
   pch=ifelse(train_data$vuu == '>=3', '*', '+')
 )
+
+```
 
 References:  
 1. HES CSCI-E63c Lecture 1, 3 notes; chi-squared test  
