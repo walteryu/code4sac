@@ -1,2 +1,3 @@
 *.csv
 *.code-workspace
+check_repo.sh
