@@ -145,7 +145,7 @@ Observations:
 
 # import train_data:
 train_data <- read.table(
-  '../311_Calls_OSC_View.csv',
+  '311_Calls_OSC_View.csv',
   sep=',',
   header=TRUE,
   quote='',
@@ -549,7 +549,7 @@ Observations:
 ```{r p1.7}
 
 cat("\n")
-cat("*** logistic regression model fit ***")
+cat("*** LR: cat_1 ~ neighborhood ***")
 cat("\n")
 
 # logistic regression model fit:
@@ -559,6 +559,10 @@ glm_train = glm(
   family=binomial
 )
 summary(glm_train)
+
+cat("\n")
+cat("*** LR: cat_1 ~ neighborhood ***")
+cat("\n")
 
 # logistic regression model fit:
 glm_train = glm(
@@ -659,46 +663,6 @@ summary(glm_train)
 # logistic regression model fit:
 glm_train = glm(
   Neighborhood~source.f,
-  data=train_col,
-  family=binomial
-)
-summary(glm_train)
-
-# logistic regression model fit:
-glm_train = glm(
-  CouncilDistrictNumber~cat_1.f,
-  data=train_col,
-  family=binomial
-)
-summary(glm_train)
-
-# logistic regression model fit:
-glm_train = glm(
-  CouncilDistrictNumber~cat_2.f,
-  data=train_col,
-  family=binomial
-)
-summary(glm_train)
-
-# logistic regression model fit:
-glm_train = glm(
-  CouncilDistrictNumber~cat_3.f,
-  data=train_col,
-  family=binomial
-)
-summary(glm_train)
-
-# logistic regression model fit:
-glm_train = glm(
-  CouncilDistrictNumber~service.f,
-  data=train_col,
-  family=binomial
-)
-summary(glm_train)
-
-# logistic regression model fit:
-glm_train = glm(
-  CouncilDistrictNumber~source.f,
   data=train_col,
   family=binomial
 )
