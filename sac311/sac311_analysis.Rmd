@@ -32,6 +32,7 @@ Notes:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
+# Install any necessary packages:
 # install.packages("FNN")
 
 library(dplyr)
@@ -46,13 +47,13 @@ library(randomForest)
 library(e1071)
 library(FNN)
 
-# HW9 libraries; LDA/QDA:
+# LDA/QDA:
 library(boot)
 library(MASS)
 library(class)
 library(reshape2)
 
-# HW12 libraries; NN:
+# Neural Net:
 library(neuralnet)
 library(tidyr)
 
@@ -144,7 +145,7 @@ cat("\n")
 # Encode categorial variables as factors:
 # https://stats.idre.ucla.edu/r/modules/coding-for-categorical-variables-in-regression-models/
 
-# Selected columns:
+# Selected columns for relevant data:
 # "CategoryHierarchy",
 # "CategoryName",
 # "CategoryLevel1",
@@ -193,6 +194,7 @@ cat("\n")
 
 summary(train_col)
 
+# save code in case prediction/validation is necessary:
 # import test_data:
 # test_data <- read.table(
 #   './final-data-test.csv',
@@ -215,8 +217,6 @@ summary(train_col)
 
 ```
 
-** START  
-
 Note: Section below pertains only to continous variables; as a result, preserve code for later use but not running it here since dataset contains all categorical variables with exception of GIS lat/long data.  
 
 References:  
@@ -234,8 +234,6 @@ Observations:
 1. Create histograms for significant factors based on p-values  
 2. Create stacked bar charts for significant factors based on p-values  
 3. Stacked bar chart shows that all variables follow noyes variables, indicating their importance and are worth additional review; this observation confirms finding that variables are significant  
-
-END **  
 
 ```{r p1.2A}
 
@@ -269,8 +267,6 @@ qplot_district = (qplot(
 # qplot_district
 
 ```
-
-** START  
 
 References:  
 1. HES CSCI-E63c Midterm, HW9, HW10, HW11 code  
@@ -346,8 +342,6 @@ Observations:
  South Natomas           : 178   Cancellation Completed:   0   7 Days-All Holidays-24x7    :  75    95833  : 310  
  (Other)                 :3368   (Other)               :   0   (Other)                     : 442    (Other):2494  
 
-END **  
-
 ```{r p1.3}
 
 cat("\n")
@@ -372,8 +366,6 @@ table(
 
 ```
 
-** START  
-
 # Part 1B - Logistic Regression  
 
 References:  
@@ -391,8 +383,6 @@ Steps:
 Observations:  
 1. Most variables have low p-values, indicating significance as a predictor  
 2. Use LR to fit categorical variables for additional analysis  
-
-END **  
 
 ```{r p1.4}
 
@@ -482,28 +472,19 @@ summary(glm_train)
 
 ```
 
-** START  
-
 References:  
-1. Lecture 5, 6, 11 notes; PCA model/plots-XX  
-2. Midterm and HW6 code; PCA model/plot usage -XX  
-3. ISLR p.230; PCA components -XX  
-4. ISLR p.233; PCA components -XX  
-5. -XX  
+1. HES CSCI-E63c Midterm, HW6; PCA model  
+2. ISLR p.230; PCA components  
+3. ISLR p.233; PCA components  
 
 Steps:  
-1. Verify/prepare data for PCA plots; use dummy variables to setup factors -XX  
-2. Scale/fit data for PCA plots; plot for top contributors to variance -XX  
-3. Evaluate top contributors to variance -XX  
-4. Plot variance by first several PCA -XX  
-5. Plot/evaluate PCA by ptj and vuu -XX  
+1. Verify/prepare data for PCA plots; use dummy variables to setup factors  
+2. Scale/fit data for PCA plots; plot for top contributors to variance  
+3. Evaluate top contributors to variance  
+4. Plot variance by first several PCA  
 
 Observations:  
-1. Yes, scaling is necessary prior to PCA plot -XX  
-2. Use dummy variables to address muiple variable levels prior to PCA plot -XX  
-3. Plot PCA components; ptj and vuu are largest variance contributors; also, both are continuous variables without levels -XX  
-4. PCA plot for noyes and ptj visualizes variance contributions -XX  
-5. PCA plot for noyes and vuu visualizes variance contributions -XX  
+1. Use dummy variables to address muiple variable levels prior to PCA plot  
 
 *** Plot variance for top 5 PCA ***
 
@@ -517,28 +498,25 @@ Observations:
 
 *** Evaluate largest loading for fifth PC ***
 
-*** summary() function output for train_data$ptj ***
-
-*** summary() function output for train_data$vuu ***
-
 END **  
 
-```{r final-p1.4}
+```{r p1.4}
 
 cat("\n")
 cat("*** Plot variance for first several PCA ***")
 cat("\n")
 
-# Scale/dummy data prior to plot:
 # train_scaled = train_data %>% mutate_if(is.numeric, scale)
+# train_dummy = model.matrix(noyes ~., train_scaled)[,-1]
+
+# Scale/dummy data prior to plot:
+
+```
+
 train_numeric = as.numeric(train_col$zip.f)
 train_scaled = train_numeric %>% mutate_if(is.numeric, scale)
 train_dummy = model.matrix(noyes ~., train_scaled)[,-1]
 
-# train_scaled = train_data %>% mutate_if(is.numeric, scale)
-# train_dummy = model.matrix(noyes ~., train_scaled)[,-1]
-
-# Create plot below:
 prcomp_plot = prcomp(train_dummy)
 plot(
   prcomp_plot,
@@ -550,42 +528,36 @@ cat("\n")
 cat("*** Evaluate largest loading for first PC ***")
 cat("\n")
 
-# Evaluate largest loading for first PC:
 sort(abs(prcomp_plot$rotation[,1]), decreasing=TRUE)[1]
 
 cat("\n")
 cat("*** Evaluate largest loading for second PC ***")
 cat("\n")
 
-# Evaluate largest loading for second PC:
 sort(abs(prcomp_plot$rotation[,2]), decreasing=TRUE)[1]
 
 cat("\n")
 cat("*** Evaluate largest loading for third PC ***")
 cat("\n")
 
-# Evaluate largest loading for third PC:
 sort(abs(prcomp_plot$rotation[,3]), decreasing=TRUE)[1]
 
 cat("\n")
 cat("*** Evaluate largest loading for fourth PC ***")
 cat("\n")
 
-# Evaluate largest loading for fourth PC:
 sort(abs(prcomp_plot$rotation[,4]), decreasing=TRUE)[1]
 
 cat("\n")
 cat("*** Evaluate largest loading for fifth PC ***")
 cat("\n")
 
-# Evaluate largest loading for fifth PC:
 sort(abs(prcomp_plot$rotation[,5]), decreasing=TRUE)[1]
 
 cat("\n")
 cat("*** Biplot: PC1 and PC2 (Scaled) ***")
 cat("\n")
 
-# Evaluate largest loading for first and second PC:
 biplot(
   prcomp_plot,
   pc.biplot=TRUE,
@@ -597,7 +569,6 @@ cat("\n")
 cat("*** PCA Plot for noyes and ptj ***")
 cat("\n")
 
-# PCA plot:
 plot(
   prcomp_plot$x[,1:2],
   main='PCA Plot: noyes and ptj (yes = red, no = purple)',
@@ -610,7 +581,6 @@ cat("\n")
 cat("*** PCA Plot for noyes and vuu ***")
 cat("\n")
 
-# PCA plot:
 plot(
   prcomp_plot$x[,1:2],
   main='PCA Plot: noyes and vuu (yes = red, no = purple)',
@@ -619,200 +589,70 @@ plot(
   pch=ifelse(train_data$vuu == '>=3', '*', '+')
 )
 
-```
-
-```{r final-p1.4A, results="hide"}
-
-# reduce to smaller sample size to reduce runtime:
-train_scaled_reduced = train_scaled[1:3500,]
-
-```
-
-** START  
-
 References:  
-1. Lecture 1, 3 notes; chi-squared test -XX  
-2. ISLR p.67; p-value and significance -XX  
-3. Midterm code; p-value and significance -XX  
-4. -XX  
-5. -XX  
+1. HES CSCI-E63c Lecture 1, 3 notes; chi-squared test  
+2. ISLR p.67; p-value and significance  
 
 Steps:  
-1. Calculate chi-squared test for categorical variables -XX  
-4. Create plots for significant factors based on p-values -XX  
-4. Create plots for significant factors based on p-values -XX  
-2. Evaluate/analyze results -XX  
-3. Document observations below -XX  
-4. -XX  
-5. -XX  
+1. Calculate chi-squared test for categorical variables  
+2. Evaluate/analyze results  
+3. Document observations below  
 
 Observations:  
-1. Chi-squared test shows low p-values for categorial variables; t-test for continous variables -XX  
-2. As a result, this observations confirms previous conjecture that variables should be kept as factors since they are significant predictors -XX  
-3. Per lecture notes, chi-squared and t-test are a good method for evaluating significance -XX  
-4. -XX  
-5. -XX  
+1. Chi-squared test shows low p-values for categorial variables; t-test for continous variables  
+2. As a result, this observations confirms previous conjecture that variables should be kept as factors since they are significant predictors  
+3. Chi-squared and t-test are a good method for evaluating significance  
 
 Observations:  
-1. Create plots for significant factors based on p-values -XX  
-2. Chi-squared and t-tests confirmed that all variables are significant per logistic regression results; specifically, all varaibles have p-value < 0.05 -XX  
-3. As a result, these variables are significant and should be used for analysis -XX  
-4. -XX  
-5. -XX  
+1. Create plots for significant factors based on p-values  
+2. Chi-squared and t-tests confirmed that all variables are significant per logistic regression results; specifically, all varaibles have p-value < 0.05  
+3. As a result, these variables are significant and should be used for analysis  
 
-*** significant factors based on p-values (1.6, logistic regression) ***
-categorial = cle, kbc, gb, xxp, rao, at, fq
-numerical = mt, zq, zf, ihj
-
-END **  
-
-```{r final-p1.5}
+```{r p1.5}
 
 cat("\n")
-cat("*** T-Test for continous variables ***")
+cat("*** t-test for continous variables ***")
 cat("\n")
 
-# Chi-Squared test for continuous variables, mt:
+# Chi-Squared test for continuous variables:
 t.test(
   as.numeric(train_col$neighborhood.f),
   train_data$service.f
 )
 
 cat("\n")
-cat("*** Chi-Squared test for categorical variables ***")
+cat("*** chi-squared test for categorical variables ***")
 cat("\n")
 
-# Chi-Squared test for categorical variables, cle:
+# Chi-Squared test for categorical variables:
 chisq.test(
-  table(train_data$noyes, train_data$cle)
-)
-
-cat("\n")
-cat("*** Chi-Squared test for categorical variables, kbc: ***")
-cat("\n")
-
-# *** significant factors based on p-values (1.6, logistic regression) ***
-# categorial = cle, kbc, gb, xxp, rao, at, fq
-# numerical = mt, zq, zf, ihj
-
-# Chi-Squared test for categorical variables, kbc:
-chisq.test(
-  table(train_data$noyes, train_data$kbc)
-)
-
-cat("\n")
-cat("*** Chi-Squared test for categorical variables, gb: ***")
-cat("\n")
-
-# *** significant factors based on p-values (1.6, logistic regression) ***
-# categorial = cle, kbc, gb, xxp, rao, at, fq
-# numerical = mt, zq, zf, ihj
-
-# Chi-Squared test for categorical variables, gb:
-chisq.test(
-  table(train_data$noyes, train_data$gb)
-)
-
-cat("\n")
-cat("*** Chi-Squared test for categorical variables, xxp: ***")
-cat("\n")
-
-# *** significant factors based on p-values (1.6, logistic regression) ***
-# categorial = cle, kbc, gb, xxp, rao, at, fq
-# numerical = mt, zq, zf, ihj
-
-# Chi-Squared test for categorical variables, xxp:
-chisq.test(
-  table(train_data$noyes, train_data$xxp)
-)
-
-cat("\n")
-cat("*** Chi-Squared test for categorical variables, rao: ***")
-cat("\n")
-
-# *** significant factors based on p-values (1.6, logistic regression) ***
-# categorial = cle, kbc, gb, xxp, rao, at, fq
-# numerical = mt, zq, zf, ihj
-
-# Chi-Squared test for categorical variables, at:
-chisq.test(
-  table(train_data$noyes, train_data$at)
-)
-
-cat("\n")
-cat("*** Chi-Squared test for categorical variables, at: ***")
-cat("\n")
-
-# *** significant factors based on p-values (1.6, logistic regression) ***
-# categorial = cle, kbc, gb, xxp, rao, at, fq
-# numerical = mt, zq, zf, ihj
-
-# Chi-Squared test for categorical variables, at:
-chisq.test(
-  table(train_data$noyes, train_data$at)
-)
-
-cat("\n")
-cat("*** Chi-Squared test for categorical variables, fq: ***")
-cat("\n")
-
-# *** significant factors based on p-values (1.6, logistic regression) ***
-# categorial = cle, kbc, gb, xxp, rao, at, fq
-# numerical = mt, zq, zf, ihj
-
-# Chi-Squared test for categorical variables, fq:
-chisq.test(
-  table(train_data$noyes, train_data$fq)
+  table(
+    train_col$neighborhood.f,
+    train_col$cat_1.f
+  )
 )
 
 ```
 
-# Problem 2: logistic regression (20 points)
-
-Develop logistic regression model of the outcome `noyes` as a function of multiple predictors in the model.  Which variables are significantly associated with the outcome?  Test model performance on multiple splits of data into training and test subsets and summarize it in terms of accuracy/error/sensitivity/specificity.
-
-** P2 **  
-** P2 **  
-** P2 **  
-
-** START  
+# Part 2 - Logistic Regression
 
 References:  
-1. HW2 code; pairs plot -XX  
-2. HW9 code; pairs plot -XX  
-3. HW10 code; pairs plot -XX  
-4. -XX  
-5. -XX  
+1. HW2 code; pairs plot  
+2. HW9 code; pairs plot  
+3. HW10 code; pairs plot  
 
 Steps:  
-1. Create pairs plot for scaled, numeric predictor variables -XX  
-2. Verify that columns are numeric and use scaled dataset -XX  
-3. Create plots; document observations below -XX  
-4. Use pairs plot to verify variables for additional analysis -XX  
-5. Pairs plot output is shown in extra problem, Part 2A -XX  
+1. Create pairs plot for scaled, numeric predictor variables  
+2. Verify that columns are numeric and use scaled dataset  
+3. Create plots; document observations below  
+4. Use pairs plot to verify variables for additional analysis  
 
 Observations:  
-1. Scale values so that pairs plot can be correct associations -XX  
-2. Only numeric values selected for pairs plot -XX  
-3. Run pairs plot first before moving on with remaining analysis -XX  
-4. -XX  
-5. -XX  
+1. Scale values so that pairs plot can be correct associations  
+2. Only numeric values selected for pairs plot  
+3. Run pairs plot first before moving on with remaining analysis 
 
-END **  
-
-*** significant factors based on p-values (1.6, logistic regression) ***
-categorial = cle, kbc, gb, xxp, rao, at, fq
-numerical = mt, zq, zf, ihj
-
-```{r final-p2.1}
-
-# cat("\n")
-# cat("*** create pairs plots ***")
-# cat("\n")
-
-# *** significant factors based on p-values (1.6, logistic regression) ***
-# categorial = cle, kbc, gb, xxp, rao, at, fq
-# numerical = mt, zq, zf, ihj
+```{r p2.1}
 
 # calculated here for analysis; comment out to reduce runtime
 # create pairs plot of scaled numeric predictors:
@@ -830,32 +670,28 @@ numerical = mt, zq, zf, ihj
 
 ```
 
-** START  
-
 References:  
-1. Midterm-P2 and HW5; best subset variable selection -XX  
-2. ISLR p.244; best subset selection -XX  
-3. ISLR p.247; best subset selection -XX  
-4. Lecture 9, 12, 13 notes; best subset -XX  
-5. -XX  
+1. Midterm-P2 and HW5; best subset variable selection  
+2. ISLR p.244; best subset selection  
+3. ISLR p.247; best subset selection  
+4. Lecture 9, 12, 13 notes; best subset  
 
 Steps:  
-1. Use variable selection to identify best predictors -XX  
-2. Use forward, backward and seq replacement methods -XX  
-3. Create metrics plot and individual plot for each method -XX  
-4. Evaluate/compare plot results -XX  
-5. Document observations below -XX  
+1. Use variable selection to identify best predictors  
+2. Use forward, backward and seq replacement methods  
+3. Create metrics plot and individual plot for each method  
+4. Evaluate/compare plot results  
+5. Document observations below  
 
 Observations:  
-1. Each method returns the same variables and order of selection -XX  
-2. Rank order of selection: 1) rao, 2) gb, 3) xxp, 4) at, 5) fq -XX  
-3. Results confirm previous findings/analysis/conjecture -XX  
-4. Significant variables will be useful for fitting other models -XX  
-5. Best subset plot visualizes results for evaluation -XX  
+1. Each method returns the same variables and order of selection  
+3. Results confirm previous findings/analysis/conjecture  
+4. Significant variables will be useful for fitting other models  
+5. Best subset plot visualizes results for evaluation  
 
 END **  
 
-```{r final-p2.2}
+```{r p2.2}
 
 cat("\n")
 cat("*** helper function for best subset selection ***")
