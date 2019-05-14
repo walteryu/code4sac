@@ -10,9 +10,7 @@ Organization: Code for Sacramento
   
 # Introduction
      
-Code for Sarcramento is develop a neighborhood portal application; as a result, this notebook evaluates the City of Sacramento 311 service call dataset for insights and trends which may be helpful in developing useful features.  
-    
-This notebook will focus on an initial analysis and modeling effort with additional prediction to follow as more information is available regarding the application.  
+Code for Sarcramento is develop a neighborhood portal application; as a result, this notebook evaluates the City of Sacramento 311 service call dataset for insights and trends which may be helpful in developing useful features. This notebook will focus on an initial analysis and modeling effort with additional prediction to follow as more information is available regarding the application.  
   
 Dataset:
   
@@ -24,6 +22,10 @@ Notes:
 1. All sources are cited accordingly.  
 2. Source dataset is ~1.2M rows, so not included in this repository.  
 3. As a result, please review attached HTML file for analysis/findings.  
+
+To-Do List:
+1. Spatial analysis  
+2. Time series analysis  
   
 ** P0 **  
 ** P0 **  
@@ -235,6 +237,33 @@ summary(train_col_numeric)
 
 # reduce dataset to minimize runtime:
 # test_reduced = test_data[1:1500,]
+
+```
+
+Reference: My own HW2 solution for correlation calculations.
+Calculate Pearson correlation in table format for all variables except sex/gender, which is nominal/categorical.
+
+Reference: https://en.wikipedia.org/wiki/Pearson_correlation_coefficient
+By definition, the Pearson coefficient (ranges between 0 and 1) is a measure of LINEAR correlation; as a result, correlation tables and plots below show strong correlation between the following variables:
+
+Reference: My own HW2 solution.
+Calculate Spearman correlation in table format for all variables except sex/gender, which is nominal/categorical.
+
+Reference: https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient
+
+By definition, the Spearman coefficient (measured between 0 and 1) indicates MONOTONIC (linear or not) correlation; as a result, table and plots below show stronger correlation between the following variables than Pearson correlation; this observation indicates non-linear correlation between those variables (also verified in later problems):
+
+```{r p1.2A}
+
+# Reference HW3 for remaining plots:
+
+# create correlation plot:
+corr <- round(train_col_numeric, method="pearson", use="everything"), 4)
+ggcorrplot(corr)
+
+# create correlation plot:
+corr <- round(train_col_numeric, method="spearman", use="everything"), 4)
+ggcorrplot(corr)
 
 ```
 
