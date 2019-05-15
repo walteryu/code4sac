@@ -240,30 +240,31 @@ summary(train_col_numeric)
 
 ```
 
-Reference: My own HW2 solution for correlation calculations.
-Calculate Pearson correlation in table format for all variables except sex/gender, which is nominal/categorical.
+References:  
+1. HES CSCI-E63c HW2 code  
+2. https://en.wikipedia.org/wiki/Pearson_correlation_coefficient  
+3. https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient  
 
-Reference: https://en.wikipedia.org/wiki/Pearson_correlation_coefficient
-By definition, the Pearson coefficient (ranges between 0 and 1) is a measure of LINEAR correlation; as a result, correlation tables and plots below show strong correlation between the following variables:
+Steps:  
+1. Calculate correlation   
+2. Create correlation plot   
+3. Document observations below  
 
-Reference: My own HW2 solution.
-Calculate Spearman correlation in table format for all variables except sex/gender, which is nominal/categorical.
-
-Reference: https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient
-
-By definition, the Spearman coefficient (measured between 0 and 1) indicates MONOTONIC (linear or not) correlation; as a result, table and plots below show stronger correlation between the following variables than Pearson correlation; this observation indicates non-linear correlation between those variables (also verified in later problems):
+Observations:  
+1. Pearson coefficient (ranges between 0 and 1) is a measure of LINEAR correlation  
+2. Spearman coefficient (measured between 0 and 1) indicates MONOTONIC (linear or not) correlation  
 
 ```{r p1.2A}
 
 # Reference HW3 for remaining plots:
 
 # create correlation plot:
-corr <- round(train_col_numeric, method="pearson", use="everything"), 4)
-ggcorrplot(corr)
+# corr <- round((train_col_numeric, method="pearson", use="everything"), 4)
+# ggcorrplot(corr)
 
 # create correlation plot:
-corr <- round(train_col_numeric, method="spearman", use="everything"), 4)
-ggcorrplot(corr)
+# corr <- round((train_col_numeric, method="spearman", use="everything"), 4)
+# ggcorrplot(corr)
 
 ```
 
