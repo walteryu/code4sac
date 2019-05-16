@@ -35,12 +35,13 @@ To-Do List:
 knitr::opts_chunk$set(echo = TRUE)
 
 # Install any necessary packages:
-# install.packages("FNN")
+install.packages("ggcorrplot")
 
 library(dplyr)
 library(readr)
 library(stringr)
 library(ggplot2)
+library("ggcorrplot")
 library(gridExtra)
 library(leaps)
 library(glmnet)
@@ -293,17 +294,19 @@ Observations:
 1. Pearson coefficient (ranges between 0 and 1) is a measure of LINEAR correlation  
 2. Spearman coefficient (measured between 0 and 1) indicates MONOTONIC (linear or not) correlation  
 
-```{r p1.2A}
-
-# Reference HW3 for remaining plots:
+```{r p1.2A, fig.height = 8, fig.width = 8, fig.align = "center"}
 
 # create correlation plot:
-# corr <- round((train_col_numeric, method="pearson", use="everything"), 4)
-# ggcorrplot(corr)
+corr <- round(cor(train_col_numeric, method="pearson", use="everything"), 4)
+ggcorrplot(corr, title="Correlation Plot - Pearson (Linear)")
+
+```
+
+```{r p1.2B, fig.height = 8, fig.width = 8, fig.align = "center"}
 
 # create correlation plot:
-# corr <- round((train_col_numeric, method="spearman", use="everything"), 4)
-# ggcorrplot(corr)
+corr <- round(cor(train_col_numeric, method="spearman", use="everything"), 4)
+ggcorrplot(corr, title="Correlation Plot - Spearman (Non-Linear/Monotonic)")
 
 ```
 
