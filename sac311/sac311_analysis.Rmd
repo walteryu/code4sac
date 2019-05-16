@@ -18,6 +18,10 @@ Dataset:
 
 City of Sacramento 311 Service Call Dataset: https://data.cityofsacramento.org/datasets/08794a6695b3483f889e9bef122517e9_0  
 
+Citations:  
+1. HES CSCI E-63c: https://www.extension.harvard.edu/course-catalog/courses/elements-of-data-science-and-statistical-learning-with-r/15123  
+2. ISLR Textbook: https://www-bcf.usc.edu/~gareth/ISL/  
+
 Notes:  
 1. All sources are cited accordingly.  
 2. Source dataset is ~1.2M rows, so not included in this repository.  
@@ -50,13 +54,13 @@ library(randomForest)
 library(e1071)
 library(FNN)
 
-# LDA/QDA:
+# LDA/QDA Packages:
 library(boot)
 library(MASS)
 library(class)
 library(reshape2)
 
-# Neural Net:
+# Neural Net Packages:
 library(neuralnet)
 library(tidyr)
 
@@ -73,17 +77,22 @@ References:
 2. ISLR p.28; categorical variables  
 
 Steps:  
-1. Import data, evaluate dimensions  
-2. Subset first 5k rows to reduce runtime  
-3. Subset columns to only include relevant data  
+1. Import data, evaluate dimensions with dim() and str() functions  
+2. Subset first 5k rows to reduce runtime    
+3. Subset columns to only include relevant data (time, location, type)  
 4. Verify subset with summary statistics; dim, str and summary functions  
 
 Observations:  
-1. Import dataset; includes header so note so in read.table  
-2. Use str() function to evaluate factors/variables  
-3. Original dataset = ~1.2M rows x 27 columns  
-4. Resulting dataset = 5k rows x 27 columns  
-5. Test dataset may be extracted from full dataset  
+1. Dataset consists of categorical variables and time/location data  
+2. Most categorical have multiple levels; some have many (e.g. category level)  
+3. Time data recorded as timestamps; locations in lat/long coordinates  
+
+Data Manipulation:  
+1. Original dataset = ~1.2M rows x 27 columns  
+2. Reduced dataset = 5k rows x 27 columns  
+3. Test dataset may be extracted from full dataset  
+4. Convert categorical variables as factors to facilitate logistic regression  
+5. Factors will be converted to numeric values to facilitate analysis
 
 ```{r p1.1}
 
@@ -286,13 +295,14 @@ References:
 3. https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient  
 
 Steps:  
-1. Calculate correlation   
-2. Create correlation plot   
+1. Calculate correlation and create correlation plot   
+2. Plots for Pearson and Spearman correlation methods  
 3. Document observations below  
 
 Observations:  
-1. Pearson coefficient (ranges between 0 and 1) is a measure of LINEAR correlation  
-2. Spearman coefficient (measured between 0 and 1) indicates MONOTONIC (linear or not) correlation  
+1. Pearson coefficient (ranges between 0 and 1) is a measure of LINEAR correlation; plots showed relatively low correlation between most variables  
+2. Spearman coefficient (measured between 0 and 1) indicates MONOTONIC (linear or not) correlation; plots showed relative low correlation between most variables  
+3. Although entire variables may have low correlation, there may be individual trends between variables which will be explored in the following sections  
 
 ```{r p1.2A, fig.height = 8, fig.width = 8, fig.align = "center"}
 
@@ -315,20 +325,19 @@ References:
 2. ISLR p.67; p-value  
 
 Steps:  
-1. Create histogram to evaluate distribution  
-2. Create stacked bar histograms  
+1. Create histogram to evaluate distribution of frequency/district   
+2. Create stacked bar histograms for service level and district  
 3. Evaluate trends from plots; identify possible trends  
-4. Create plots for significant factors bsed on p-values  
+4. Create plots for significant factors based on p-values  
 5. Document observations below  
 
 Observations:  
-1. Create histograms for significant factors based on p-values  
-2. Create stacked bar charts for significant factors based on p-values  
-3. Stacked bar chart shows interaction between neighborhood and service level  
+1. Categorical variables provide limited use for histogram plots since they are intended for continuous/numeric variables  
+2. However, call frequency by district number histogram showed distribution while the other plots/variables did not convert well or translate into coherent plots  
 
 ```{r p1.3}
 
-# Create historgram for continous variables to evaluate distribution:
+# Create historgram for continuous variables to evaluate distribution:
 
 hist(
   train_col_numeric$district.f,
@@ -352,7 +361,7 @@ qplot_district = (qplot(
   binwidth = 1,
   fill=train_col_numeric$service.f,
   main='Outcome Variable - 311 Service Level')
-  + scale_fill_manual(values=c('purple', 'red'))
+  + scale_fill_manual(values=c('blue', 'red'))
   + theme(legend.position='top')
   + xlab('Predictor Variable - Council District Number')
 )
@@ -386,7 +395,7 @@ cat("\n")
 # Create contingency table:
 table(
   train_data$Neighborhood,
-  train_data$SourceLevel1
+  train_data$CategoryLevel1
 )
 
 cat("\n")
@@ -395,8 +404,8 @@ cat("\n")
 
 # Create contingency table:
 table(
-  train_data$ZIP,
-  train_data$SourceLevel1
+  train_data$Neighborhood,
+  train_data$CategoryLevel2
 )
 
 ```
