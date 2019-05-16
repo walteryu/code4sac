@@ -7,14 +7,14 @@ output:
 
 Author: Walter Yu  
 Organization: Code for Sacramento  
-  
+
 # Introduction
-     
-Code for Sarcramento is develop a neighborhood portal application; as a result, this notebook evaluates the City of Sacramento 311 service call dataset for insights and trends which may be helpful in developing useful features. This notebook will focus on an initial analysis and modeling effort with additional prediction to follow as more information is available regarding the application.  
-  
+
+Code for Sacramento is develop a neighborhood portal application; as a result, this notebook evaluates the City of Sacramento 311 service call dataset for insights and trends which may be helpful in developing useful features. This notebook will focus on an initial analysis and modeling effort with additional prediction to follow as more information is available regarding the application.  
+
 Dataset:
-  
-311 service call dataset from City of Sacramento; summary statistics for the full and partial datasets are listed below. The data is available in geospatial, tabular or API format; the tabular format is used for this analysis to identify important neighorhoods and trends which are relevant to developing the application.  
+
+311 service call dataset from City of Sacramento; summary statistics for the full and partial datasets are listed below. The data is available in geospatial, tabular or API format; the tabular format is used for this analysis to identify important neighborhoods and trends which are relevant to developing the application.  
 
 City of Sacramento 311 Service Call Dataset: https://data.cityofsacramento.org/datasets/08794a6695b3483f889e9bef122517e9_0  
 
@@ -26,7 +26,7 @@ Notes:
 To-Do List:
 1. Spatial analysis  
 2. Time series analysis  
-  
+
 ** P0 **  
 ** P0 **  
 ** P0 **  
@@ -98,6 +98,36 @@ train_data <- read.table(
 
 ```
 
+Data Attributes:  
+
+$ X                    : num  
+$ Y                    : num  
+$ OBJECTID             : int  
+$ ReferenceNumber      : Factor w/ 1130759 levels  
+$ CategoryHierarchy    : Factor w/ 437 levels  
+$ CategoryLevel1       : Factor w/ 18 levels  
+$ CategoryLevel2       : Factor w/ 48 levels  
+$ CategoryLevel3       : Factor w/ 10 levels  
+$ CategoryLevel4       : logi  
+$ CategoryLevel5       : logi  
+$ CategoryName         : Factor w/ 286 levels  
+$ CouncilDistrictNumber: int  
+$ SourceLevel1         : Factor w/ 5 levels  
+$ Neighborhood         : Factor w/ 130 levels  
+$ DateCreated          : Factor w/ 1118207 levels  
+$ DateUpdated          : Factor w/ 927449 levels  
+$ DateClosed           : Factor w/ 772674 levels  
+$ StatusType           : Factor w/ 14 levels  
+$ SystemId             : int  
+$ ServiceLevelName     : Factor w/ 34 levels  
+$ Latitude             : num  
+$ Longitude            : num  
+$ XCoord               : num  
+$ YCoord               : num  
+$ CrossStreet          : Factor w/ 11685 levels  
+$ GlobalID             : Factor w/ 1225340 levels  
+$ ZIP                  : Factor w/ 66 levels  
+
 ```{r p1.2}
 
 # verify dim and drop NA; train_data:
@@ -108,6 +138,8 @@ train_reduced = train_data[1:5000,]
 
 # reduce to smaller sample size for relevant data:
 train_col = train_reduced[, c(
+  # "X",
+  # "Y",
   "CategoryHierarchy",
   "CategoryName",
   "CategoryLevel1",
@@ -116,8 +148,15 @@ train_col = train_reduced[, c(
   "CouncilDistrictNumber",
   "SourceLevel1",
   "Neighborhood",
+  "DateCreated",
+  "DateUpdated",
+  "DateClosed",
   "StatusType",
   "ServiceLevelName",
+  "Latitude",
+  "Longitude",
+  "XCoord",
+  "YCoord",
   "ZIP"
 )]
 
@@ -765,7 +804,7 @@ Steps:
 Observations:  
 1. Scale values so that pairs plot can be correct associations  
 2. Only numeric values selected for pairs plot  
-3. Run pairs plot first before moving on with remaining analysis 
+3. Run pairs plot first before moving on with remaining analysis
 
 ```{r p2.1}
 
@@ -1125,66 +1164,3 @@ cat("\n")
 # Conclusion
 
 Summarize findings once analysis has been completed.
-
-*** SUMMARY ***
-*** SUMMARY ***
-*** SUMMARY ***
-
-*** Summary Statistics - Full Dataset (~1.2M Rows x 27 Columns) ***  
-
-'data.frame':	1225340 obs. of  27 variables:  
- $ X                    : num  -121 -122 -121 -122 -122 ...
- $ Y                    : num  38.6 38.5 38.4 38.6 38.5 ...
- $ OBJECTID             : int  6136 6137 6138 6139 6140 6141 6142 6143 6144 6145 ...
- $ ReferenceNumber      : Factor w/ 1130759 levels "160430-000040",..: 2999 3002 3003 3004 3005 3007 3006 3010 3008 3009 ...
- $ CategoryHierarchy    : Factor w/ 437 levels ":",": Code Enforcement",..: 342 340 326 318 323 326 339 363 326 71 ...
- $ CategoryLevel1       : Factor w/ 18 levels "","Animal care",..: 14 14 14 14 14 14 14 14 14 3 ...
- $ CategoryLevel2       : Factor w/ 48 levels "","Animal Cruelty (597)",..: 28 26 1 15 18 1 26 39 1 17 ...
- $ CategoryLevel3       : Factor w/ 10 levels "","Aggressive",..: 1 1 1 1 1 1 1 4 1 1 ...
- $ CategoryLevel4       : logi  NA NA NA NA NA NA ...
- $ CategoryLevel5       : logi  NA NA NA NA NA NA ...
- $ CategoryName         : Factor w/ 286 levels "","911 Transfer",..: 91 137 109 91 91 109 91 142 109 183 ...
- $ CouncilDistrictNumber: int  3 7 8 1 4 5 3 5 8 3 ...
- $ SourceLevel1         : Factor w/ 5 levels "","Email","Mobile App",..: 4 4 4 4 4 5 4 5 4 4 ...
- $ Neighborhood         : Factor w/ 130 levels "","Airport","Alhambra Triangle",..: 102 85 115 67 56 44 102 73 115 31 ...
- $ DateCreated          : Factor w/ 1118207 levels "2016-04-30T16:05:44.000Z",..: 2988 2989 2990 2991 2992 2993 2994 2995 2996 2997 ...
- $ DateUpdated          : Factor w/ 927449 levels "2016-04-30T16:46:53.000Z",..: 238837 146545 284898 238837 146543 241794 232773 238864 284900 295 ...
- $ DateClosed           : Factor w/ 772674 levels "","2016-05-30T18:53:03.000Z",..: 218275 136981 261213 218275 136981 221113 212237 218302 261213 1 ...
- $ StatusType           : Factor w/ 14 levels "Cancellation Completed",..: 4 3 4 4 3 4 4 4 4 8 ...
- $ SystemId             : int  13089 13091 13092 13095 13098 13100 13103 13107 13110 13112 ...
- $ ServiceLevelName     : Factor w/ 34 levels "","1 Hour-All Holidays-24/7",..: 13 13 1 1 1 1 13 1 1 29 ...
- $ Latitude             : num  38.6 38.5 38.4 38.6 38.5 ...
- $ Longitude            : num  -121 -122 -121 -122 -122 ...
- $ XCoord               : num  6706636 6692383 6730272 6700552 6697903 ...
- $ YCoord               : num  1988045 1940692 1925199 1993886 1953896 ...
- $ CrossStreet          : Factor w/ 11685 levels "","&","10TH AVE",..: 11552 9908 10313 1402 2119 6943 3935 3120 11242 6799 ...
- $ GlobalID             : Factor w/ 1225340 levels "00001d4c-8b09-4d05-a87c-46fbd73bc23d",..: 347721 686993 785273 361851 1165337 1078483 497589 933654 757256 194850 ...
- $ ZIP                  : Factor w/ 66 levels "","00000","11111",..: 53 51 32 54 42 42 53 40 43 36 ...
-
-*** Summary Statistics - Subset Dataset (5k Rows x 8 Columns) ***  
-
-'data.frame':	5000 obs. of  8 variables:  
- $ CategoryHierarchy    : Factor w/ 437 levels ":",": Code Enforcement",..: 342 340 326 318 323 326 339 363 326 71 ...
- $ CategoryName         : Factor w/ 286 levels "","911 Transfer",..: 91 137 109 91 91 109 91 142 109 183 ...
- $ CouncilDistrictNumber: int  3 7 8 1 4 5 3 5 8 3 ...
- $ SourceLevel1         : Factor w/ 5 levels "","Email","Mobile App",..: 4 4 4 4 4 5 4 5 4 4 ...
- $ Neighborhood         : Factor w/ 130 levels "","Airport","Alhambra Triangle",..: 102 85 115 67 56 44 102 73 115 31 ...
- $ StatusType           : Factor w/ 14 levels "Cancellation Completed",..: 4 3 4 4 3 4 4 4 4 8 ...
- $ ServiceLevelName     : Factor w/ 34 levels "","1 Hour-All Holidays-24/7",..: 13 13 1 1 1 1 13 1 1 29 ...
- $ ZIP                  : Factor w/ 66 levels "","00000","11111",..: 53 51 32 54 42 42 53 40 43 36 ...
-                                         CategoryHierarchy               CategoryName  CouncilDistrictNumber     SourceLevel1 
- Solid Waste : Household Junk                     :1487    Household Junk      :1487   Min.   :1.000                   :   0  
- Solid Waste : Appliance and eWaste               : 259    Garbage             : 930   1st Qu.:3.000         Email     : 181  
- Solid Waste : Kick truck : Garbage               : 223    Lawn and Garden     : 365   Median :5.000         Mobile App: 284  
- Solid Waste : Illegal Dumping : Street / Sidewalk: 181    Recycle             : 359   Mean   :4.601         Phone Call:3926  
- Solid Waste : Replace Can : Garbage              : 152    Appliance and eWaste: 259   3rd Qu.:6.000         Web App   : 609  
- Solid Waste : Exchange Can : Garbage             : 150    Street / Sidewalk   : 181   Max.   :8.000                          
- (Other)                                          :2548    (Other)             :1419   NA's   :27                             
-                   Neighborhood                   StatusType                       ServiceLevelName      ZIP      
- Valley Hi / North Laguna: 388   Completed             :3907                               :3355    95822  : 533  
- East Sacramento         : 302   In Progress           : 519   36 Hours-No Holidays-M/F-24h: 602    95823  : 486  
- Meadowview              : 296   Closed                : 440   7 Days-No Holidays-M/F-24h  : 211    95820  : 423  
- Pocket                  : 246   Cancelled             : 132   2 Hours-All Holidays-24x7   : 158    95831  : 403  
- Downtown                : 222   Pending               :   2   24 Hours-No Holidays-M/F-24h: 157    95838  : 351  
- South Natomas           : 178   Cancellation Completed:   0   7 Days-All Holidays-24x7    :  75    95833  : 310  
- (Other)                 :3368   (Other)               :   0   (Other)                     : 442    (Other):2494  
