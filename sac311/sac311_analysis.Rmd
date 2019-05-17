@@ -444,6 +444,8 @@ Observations:
 1. Use dummy variables to address muiple variable levels prior to PCA plot  
 2. PCA calculations show top contributors of variance to the model  
 3. PCA plot show interaction between neighborhood and service level  
+4. However, categorical variables did not translate well to continuous  
+5. As a result, PCA calculates did not identify any useful trends  
 
 ```{r p1.6}
 
@@ -471,39 +473,12 @@ plot(
   col='purple'
 )
 
-cat("\n")
-cat("*** Evaluate largest loading for first PC ***")
-cat("\n")
-
+# calculate top five PCA components:
 sort(abs(prcomp_plot$rotation[,1]), decreasing=TRUE)[1]
-
-cat("\n")
-cat("*** Evaluate largest loading for second PC ***")
-cat("\n")
-
 sort(abs(prcomp_plot$rotation[,2]), decreasing=TRUE)[1]
-
-cat("\n")
-cat("*** Evaluate largest loading for third PC ***")
-cat("\n")
-
 sort(abs(prcomp_plot$rotation[,3]), decreasing=TRUE)[1]
-
-cat("\n")
-cat("*** Evaluate largest loading for fourth PC ***")
-cat("\n")
-
 sort(abs(prcomp_plot$rotation[,4]), decreasing=TRUE)[1]
-
-cat("\n")
-cat("*** Evaluate largest loading for fifth PC ***")
-cat("\n")
-
 sort(abs(prcomp_plot$rotation[,5]), decreasing=TRUE)[1]
-
-cat("\n")
-cat("*** Biplot: PC1 and PC2 (Scaled) ***")
-cat("\n")
 
 # create biplot of PCA components:
 biplot(
@@ -512,10 +487,6 @@ biplot(
   xlabs=rep('*', dim(prcomp_plot$x)[1]),
   col=c('red','purple')
 )
-
-cat("\n")
-cat("*** PCA Plot ***")
-cat("\n")
 
 # create PCA plot:
 plot(
@@ -540,14 +511,11 @@ Steps:
 4. Evaluate results for association between predictor/outcome  
 
 Observations:  
-1. Most variables have low p-values, indicating significance as a predictor  
-2. Use LR to fit categorical variables for additional analysis  
+1. Most variables did not have low p-values, indicating poor model fit  
+2. However, some variables did show significance  
+3. Specifiically, some neighborhoods show relationship with particular call categories  
 
 ```{r p1.7}
-
-cat("\n")
-cat("*** LR: cat_1 ~ neighborhood ***")
-cat("\n")
 
 # logistic regression model fit:
 glm_train = glm(
@@ -557,10 +525,6 @@ glm_train = glm(
 )
 summary(glm_train)
 
-cat("\n")
-cat("*** LR: cat_1 ~ district ***")
-cat("\n")
-
 # logistic regression model fit:
 glm_train = glm(
   CategoryLevel1~district.f,
@@ -568,10 +532,6 @@ glm_train = glm(
   family=binomial
 )
 summary(glm_train)
-
-cat("\n")
-cat("*** LR: cat_1 ~ zipcode ***")
-cat("\n")
 
 # logistic regression model fit:
 glm_train = glm(
@@ -581,10 +541,6 @@ glm_train = glm(
 )
 summary(glm_train)
 
-cat("\n")
-cat("*** LR: cat_2 ~ neighborhood ***")
-cat("\n")
-
 # logistic regression model fit:
 glm_train = glm(
   CategoryLevel2~neighborhood.f,
@@ -592,10 +548,6 @@ glm_train = glm(
   family=binomial
 )
 summary(glm_train)
-
-cat("\n")
-cat("*** LR: cat_2 ~ district ***")
-cat("\n")
 
 # logistic regression model fit:
 glm_train = glm(
@@ -605,10 +557,6 @@ glm_train = glm(
 )
 summary(glm_train)
 
-cat("\n")
-cat("*** LR: cat_2 ~ zipcode ***")
-cat("\n")
-
 # logistic regression model fit:
 glm_train = glm(
   CategoryLevel2~zip.f,
@@ -616,10 +564,6 @@ glm_train = glm(
   family=binomial
 )
 summary(glm_train)
-
-cat("\n")
-cat("*** LR: cat_3 ~ neighborhood ***")
-cat("\n")
 
 # logistic regression model fit:
 glm_train = glm(
@@ -629,10 +573,6 @@ glm_train = glm(
 )
 summary(glm_train)
 
-cat("\n")
-cat("*** LR: cat_3 ~ district ***")
-cat("\n")
-
 # logistic regression model fit:
 glm_train = glm(
   CategoryLevel3~district.f,
@@ -640,10 +580,6 @@ glm_train = glm(
   family=binomial
 )
 summary(glm_train)
-
-cat("\n")
-cat("*** LR: cat_3 ~ zipcode ***")
-cat("\n")
 
 # logistic regression model fit:
 glm_train = glm(
@@ -653,10 +589,6 @@ glm_train = glm(
 )
 summary(glm_train)
 
-cat("\n")
-cat("*** LR: neighborhood ~ cat_1 ***")
-cat("\n")
-
 # logistic regression model fit:
 glm_train = glm(
   Neighborhood~cat_1.f,
@@ -664,10 +596,6 @@ glm_train = glm(
   family=binomial
 )
 summary(glm_train)
-
-cat("\n")
-cat("*** LR: neighborhood ~ cat_2 ***")
-cat("\n")
 
 # logistic regression model fit:
 glm_train = glm(
@@ -677,10 +605,6 @@ glm_train = glm(
 )
 summary(glm_train)
 
-cat("\n")
-cat("*** LR: neighborhood ~ cat_3 ***")
-cat("\n")
-
 # logistic regression model fit:
 glm_train = glm(
   Neighborhood~cat_3.f,
@@ -688,10 +612,6 @@ glm_train = glm(
   family=binomial
 )
 summary(glm_train)
-
-cat("\n")
-cat("*** LR: neighborhood ~ service level ***")
-cat("\n")
 
 # logistic regression model fit:
 glm_train = glm(
@@ -701,10 +621,6 @@ glm_train = glm(
 )
 summary(glm_train)
 
-cat("\n")
-cat("*** LR: neighborhood ~ source ***")
-cat("\n")
-
 # logistic regression model fit:
 glm_train = glm(
   Neighborhood~source.f,
@@ -712,10 +628,6 @@ glm_train = glm(
   family=binomial
 )
 summary(glm_train)
-
-cat("\n")
-cat("*** LR: zipcode ~ cat_1 ***")
-cat("\n")
 
 # logistic regression model fit:
 glm_train = glm(
@@ -725,10 +637,6 @@ glm_train = glm(
 )
 summary(glm_train)
 
-cat("\n")
-cat("*** LR: zipcode ~ cat_2 ***")
-cat("\n")
-
 # logistic regression model fit:
 glm_train = glm(
   ZIP~cat_2.f,
@@ -736,10 +644,6 @@ glm_train = glm(
   family=binomial
 )
 summary(glm_train)
-
-cat("\n")
-cat("*** LR: zipcode ~ cat_3 ***")
-cat("\n")
 
 # logistic regression model fit:
 glm_train = glm(
@@ -749,10 +653,6 @@ glm_train = glm(
 )
 summary(glm_train)
 
-cat("\n")
-cat("*** LR: zipcode ~ service level ***")
-cat("\n")
-
 # logistic regression model fit:
 glm_train = glm(
   ZIP~service.f,
@@ -760,10 +660,6 @@ glm_train = glm(
   family=binomial
 )
 summary(glm_train)
-
-cat("\n")
-cat("*** LR: zipcode ~ source ***")
-cat("\n")
 
 # logistic regression model fit:
 glm_train = glm(
@@ -826,16 +722,11 @@ Steps:
 5. Document observations below  
 
 Observations:  
-1. Each method returns the same variables and order of selection  
-3. Results confirm previous findings/analysis/conjecture  
-4. Significant variables will be useful for fitting other models  
-5. Best subset plot visualizes results for evaluation  
+1. Each method returned similar variables and order of selection  
+2. Results confirm previous findings/analysis/conjecture  
+3. Neighborhood variable showed some association with call category  
 
 ```{r p2.2}
-
-cat("\n")
-cat("*** helper function for best subset selection ***")
-cat("\n")
 
 # helper function for best subset selection:
 summaryMetrics <- NULL
@@ -864,10 +755,6 @@ for ( myMthd in my_methods ) {
       value=summRes[[metricName]]))
   }
 }
-
-cat("\n")
-cat("*** plot subset ***")
-cat("\n")
 
 # plot best subset:
 ggplot(
@@ -908,10 +795,6 @@ Observations:
 
 ```{r p2.3}
 
-cat("\n")
-cat("*** fit and plot lasso model ***")
-cat("\n")
-
 # fit and plot lasso model:
 # x = model.matrix(noyes~., train_scaled_reduced)[,-1]
 # y = train_scaled_reduced[,'noyes']
@@ -926,10 +809,6 @@ y = train_scaled[1:4973 ,'Neighborhood']
 # )
 # plot(lasso_fit_lr)
 
-cat("\n")
-cat("*** determine best lambda values ***")
-cat("\n")
-
 # determine best lambda values:
 # cv_lasso_fit_lr = cv.glmnet(
 #   x, y,
@@ -938,19 +817,11 @@ cat("\n")
 # )
 # plot(cv_lasso_fit_lr)
 
-cat("\n")
-cat("*** determine lambda value; 1 SD away ***")
-cat("\n")
-
 # determine best lambda values; 1 SD away:
 # lowest_error_plus_one_sd_lambda = cv_lasso_fit_lr$lambda.1se
 
 # evaluate which dashed lines is best:
 # print(log(lowest_error_plus_one_sd_lambda))
-
-cat("\n")
-cat("*** lasso model prediction ***")
-cat("\n")
 
 # determine best lambda values; 1 SD away:
 # predict(
@@ -980,10 +851,6 @@ Observations:
 3. Measures plot are a good method of evaluating metrics  
 
 ```{r p2.4}
-
-cat("\n")
-cat("*** helper function to predict model quality ***")
-cat("\n")
 
 # helper function to predict model quality:
 assess_prediction = function(truth, predicted, print_results=FALSE) {
@@ -1042,10 +909,6 @@ assess_prediction = function(truth, predicted, print_results=FALSE) {
               false_discovery_pct=false_discovery_pct,
               false_positive_rate_pct=false_positive_rate_pct))
 }
-
-cat("\n")
-cat("*** helper function for cross validation ***")
-cat("\n")
 
 # helper function for cross validation:
 # xvalNoYes= function(data, nTries=20, kXval=5) {
@@ -1131,10 +994,6 @@ number_of_tries = 3
 
 ```{r fig.width=9, fig.height=6, echo=FALSE}
 
-cat("\n")
-cat("*** cross validation plot ***")
-cat("\n")
-
 # cross validation plot:
 # df_output_melted = melt(df_output, id.vars=c('sim'))
 # p = ggplot(
@@ -1151,4 +1010,6 @@ cat("\n")
 
 # Conclusion
 
-Summarize findings once analysis has been completed.
+1. Summary statistics revealed that most variables with categorical; neighborhood/location data is of particular interest and would be useful for developing application features.  
+2. Time/location data will be used for additional analysis (time series/spatial analysis).  
+3. Categorical variable conversion was not as successful as expected; variables did not translate to good model fit.  
