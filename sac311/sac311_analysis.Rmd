@@ -331,8 +331,7 @@ Observations:
 
 ```{r p1.3}
 
-# Create historgram for continuous variables to evaluate distribution:
-
+# Create historgram to evaluate distribution:
 hist(
   train_col_numeric$district.f,
   main='Council District',
@@ -349,7 +348,7 @@ hist(
   breaks=10
 )
 
-# Create histogram, stacked bar chart; remaining variables
+# create histogram, stacked bar chart:
 qplot_district = (qplot(
   train_col_numeric$district.f,
   binwidth = 1,
@@ -380,19 +379,11 @@ Observations:
 
 ```{r p1.4}
 
-cat("\n")
-cat("*** contingency table for neighborhood and source ***")
-cat("\n")
-
 # Create contingency table:
 table(
   train_data$Neighborhood,
   train_data$CategoryLevel1
 )
-
-cat("\n")
-cat("*** contingency table for zipcode and source ***")
-cat("\n")
 
 # Create contingency table:
 table(
@@ -413,16 +404,13 @@ Steps:
 
 Observations:  
 1. Chi-squared test shows low p-values for categorial variables  
-2. T-test for continous variables  
-3. Chi-squared and t-test are a good method for evaluating significance  
-
-Observations:  
-1. Create plots for significant factors based on p-values  
+2. T-test for continuous variables; not as effective  
+3. Create plots for significant factors based on p-values  
 
 ```{r p1.5}
 
 cat("\n")
-cat("*** t-test for continous variables ***")
+cat("*** t-test for continuous variables ***")
 cat("\n")
 
 # Chi-Squared test for continuous variables:
@@ -430,10 +418,6 @@ t.test(
   as.numeric(train_col$neighborhood.f),
   train_data$service.f
 )
-
-cat("\n")
-cat("*** chi-squared test for categorical variables ***")
-cat("\n")
 
 # Chi-Squared test for categorical variables:
 chisq.test(
