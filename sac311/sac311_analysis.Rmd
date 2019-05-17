@@ -44,13 +44,13 @@ To-Do List:
 knitr::opts_chunk$set(echo = TRUE)
 
 # Install any necessary packages:
-install.packages("ggcorrplot")
+# install.packages("ggcorrplot")
 
 library(dplyr)
 library(readr)
 library(stringr)
 library(ggplot2)
-library("ggcorrplot")
+library(ggcorrplot)
 library(gridExtra)
 library(leaps)
 library(glmnet)
@@ -298,7 +298,7 @@ Observations:
 2. Spearman coefficient (measured between 0 and 1) indicates MONOTONIC (linear or not) correlation; plots showed relative low correlation between most variables  
 3. Although entire variables may have low correlation, there may be individual trends between variables which will be explored in the following sections  
 
-```{r p1.2A, fig.height = 8, fig.width = 8, fig.align = "center"}
+```{r p1.2B, fig.height = 8, fig.width = 8, fig.align = "center"}
 
 # create correlation plot:
 corr <- round(cor(train_col_numeric, method="pearson", use="everything"), 4)
@@ -306,7 +306,7 @@ ggcorrplot(corr, title="Correlation Plot - Pearson (Linear)")
 
 ```
 
-```{r p1.2B, fig.height = 8, fig.width = 8, fig.align = "center"}
+```{r p1.2C, fig.height = 8, fig.width = 8, fig.align = "center"}
 
 # create correlation plot:
 corr <- round(cor(train_col_numeric, method="spearman", use="everything"), 4)
