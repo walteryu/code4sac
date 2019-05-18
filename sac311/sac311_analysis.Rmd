@@ -412,20 +412,54 @@ points(train_col[,c('Longitude', 'Latitude')], col='blue', pch=20)
 
 ```{r p1.4}
 
+# test plot by county:
+# yolo <- counties[counties$NAME == 'Yolo', ]
+# plot(yolo, col='light gray', border='gray')
+
+# organize service calls by category type:
 tb <- sort(table(train_col$CategoryLevel1))[-1]
 tb
 
-# xy <- coordinates(train_col_numeric)
-xy <- coordinates(train_col_numeric)
+# duplicate training data for manipulation:
+train_xy <- train_col
 
+# extract lag/long and convert to coordinates:
+# xy <- train_xy[,15:14]
+# coordinates(xy)
+
+xy <- train_xy[,c('XCoord', 'YCoord')]
 dim(xy)
-## [1] 2661    2
+# head(xy, 5)
 
+# remove duplications and verify dimensions:
 xy <- unique(xy)
 dim(xy)
-## [1] 1208    2
+# head(xy, 5)
 
-head(xy)
+# calculate mean center
+mc <- apply(xy, 2, mean)
+# calculate standard distance
+sd <- sqrt(sum((xy[,1] - mc[1])^2 + (xy[,2] - mc[2])^2) / nrow(xy))
+
+# plot county:
+county <- counties[counties$NAME == 'Sacramento', ]
+# plot(county , col='light blue', border='gray')
+# plot(county , col='light blue')
+
+# plot points:
+plot(county)
+points(train_col[,c('Longitude', 'Latitude')], col='blue', pch=20)
+# points(train_col[,c('XCoord', 'YCoord', 'CategoryLevel1')], cex=.5)
+# points(train_col, cex=.5)
+
+points(cbind(mc[1], mc[2]), pch='*', col='red', cex=5)
+# make a circle
+bearing <- 1:360 * pi/180
+cx <- mc[1] + sd * cos(bearing)
+cy <- mc[2] + sd * sin(bearing)
+circle <- cbind(cx, cy)
+lines(circle, col='red', lwd=2)
+
 
 ```
 
