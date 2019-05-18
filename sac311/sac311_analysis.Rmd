@@ -471,7 +471,11 @@ CountyArea <- raster::area(county)
 dens <- nrow(xy) / CountyArea
 
 # rasterize into tiles:
-rc <- raster(county)
+city <- sp_data('city')
+city
+county
+
+rc <- raster(city)
 res(rc) <- 1000
 rc
 
