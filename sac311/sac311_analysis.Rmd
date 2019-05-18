@@ -45,10 +45,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Install packages with rcran:
 # install.packages("ggcorrplot")
-install.packages("maptools")
+# install.packages("maptools")
+# install.packages("dplyr")
 
 # Install packages with github:
-# devtools::install_github('rspatial/rspatial')
+# devtools::install_github("rspatial/rspatial")
 
 library(dplyr)
 library(readr)
@@ -75,6 +76,7 @@ library(tidyr)
 
 # Spatial Package:
 library(maptools)
+# library(rspatial)
 
 ```
 
@@ -383,16 +385,47 @@ Observations:
 1. Since variables do not appear to have strong correlations and EDA shows that most variables only have an association for individual values/levels  
 2. As a result, explore other analytical methods to identify trends; primarily, time series and geospatial analysis  
 
-```{r p1.2C, fig.height = 8, fig.width = 8, fig.align = "center"}
+```{r p1.3A, fig.height = 6, fig.width = 12, fig.align = "center"}
 
+# verify data dimensions/columns:
 # str(train_col)
 # dim(train_col)
 
-# plot service call data to map:
+# plot service call data on world map:
 plot(train_col[,15:14], cex=0.5, col='red')
 ## Checking rgeos availability: TRUE
 data(wrld_simpl)
 plot(wrld_simpl, add=TRUE)
+
+```
+
+```{r p1.3B, fig.height = 8, fig.width = 8, fig.align = "center"}
+
+# plot service call data on state map:
+if (!require("rspatial")) devtools::install_github('rspatial/rspatial')
+library(rspatial)
+counties <- sp_data('counties')
+plot(counties)
+points(train_col[,c('Longitude', 'Latitude')], col='blue', pch=20)
+
+```
+
+```{r p1.4}
+
+tb <- sort(table(train_col$CategoryLevel1))[-1]
+tb
+
+# xy <- coordinates(train_col_numeric)
+xy <- coordinates(train_col_numeric)
+
+dim(xy)
+## [1] 2661    2
+
+xy <- unique(xy)
+dim(xy)
+## [1] 1208    2
+
+head(xy)
 
 ```
 
