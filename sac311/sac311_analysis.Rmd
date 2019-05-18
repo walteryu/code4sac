@@ -404,13 +404,14 @@ plot(wrld_simpl, add=TRUE)
 # plot service call data on state map:
 if (!require("rspatial")) devtools::install_github('rspatial/rspatial')
 library(rspatial)
+
 counties <- sp_data('counties')
 plot(counties)
 points(train_col[,c('Longitude', 'Latitude')], col='blue', pch=20)
 
 ```
 
-```{r p1.4}
+```{r p1.3C}
 
 # test plot by county:
 # yolo <- counties[counties$NAME == 'Yolo', ]
@@ -427,30 +428,31 @@ train_xy <- train_col
 # xy <- train_xy[,15:14]
 # coordinates(xy)
 
-xy <- train_xy[,c('XCoord', 'YCoord')]
+# extract lag/long and convert to coordinates:
+# xy <- train_xy[,c('XCoord', 'YCoord')]
+xy <- train_xy[,c('Longitude', 'Latitude')]
 dim(xy)
-# head(xy, 5)
 
 # remove duplications and verify dimensions:
 xy <- unique(xy)
 dim(xy)
-# head(xy, 5)
 
 # calculate mean center
 mc <- apply(xy, 2, mean)
 # calculate standard distance
 sd <- sqrt(sum((xy[,1] - mc[1])^2 + (xy[,2] - mc[2])^2) / nrow(xy))
 
+```
+
+```{r p1.3D, fig.height = 8, fig.width = 8, fig.align = "center"}
+
 # plot county:
 county <- counties[counties$NAME == 'Sacramento', ]
-# plot(county , col='light blue', border='gray')
-# plot(county , col='light blue')
+plot(county)
 
 # plot points:
-plot(county)
 points(train_col[,c('Longitude', 'Latitude')], col='blue', pch=20)
-# points(train_col[,c('XCoord', 'YCoord', 'CategoryLevel1')], cex=.5)
-# points(train_col, cex=.5)
+# points(xy, cex=.5)
 
 points(cbind(mc[1], mc[2]), pch='*', col='red', cex=5)
 # make a circle
@@ -460,6 +462,23 @@ cy <- mc[2] + sd * sin(bearing)
 circle <- cbind(cx, cy)
 lines(circle, col='red', lwd=2)
 
+```
+
+```{r p1.3E}
+
+# calculate service call density:
+CountyArea <- raster::area(county)
+dens <- nrow(xy) / CountyArea
+
+# rasterize into tiles:
+rc <- raster(county)
+res(rc) <- 1000
+rc
+
+# nc <- rasterize(coordinates(crime), r, fun='count', background=0)
+nc <- rasterize(xy, rc, fun='count', background=0)
+plot(nc)
+plot(county, add=TRUE)
 
 ```
 
