@@ -43,8 +43,12 @@ To-Do List:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
-# Install any necessary packages:
+# Install packages with rcran:
 # install.packages("ggcorrplot")
+install.packages("maptools")
+
+# Install packages with github:
+# devtools::install_github('rspatial/rspatial')
 
 library(dplyr)
 library(readr)
@@ -68,6 +72,9 @@ library(reshape2)
 # Neural Net Packages:
 library(neuralnet)
 library(tidyr)
+
+# Spatial Package:
+library(maptools)
 
 ```
 
@@ -184,9 +191,9 @@ train_col = train_reduced[, c(
 # dim(train_col)
 
 # EDA output; train_data:
+# summary(train_col)
 dim(train_col)
 str(train_col)
-summary(train_col)
 
 # Encode categorial variables as factors:
 # https://stats.idre.ucla.edu/r/modules/coding-for-categorical-variables-in-regression-models/
@@ -253,7 +260,9 @@ train_col_numeric[i] <- lapply(train_col_numeric[i], as.numeric)
 # head(train_col_numeric, 5)
 
 # summary statistics for numeric values
-summary(train_col_numeric)
+# summary(train_col_numeric)
+dim(train_col_numeric)
+str(train_col_numeric)
 
 ```
 
@@ -361,6 +370,29 @@ qplot_district = (qplot(
   + xlab('Predictor Variable - Council District Number')
 )
 qplot_district
+
+```
+
+References:  
+Spatial plot: https://www.rspatial.org/analysis/4-interpolation.html#temperature-in-california  
+
+Steps:  
+1. Develop spatial analysis plots below to identify trends  
+
+Observations:  
+1. Since variables do not appear to have strong correlations and EDA shows that most variables only have an association for individual values/levels  
+2. As a result, explore other analytical methods to identify trends; primarily, time series and geospatial analysis  
+
+```{r p1.2C, fig.height = 8, fig.width = 8, fig.align = "center"}
+
+# str(train_col)
+# dim(train_col)
+
+# plot service call data to map:
+plot(train_col[,15:14], cex=0.5, col='red')
+## Checking rgeos availability: TRUE
+data(wrld_simpl)
+plot(wrld_simpl, add=TRUE)
 
 ```
 
@@ -538,7 +570,13 @@ Observations:
 
 ```{r p1.7}
 
-# Comment out LR code below.
+# LR for neighborhood variable; remaining model fits are below:
+glm_train = glm(
+  Neighborhood~.,
+  data=train_col,
+  family=binomial
+)
+summary(glm_train)
 
 ```
 
