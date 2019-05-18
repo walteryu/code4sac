@@ -91,6 +91,8 @@ Observations:
 1. Dataset consists of categorical variables and time/location data  
 2. Most categorical have multiple levels; some have many (e.g. category level)  
 3. Time data recorded as timestamps; locations in lat/long coordinates  
+4. Call category, time and location data appear most relevant  
+5. As a result, those variables were extracted as a subset  
 
 Data Manipulation:  
 1. Original dataset = ~1.2M rows x 27 columns  
