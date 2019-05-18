@@ -382,16 +382,35 @@ Observations:
 ```{r p1.4}
 
 # Create contingency table:
-table(
+# table(
+#   train_data$Neighborhood,
+#   train_data$CategoryLevel1
+# )
+
+# Create contingency table:
+# table(
+#   train_data$Neighborhood,
+#   train_data$CategoryLevel2
+# )
+
+```
+
+```{r p1.4A}
+
+# attempt at mosaic plot
+# https://stats.stackexchange.com/questions/147721/which-is-the-best-visualization-for-contingency-tables
+
+
+# install.packages("vcd")
+# library(vcd)
+# require(vcd)
+
+tab <- table(
   train_data$Neighborhood,
   train_data$CategoryLevel1
 )
-
-# Create contingency table:
-table(
-  train_data$Neighborhood,
-  train_data$CategoryLevel2
-)
+# mosaic(tab, shade=T, legend=T)
+# assoc(tab, shade=T, legend=T)
 
 ```
 
@@ -519,7 +538,10 @@ Observations:
 
 ```{r p1.7}
 
-# logistic regression model fit:
+# Comment out LR code below.
+
+```
+
 glm_train = glm(
   CategoryLevel1~neighborhood.f,
   data=train_col,
@@ -527,7 +549,6 @@ glm_train = glm(
 )
 summary(glm_train)
 
-# logistic regression model fit:
 glm_train = glm(
   CategoryLevel1~district.f,
   data=train_col,
@@ -535,7 +556,6 @@ glm_train = glm(
 )
 summary(glm_train)
 
-# logistic regression model fit:
 glm_train = glm(
   CategoryLevel1~zip.f,
   data=train_col,
@@ -543,7 +563,6 @@ glm_train = glm(
 )
 summary(glm_train)
 
-# logistic regression model fit:
 glm_train = glm(
   CategoryLevel2~neighborhood.f,
   data=train_col,
@@ -551,7 +570,6 @@ glm_train = glm(
 )
 summary(glm_train)
 
-# logistic regression model fit:
 glm_train = glm(
   CategoryLevel2~district.f,
   data=train_col,
@@ -559,7 +577,6 @@ glm_train = glm(
 )
 summary(glm_train)
 
-# logistic regression model fit:
 glm_train = glm(
   CategoryLevel2~zip.f,
   data=train_col,
@@ -567,7 +584,6 @@ glm_train = glm(
 )
 summary(glm_train)
 
-# logistic regression model fit:
 glm_train = glm(
   CategoryLevel3~neighborhood.f,
   data=train_col,
@@ -575,7 +591,6 @@ glm_train = glm(
 )
 summary(glm_train)
 
-# logistic regression model fit:
 glm_train = glm(
   CategoryLevel3~district.f,
   data=train_col,
@@ -583,7 +598,6 @@ glm_train = glm(
 )
 summary(glm_train)
 
-# logistic regression model fit:
 glm_train = glm(
   CategoryLevel3~zip.f,
   data=train_col,
@@ -591,7 +605,6 @@ glm_train = glm(
 )
 summary(glm_train)
 
-# logistic regression model fit:
 glm_train = glm(
   Neighborhood~cat_1.f,
   data=train_col,
@@ -599,7 +612,6 @@ glm_train = glm(
 )
 summary(glm_train)
 
-# logistic regression model fit:
 glm_train = glm(
   Neighborhood~cat_2.f,
   data=train_col,
@@ -607,7 +619,6 @@ glm_train = glm(
 )
 summary(glm_train)
 
-# logistic regression model fit:
 glm_train = glm(
   Neighborhood~cat_3.f,
   data=train_col,
@@ -615,7 +626,6 @@ glm_train = glm(
 )
 summary(glm_train)
 
-# logistic regression model fit:
 glm_train = glm(
   Neighborhood~service.f,
   data=train_col,
@@ -623,7 +633,6 @@ glm_train = glm(
 )
 summary(glm_train)
 
-# logistic regression model fit:
 glm_train = glm(
   Neighborhood~source.f,
   data=train_col,
@@ -631,7 +640,6 @@ glm_train = glm(
 )
 summary(glm_train)
 
-# logistic regression model fit:
 glm_train = glm(
   ZIP~cat_1.f,
   data=train_col,
@@ -639,7 +647,6 @@ glm_train = glm(
 )
 summary(glm_train)
 
-# logistic regression model fit:
 glm_train = glm(
   ZIP~cat_2.f,
   data=train_col,
@@ -647,7 +654,6 @@ glm_train = glm(
 )
 summary(glm_train)
 
-# logistic regression model fit:
 glm_train = glm(
   ZIP~cat_3.f,
   data=train_col,
@@ -655,7 +661,6 @@ glm_train = glm(
 )
 summary(glm_train)
 
-# logistic regression model fit:
 glm_train = glm(
   ZIP~service.f,
   data=train_col,
@@ -663,7 +668,6 @@ glm_train = glm(
 )
 summary(glm_train)
 
-# logistic regression model fit:
 glm_train = glm(
   ZIP~source.f,
   data=train_col,
@@ -671,7 +675,6 @@ glm_train = glm(
 )
 summary(glm_train)
 
-```
 
 # Part 2 - Logistic Regression
 
