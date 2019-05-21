@@ -46,10 +46,6 @@ knitr::opts_chunk$set(echo = TRUE)
 # Install packages with rcran:
 # install.packages("ggcorrplot")
 # install.packages("maptools")
-# install.packages("dplyr")
-
-# Install packages with github:
-# devtools::install_github("rspatial/rspatial")
 
 library(dplyr)
 library(readr)
@@ -74,8 +70,15 @@ library(reshape2)
 library(neuralnet)
 library(tidyr)
 
-# Spatial Package:
+# Spatial Packages:
 library(maptools)
+
+# install devtools/rspatial:
+# install.packages("devtools")
+library(devtools)
+
+# Install packages with github:
+# devtools::install_github("rspatial/rspatial")
 # library(rspatial)
 
 ```
@@ -268,7 +271,7 @@ str(train_col_numeric)
 
 ```
 
-```{r p1.2A}
+```{r p1.2A, eval=FALSE}
 
 # save code in case prediction/validation is necessary:
 # import test_data:
@@ -376,7 +379,8 @@ qplot_district
 ```
 
 References:  
-Spatial plot: https://www.rspatial.org/analysis/4-interpolation.html#temperature-in-california  
+1. Spatial plot: https://rspatial.org/rosu/Chapter5.html  
+2. R Spatial Textbook: https://rspatial.org/rosu/ROSU.pdf  
 
 Steps:  
 1. Develop spatial analysis plots below to identify trends  
@@ -385,7 +389,7 @@ Observations:
 1. Since variables do not appear to have strong correlations and EDA shows that most variables only have an association for individual values/levels  
 2. As a result, explore other analytical methods to identify trends; primarily, time series and geospatial analysis  
 
-```{r p1.3A, fig.height = 6, fig.width = 12, fig.align = "center"}
+```{r p1.3A, fig.height = 6, fig.width = 12, fig.align = "center", eval=FALSE}
 
 # verify data dimensions/columns:
 # str(train_col)
@@ -393,18 +397,16 @@ Observations:
 
 # plot service call data on world map:
 plot(train_col[,15:14], cex=0.5, col='red')
+
 ## Checking rgeos availability: TRUE
 data(wrld_simpl)
 plot(wrld_simpl, add=TRUE)
 
 ```
 
-```{r p1.3B, fig.height = 8, fig.width = 8, fig.align = "center"}
+```{r p1.3B, fig.height = 8, fig.width = 8, fig.align = "center", eval=FALSE}
 
 # plot service call data on state map:
-if (!require("rspatial")) devtools::install_github('rspatial/rspatial')
-library(rspatial)
-
 counties <- sp_data('counties')
 plot(counties)
 points(train_col[,c('Longitude', 'Latitude')], col='blue', pch=20)
@@ -412,6 +414,10 @@ points(train_col[,c('Longitude', 'Latitude')], col='blue', pch=20)
 ```
 
 ```{r p1.3C}
+
+# load rspatial if needed:
+if (!require("rspatial")) devtools::install_github('rspatial/rspatial')
+library(rspatial)
 
 # test plot by county:
 # yolo <- counties[counties$NAME == 'Yolo', ]
@@ -451,7 +457,7 @@ county <- counties[counties$NAME == 'Sacramento', ]
 plot(county)
 
 # plot points:
-points(train_col[,c('Longitude', 'Latitude')], col='blue', pch=20)
+points(train_xy[,c('Longitude', 'Latitude')], col='blue', pch=20)
 # points(xy, cex=.5)
 
 points(cbind(mc[1], mc[2]), pch='*', col='red', cex=5)
@@ -466,23 +472,10 @@ lines(circle, col='red', lwd=2)
 
 ```{r p1.3E}
 
-# calculate service call density:
-CountyArea <- raster::area(county)
-dens <- nrow(xy) / CountyArea
-
-# rasterize into tiles:
-city <- sp_data('city')
-city
-county
-
-rc <- raster(city)
-res(rc) <- 1000
-rc
-
-# nc <- rasterize(coordinates(crime), r, fun='count', background=0)
-nc <- rasterize(xy, rc, fun='count', background=0)
-plot(nc)
-plot(county, add=TRUE)
+# implement PPA:
+# plot(x, y, type='n')
+# text(xy[,1], xy[,2], z)
+# contour(x, y, zm, add=TRUE, lty=2)
 
 ```
 
@@ -501,38 +494,38 @@ Observations:
 2. Contingency tables show distributions of variables and breaks them down by level; certain neighborhoods show association with particular categories  
 3. These associations will help identify potential issues by neighborhood  
 
-```{r p1.4}
+```{r p1.4, eval=FALSE}
 
 # Create contingency table:
-# table(
-#   train_data$Neighborhood,
-#   train_data$CategoryLevel1
-# )
+table(
+ train_data$Neighborhood,
+ train_data$CategoryLevel1
+)
 
 # Create contingency table:
-# table(
-#   train_data$Neighborhood,
-#   train_data$CategoryLevel2
-# )
+table(
+ train_data$Neighborhood,
+ train_data$CategoryLevel2
+)
 
 ```
 
-```{r p1.4A}
+```{r p1.4A, eval=FALSE}
 
-# attempt at mosaic plot
+# attempt at mosaic plot:
 # https://stats.stackexchange.com/questions/147721/which-is-the-best-visualization-for-contingency-tables
 
 
-# install.packages("vcd")
-# library(vcd)
-# require(vcd)
+install.packages("vcd")
+library(vcd)
+require(vcd)
 
 tab <- table(
   train_data$Neighborhood,
   train_data$CategoryLevel1
 )
-# mosaic(tab, shade=T, legend=T)
-# assoc(tab, shade=T, legend=T)
+mosaic(tab, shade=T, legend=T)
+assoc(tab, shade=T, legend=T)
 
 ```
 
@@ -550,11 +543,7 @@ Observations:
 2. T-test for continuous variables; not as effective  
 3. Create plots for significant factors based on p-values  
 
-```{r p1.5}
-
-cat("\n")
-cat("*** t-test for continuous variables ***")
-cat("\n")
+```{r p1.5, eval=FALSE}
 
 # Chi-Squared test for continuous variables:
 t.test(
@@ -591,10 +580,6 @@ Observations:
 5. As a result, PCA calculates did not identify any useful trends  
 
 ```{r p1.6}
-
-cat("\n")
-cat("*** Plot variance for first several PCA ***")
-cat("\n")
 
 # train_scaled = train_data %>% mutate_if(is.numeric, scale)
 # train_dummy = model.matrix(noyes ~., train_scaled)[,-1]
@@ -660,9 +645,7 @@ Observations:
 
 ```{r p1.7}
 
-# comment out LR code below.
-
-```
+# LR model fit:
 
 glm_train = glm(
   CategoryLevel1~neighborhood.f,
@@ -797,6 +780,7 @@ glm_train = glm(
 )
 summary(glm_train)
 
+```
 
 # Part 2 - Logistic Regression
 
@@ -817,21 +801,21 @@ Observations:
 2. Only numeric values selected for pairs plot  
 3. Run pairs plot first before moving on with remaining analysis
 
-```{r p2.1}
+```{r p2.1, eval=FALSE}
 
 # calculated here for analysis; comment out to reduce runtime
 # create pairs plot of scaled numeric predictors:
-# columns_is_numeric = unlist(lapply(train_reduced, is.numeric))
-# numeric_cols = names(train_data)[columns_is_numeric]
+columns_is_numeric = unlist(lapply(train_reduced, is.numeric))
+numeric_cols = names(train_data)[columns_is_numeric]
 
-# train_scaled_numeric = train_scaled %>% select_if(is.numeric)
-# pairs(
-#   train_scaled_numeric,
-#   pch=25,
-#   cex=0.8,
-#   col=c(ifelse(train_scaled$source.f == '>1', 'purple', 'red')),
-#   main='Pairs Plot - Source Level '
-# )
+train_scaled_numeric = train_scaled %>% select_if(is.numeric)
+pairs(
+  train_scaled_numeric,
+  pch=25,
+  cex=0.8,
+  col=c(ifelse(train_scaled$source.f == '>1', 'purple', 'red')),
+  main='Pairs Plot - Source Level '
+)
 
 ```
 
@@ -920,42 +904,42 @@ Observations:
 2. Additional calculations made to evaluate error rates  
 3. Error rate also calculated for 1SD away  
 
-```{r p2.3}
+```{r p2.3, eval=FALSE}
 
 # fit and plot lasso model:
-# x = model.matrix(noyes~., train_scaled_reduced)[,-1]
-# y = train_scaled_reduced[,'noyes']
+x = model.matrix(noyes~., train_scaled_reduced)[,-1]
+y = train_scaled_reduced[,'noyes']
 
 x = model.matrix(Neighborhood~., train_scaled)[,-1]
 y = train_scaled[1:4973 ,'Neighborhood']
 
-# lasso_fit_lr = glmnet(
-#   x, y,
-#   alpha=1,
-#   family='binomial'
-# )
-# plot(lasso_fit_lr)
+lasso_fit_lr = glmnet(
+  x, y,
+  alpha=1,
+  family='binomial'
+ )
+plot(lasso_fit_lr)
 
 # determine best lambda values:
-# cv_lasso_fit_lr = cv.glmnet(
-#   x, y,
-#   family='binomial',
-#   type.measure='class'
-# )
-# plot(cv_lasso_fit_lr)
+cv_lasso_fit_lr = cv.glmnet(
+  x, y,
+  family='binomial',
+  type.measure='class'
+)
+plot(cv_lasso_fit_lr)
 
 # determine best lambda values; 1 SD away:
-# lowest_error_plus_one_sd_lambda = cv_lasso_fit_lr$lambda.1se
+lowest_error_plus_one_sd_lambda = cv_lasso_fit_lr$lambda.1se
 
 # evaluate which dashed lines is best:
-# print(log(lowest_error_plus_one_sd_lambda))
+print(log(lowest_error_plus_one_sd_lambda))
 
 # determine best lambda values; 1 SD away:
-# predict(
-#   lasso_fit_lr,
-#   type='coefficients',
-#   s=lowest_error_plus_one_sd_lambda
-# )
+predict(
+  lasso_fit_lr,
+  type='coefficients',
+  s=lowest_error_plus_one_sd_lambda
+)
 
 ```
 
@@ -977,7 +961,7 @@ Observations:
 2. Measures will be used to compare against other model fits  
 3. Measures plot are a good method of evaluating metrics  
 
-```{r p2.4}
+```{r p2.4, eva=FALSE}
 
 # helper function to predict model quality:
 assess_prediction = function(truth, predicted, print_results=FALSE) {
@@ -1110,28 +1094,28 @@ number_of_tries = 3
 ```{r final-p2.4A, results="hide"}
 
 # reduce to smaller sample size to reduce runtime:
-# train_scaled[1:5000,]
-# df_output = xvalLR(
-#   train_scaled,
-#   kXval=number_of_folds,
-#   nTries=number_of_tries
-# )
+train_scaled[1:5000,]
+df_output = xvalLR(
+  train_scaled,
+  kXval=number_of_folds,
+  nTries=number_of_tries
+)
 
 ```
 
-```{r fig.width=9, fig.height=6, echo=FALSE}
+```{r fig.width=9, fig.height=6, eval=FALSE, echo=FALSE}
 
 # cross validation plot:
-# df_output_melted = melt(df_output, id.vars=c('sim'))
-# p = ggplot(
-#   df_output_melted,
-#   aes(x=variable, y=value, colour=variable)
-# ) + geom_boxplot()
-# title = sprintf(
-#   'Performance Measures Plot for LR; %d-fold Cross Validation',
-#   number_of_folds
-# )
-# p + ggtitle(title) + xlab("Measure Type") + ylab("Measure Value %")
+df_output_melted = melt(df_output, id.vars=c('sim'))
+p = ggplot(
+  df_output_melted,
+  aes(x=variable, y=value, colour=variable)
+) + geom_boxplot()
+title = sprintf(
+  'Performance Measures Plot for LR; %d-fold Cross Validation',
+  number_of_folds
+)
+p + ggtitle(title) + xlab("Measure Type") + ylab("Measure Value %")
 
 ```
 
