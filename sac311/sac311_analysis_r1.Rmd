@@ -164,6 +164,7 @@ dim(train_data)
 
 # reduce to smaller sample size to reduce runtime:
 train_reduced = train_data[1:5000,]
+write.csv(train_reduced, file = "train_5k.csv")
 
 # reduce to smaller sample size for relevant data:
 train_col = train_reduced[, c(
@@ -453,6 +454,7 @@ sd <- sqrt(sum((xy[,1] - mc[1])^2 + (xy[,2] - mc[2])^2) / nrow(xy))
 ```{r p1.3D, fig.height = 8, fig.width = 8, fig.align = "center"}
 
 # plot county:
+counties <- sp_data('counties')
 county <- counties[counties$NAME == 'Sacramento', ]
 plot(county)
 
@@ -473,9 +475,23 @@ lines(circle, col='red', lwd=2)
 ```{r p1.3E}
 
 # implement PPA:
-# plot(x, y, type='n')
-# text(xy[,1], xy[,2], z)
-# contour(x, y, zm, add=TRUE, lty=2)
+x <- train_xy[,14]
+y <- train_xy[,15]
+z <- x + y
+zm <- matrix(z, ncol=2)
+
+r <- raster(xmn=-87.5, xmx=-87, ymn=-87.5, ymx=-87, ncol=50, nrow=50)
+quads <- rasterToPolygons(r)
+
+# plot(x, y, xlim=c(0,99), ylim=c(0,99), col='red', pch=20, axes=F)
+# plot(quads, add=TRUE, border='gray')
+
+xy <- cbind(x,y)
+p <- rasterize(xy, r, fun='count', background=0)
+plot(p)
+plot(quads, add=TRUE, border='gray')
+points(x, y, pch=20)
+
 
 ```
 
