@@ -10,7 +10,7 @@ Code for Sacramento is develop a neighborhood portal application; as a result, t
 
 311 service call dataset from City of Sacramento; summary statistics for the full and partial datasets are listed below. The data is available in geospatial, tabular or API format; the tabular format is used for this analysis to identify important neighborhoods and trends which are relevant to developing the application.  
 
-City of Sacramento 311 Service Call [Dataset](https://data.cityofsacramento.org/datasets/08794a6695b3483f889e9bef122517e9_0)
+City of Sacramento 311 [Service Call Dataset](https://data.cityofsacramento.org/datasets/08794a6695b3483f889e9bef122517e9_0)
 
 ### Methodology
 1. Exploratory data analysis (EDA) and model fits showed that spatial and temporal analysis would be more appropriate methods of analysis.
@@ -20,7 +20,7 @@ City of Sacramento 311 Service Call [Dataset](https://data.cityofsacramento.org/
 ### Installation
 1. Notebook is written in R markdown, so be sure that R Studio is installed then clone this repository.
 2. Load notebook in R Studio, run/download dependencies.
-3. For spatial analysis, download and start the GeoDa [spatial analysis tool](https://geodacenter.github.io/download.html) which was developed by the University of Chicago [spatial data science program](https://spatial.uchicago.edu/).
+3. For spatial analysis, download and start the GeoDa [spatial analysis tool](https://geodacenter.github.io/download.html) which was developed by the University of Chicago [Spatial Data Science Program](https://spatial.uchicago.edu/).
 
 ### Citations
 
