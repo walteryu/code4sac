@@ -18,11 +18,11 @@ City of Sacramento 311 Service Call [Dataset](https://data.cityofsacramento.org/
 
 
 ### Installation
-1. Follow tutorial instructions below to create model from Custom Vision Website
-2. For Python example: Clone this repository, update product keys and run example
-3. For trained model: Clone this repository and restore image located in images directory
-4. Tutorial and trained models are organized into separate directories within this repository
-5. Additional trained models under development and will be shared when available
+1. Notebook is written in R markdown, so be sure that R Studio is installed then clone this repository.
+2. Load notebook in R Studio, run/download dependencies.
+3. For spatial analysis, download and start the Geo Da software from 
+4.
+5.
 
 ### Citations
 
