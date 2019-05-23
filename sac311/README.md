@@ -1,12 +1,8 @@
 # Code for Sacramento - Neighborhood Portal Project
 
-## City of Sacramento - 311 Service Call Analysis
-
-![Custom Vision AI Example](https://github.com/walteryu/custom-vision/blob/master/images/ala_880_gsv.png)
-
 ![Sac311](https://github.com/walteryu/code4sac/blob/master/sac311/sac311.png)
 
-### Introduction
+### City of Sacramento - 311 Service Call Analysis
 
 Code for Sacramento is develop a neighborhood portal application; as a result, this notebook evaluates the City of Sacramento 311 service call dataset for insights and trends which may be helpful in developing useful features. This notebook will focus on an initial analysis and identifying potential issues related to users and their neighborhoods.  
 
