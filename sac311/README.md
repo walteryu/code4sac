@@ -16,9 +16,6 @@ City of Sacramento 311 Service Call [Dataset](https://data.cityofsacramento.org/
 
 ### Methodology
 
-1.
-2. Images were annotated using the Custom Vision website with single label, "trash"
-3. Model trained with ~80% accuracy; object detection was mostly accuracy on test images
 
 ### Installation
 1. Follow tutorial instructions below to create model from Custom Vision Website
