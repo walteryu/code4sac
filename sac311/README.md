@@ -4,6 +4,8 @@
 
 ![Custom Vision AI Example](https://github.com/walteryu/custom-vision/blob/master/images/ala_880_gsv.png)
 
+![Sac311](https://github.com/walteryu/code4sac/blob/master/sac311/sac311.png)
+
 ### Introduction
 
 Code for Sacramento is develop a neighborhood portal application; as a result, this notebook evaluates the City of Sacramento 311 service call dataset for insights and trends which may be helpful in developing useful features. This notebook will focus on an initial analysis and identifying potential issues related to users and their neighborhoods.  
@@ -15,17 +17,15 @@ Code for Sacramento is develop a neighborhood portal application; as a result, t
 City of Sacramento 311 Service Call [Dataset](https://data.cityofsacramento.org/datasets/08794a6695b3483f889e9bef122517e9_0)
 
 ### Methodology
-
+1. Exploratory data analysis (EDA) and model fits showed that spatial and temporal analysis would be more appropriate methods of analysis.
+2. As a result, spatial analysis with R and GeoDa were used to identify trends.
+3. Findings are documented within the notebook; additional analysis was completed in GeoDa.
 
 ### Installation
 1. Notebook is written in R markdown, so be sure that R Studio is installed then clone this repository.
 2. Load notebook in R Studio, run/download dependencies.
-3. For spatial analysis, download and start the Geo Da software from 
-4.
-5.
+3. For spatial analysis, download and start the GeoDa [spatial analysis tool](https://geodacenter.github.io/download.html) which was developed by the University of Chicago [spatial data science program](https://spatial.uchicago.edu/).
 
 ### Citations
 
-1. Python example was created using this Microsoft [tutorial](https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/python-tutorial-od)
-2. Website example was created using this Towards Data Science [tutorial](https://towardsdatascience.com/how-to-create-a-custom-image-classifier-with-customvision-ai-fe3df6fd219b)
-3. Trained model was exported using this Microsoft [tutorial](https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/export-your-model)
+1. Spatial Data Science with R [textbook](https://rspatial.org/)
