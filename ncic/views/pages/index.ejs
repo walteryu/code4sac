@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Load Heroku node.js template partial -->
+    <% include ../partials/header.ejs %>
+  </head>
+
+  <body>
+    <!-- Load Heroku node.js template partial -->
+    <% include ../partials/nav.ejs %>
+
+    <div class="jumbotron text-center">
+      <div class="container">
+        <!-- <a href="/" class="lang-logo">
+          <img src="/lang-logo.png">
+        </a> -->
+        <h1>2019 NSF Civic Innovation Challenge</h1>
+        <h2>Climate Change: Resilience Theme</h2>
+        <p>GIS Web Application: Technology to Minimize Flooding and Erosion Impacts</p>
+        <!-- <a type="button" class="btn btn-lg btn-default" href="https://codeforsacramento.org/"><span class="glyphicon glyphicon-flash"></span> Code for Sacramento</a>
+        <a type="button" class="btn btn-lg btn-default" href="https://nsfcivicinnovation.org/"><span class="glyphicon glyphicon-flash"></span> Civic Innovation Challenge</a> -->
+        <a type="button" class="btn btn-lg btn-default" href="/map"><span class="glyphicon glyphicon-map-marker"></span> View GIS Map</a>
+      </div>
+    </div>
+
+    <div class="container">
+      <h4>
+        <div class="row">
+          <div class="col-md-4">
+            <h3><span class="glyphicon glyphicon-question-sign"></span> About</h3>
+              <p>
+                The Civic Innovation Challenge aims to leverage social science, data, and technology to address complex community challenges, enhance job growth
+                and economic competitiveness, and address equity in our communities.
+              </p>
+          </div>
+          <div class="col-md-4">
+            <h3><span class="glyphicon glyphicon-flash"></span> Resilience</h3>
+              <p>
+                Communities are at a high risk from flooding and erosion. How can we use data and technology tools, like sensing and mapping, to help protect our communities?
+              </p>
+          </div>
+          <div class="col-md-4">
+            <h3><span class="glyphicon glyphicon-link"></span> Software and Tools</h3>
+              <li><a href="https://developers.arcgis.com/javascript/">ESRI JS API</a></li>
+              <li><a href="https://devcenter.heroku.com/categories/nodejs-support">Node.js on Heroku</a></li>
+              <li><a href="https://data-sacramentocounty.opendata.arcgis.com/">Sacramento County</a></li>
+              <li><a href="https://www.caloes.ca.gov/cal-oes-divisions/geographic-information-systems">Office of Emergency Services (OES)</a></li>
+              <li><a href="https://atlas-dwr.opendata.arcgis.com/">Department of Water Resources (DWR)</a></li>
+          </div>
+        </div>
+      <h4>
+    </div>
+
+  </body>
+</html>

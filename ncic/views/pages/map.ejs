@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<!--
+  Title: 2019 NSF Civic Innovation Challenge
+  Description: Code for Sacramento - Contest Entry
+  Author: Walter Yu
+  Heroku: http://ncic.herokuapp.com/
+  Github: https://github.com/walteryu/ncic
+-->
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>NCIC Web Application</title>
+
+  <!-- Load Heroku node.js template partial -->
+  <% include ../partials/header.ejs %>
+
+  <!-- Load JS API before function calls -->
+  <script src="https://js.arcgis.com/4.9/"></script>
+  <script>
+    require([
+      "esri/Map",
+      "esri/views/MapView",
+      "esri/layers/FeatureLayer",
+      "esri/widgets/LayerList",
+      "esri/widgets/Legend",
+      "esri/widgets/Locate",
+      "dojo/domReady!"
+    ], function(Map, MapView, FeatureLayer, LayerList, Legend, Locate) {
+
+      var map = new Map({
+        // Toggle options for basemap here
+        // basemap: "streets"
+        basemap: "hybrid"
+      });
+
+      var view = new MapView({
+        container: "viewDiv",
+        map: map,
+
+        // Zoom and center map on Sacramento, CA
+        zoom: 11,
+        center: [-121.4944,38.5816]
+      });
+
+      // Sacramento County GIS Portal, Major Roads: http://data.sacog.org/datasets/9b8d683144894beb997c4aed64c7453c_0
+      var roadLayer = new FeatureLayer({
+        url: "https://services6.arcgis.com/YBp5dUuxCMd8W1EI/arcgis/rest/services/Major_Roads/FeatureServer/0/query?outFields=*&where=1%3D1"
+      });
+
+      // ESRI/AGOL Map Layer Reference, US Freeways: http://arcg.is/2nyzgr4
+      var freewayLayer = new FeatureLayer({
+        url: "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/USA_Freeway_System_analysis/FeatureServer"
+      });
+
+      // Sacramento County GIS Portal, City Boundaries: https://data-sacramentocounty.opendata.arcgis.com/datasets/city-boundaries
+      var cityLayer = new FeatureLayer({
+        url: "https://services1.arcgis.com/5NARefyPVtAeuJPU/arcgis/rest/services/City_Boundaries/FeatureServer/0/query?outFields=*&where=1%3D1"
+      });
+
+      // OES GIS Portal, Urgent Care Facilities: https://calema.maps.arcgis.com/home/item.html?id=278de935e5434a7c91eff042251f3109
+      var urgentLayer = new FeatureLayer({
+        url: "https://services1.arcgis.com/Hp6G80Pky0om7QvQ/arcgis/rest/services/Urgent_Care_Facilities/FeatureServer"
+      });
+
+      // DWR GIS Portal, Delta Boundary: https://atlas-dwr.opendata.arcgis.com/datasets/57b02f8a5e77465f902376dbd9522585_0
+      var deltaLayer = new FeatureLayer({
+        url: "https://gis.water.ca.gov/arcgis/rest/services/Boundaries/i03_LegalDeltaBoundary/FeatureServer/0/query?outFields=*&where=1%3D1"
+      });
+
+      // DWR GIS Portal, 2012 Levee Centerlin: https://atlas-dwr.opendata.arcgis.com/datasets/df57b2bdb7954cad8c89210738cfa658_0
+      var leveeLayer = new FeatureLayer({
+        url: "https://gis.water.ca.gov/arcgis/rest/services/Structure/i17_LeveeCenterlineClass_2012/FeatureServer/0/query?outFields=*&where=1%3D1 "
+      });
+
+      // Sacramento County GIS Portal, Rivers: https://data-sacramentocounty.opendata.arcgis.com/datasets/rivers
+      var riverLayer = new FeatureLayer({
+        url: "https://services1.arcgis.com/5NARefyPVtAeuJPU/arcgis/rest/services/Rivers/FeatureServer/0/query?outFields=*&where=1%3D1"
+      });
+
+      // OES GIS Portal, USGS Watershed Boundaries Dataset (WBD): https://calema.maps.arcgis.com/home/item.html?id=70814bc6a3cb48668735688d6023f803
+      var wbdLayer = new FeatureLayer({
+        url: "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer"
+      });
+
+      // OES GIS Portal, NOAA Flash Flood Index (FFPI): https://calema.maps.arcgis.com/home/item.html?id=70814bc6a3cb48668735688d6023f803
+      var ffpiLayer = new FeatureLayer({
+        url: "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer"
+      });
+
+      // ESRI/AGOL Reference, Locate Widget: http://arcg.is/2nuD00V
+      var locateBtn = new Locate({
+        view: view
+      });
+      // Add the locate widget to the top left corner of the view
+      view.ui.add(locateBtn, {
+        position: "top-left"
+      });
+
+      // ESRI/AGOL Reference, Map Layer Widget: http://arcg.is/2nuFRa1
+      var layerList = new LayerList({
+        view: view
+      });
+      // Adds widget below other elements in the top left corner of the view
+      view.ui.add(layerList, {
+        position: "top-right"
+      });
+
+      // ESRI/AGOL Reference, Map Legend Widget: http://arcg.is/2nuFPin
+      var legend = new Legend({
+        view: view,
+        layerInfos: [
+          {
+            layer: freewayLayer,
+            title: "Major U.S. Freeways (ESRI/AGOL)"
+          },
+          {
+            layer: cityLayer,
+            title: "City Boundaries (Sacramento County)"
+          },
+          {
+            layer: roadLayer,
+            title: "Major Roads (Sacramento County)"
+          },
+          {
+            layer: urgentLayer,
+            title: "Major Roads (Sacramento County)"
+          },
+          {
+            layer: riverLayer,
+            title: "Major Rivers (Sacramento County)"
+          },
+          {
+            layer: deltaLayer,
+            title: "Delta Boundary (DWR)"
+          },
+          {
+            layer: leveeLayer,
+            title: "2012 Levee Centerline (DWR)"
+          },
+          {
+            layer: wbdLayer,
+            title: "USGS Watershed Boundary (OES)"
+          },
+          {
+            layer: ffpiLayer,
+            title: "NOAA Flash Flood Probability Index (OES)"
+          }
+        ]
+      });
+      // Add widget to the bottom right corner of the view
+      view.ui.add(legend, "top-right");
+
+      // Render layers; toggle on/off to display/hide
+      map.add(urgentLayer);
+      map.add(roadLayer);
+      // map.add(freewayLayer);
+      map.add(cityLayer);
+      // map.add(ffpiLayer);
+      map.add(wbdLayer);
+      // map.add(deltaLayer);
+      map.add(leveeLayer);
+      map.add(riverLayer);
+    });
+  </script>
+
+  <!-- Load stylesheet/partial in order, removes gap below navbar -->
+  <link rel="stylesheet" href="https://js.arcgis.com/4.9/esri/css/main.css">
+
+  <!-- Load Heroku node.js template partial -->
+  <% include ../partials/header.ejs %>
+
+  <!-- Override css to size map/navbar -->
+  <style>
+    html,
+    body,
+    #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+    .navbar {
+      margin-bottom: 0px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- Load Heroku node.js template partial -->
+  <% include ../partials/nav.ejs %>
+
+  <!-- Load main map container -->
+  <div id="viewDiv"></div>
+</body>
+</html>
