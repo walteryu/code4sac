@@ -25,3 +25,4 @@ City of Sacramento 311 [Service Call Dataset](https://data.cityofsacramento.org/
 ### Citations
 
 1. Spatial Data Science with R [textbook](https://rspatial.org/)
+2. GeoDa Spatial Analysis [software](https://geodacenter.github.io/index.html)
