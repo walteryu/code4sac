@@ -11,8 +11,8 @@ Code for Sacramento is a [Code for America](https://www.codeforamerica.org/) bri
 ### Projects
 
 1. 2019 NSF Civic Innovation Challenge - GIS web application developed to evaluate flood and erosion risk due to climate change in the Sacramento Area. Application was built using the ESRI JS API and Node.JS framework.
-2. Computer Vision Modeling for Litter Detection - Trained models for custom object detection with [Microsoft Custom Vision](https://customvision.ai) to detect and evaluate trash levels on roads and highways.
-3. City of Sacramento Service Call Analysis - Analysis for the neighborhood portal project with statistical and spatial analysis.
+2. Computer Vision Modeling for Litter Detection - Trained models for custom object detection to detect and evaluate trash levels on roads and highways.
+3. City of Sacramento 311 Service Calls - Analysis for the neighborhood portal project with statistical and spatial analysis.
 
 ### Methodology
 
