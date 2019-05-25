@@ -1,16 +1,16 @@
 # Code for America - Code4Sac
 
-![Sac311](https://github.com/walteryu/code4sac/blob/master/sac311/sac311.png)
+![Sac311](https://github.com/walteryu/code4sac/blob/master/images/code4sac.png)
 
-### City of Sacramento - 311 Service Call Analysis
+### Introduction
 
-Code for Sacramento is develop a neighborhood portal application; as a result, this notebook evaluates the City of Sacramento 311 service call dataset for insights and trends which may be helpful in developing useful features. This notebook will focus on an initial analysis and identifying potential issues related to users and their neighborhoods.  
+This repository contains my projects for [Code for Sacramento](https://codeforsacramento.org/) with focus on data science and spatial analysis.
 
-### Dataset
+Code for Sacramento is a [Code for America](https://www.codeforamerica.org/) brigade which volunteers its time to develop projects for non-profits and local municipalities using open-source technologies.
 
-311 service call dataset from City of Sacramento; summary statistics for the full and partial datasets are listed below. The data is available in geospatial, tabular or API format; the tabular format is used for this analysis to identify important neighborhoods and trends which are relevant to developing the application.  
+### Projects
 
-City of Sacramento 311 [Service Call Dataset](https://data.cityofsacramento.org/datasets/08794a6695b3483f889e9bef122517e9_0)
+1.
 
 ### Methodology
 1. Exploratory data analysis (EDA) and model fits showed that spatial and temporal analysis would be more appropriate methods of analysis.
