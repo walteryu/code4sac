@@ -1,4 +1,4 @@
-# Code for America - Code4Sac
+# Code for Sacramento
 
 ![Sac311](https://github.com/walteryu/code4sac/blob/master/images/code4sac.png)
 
@@ -10,18 +10,14 @@ Code for Sacramento is a [Code for America](https://www.codeforamerica.org/) bri
 
 ### Projects
 
-1.
+1. 2019 NSF Civic Innovation Challenge - GIS web application developed to evaluate flood and erosion risk due to climate change in the Sacramento Area. Application was built using the ESRI JS API and Node.JS framework.
+2. Computer Vision Modeling for Litter Detection - Trained models for custom object detection with [Microsoft Custom Vision](https://customvision.ai) to detect and evaluate trash levels on roads and highways.
+3. City of Sacramento Service Call Analysis - Analysis for the neighborhood portal project with statistical and spatial analysis.
 
 ### Methodology
-1. Exploratory data analysis (EDA) and model fits showed that spatial and temporal analysis would be more appropriate methods of analysis.
-2. As a result, spatial analysis with R and GeoDa were used to identify trends.
-3. Findings are documented within the notebook; additional analysis was completed in GeoDa.
 
-### Installation
-1. Notebook is written in R markdown, so be sure that R Studio is installed then clone this repository.
-2. Load notebook in R Studio, run/download dependencies.
-3. For spatial analysis, download and start the GeoDa [spatial analysis tool](https://geodacenter.github.io/download.html) which was developed by the University of Chicago [Spatial Data Science Program](https://spatial.uchicago.edu/).
+Appropriate technologies, tools and analytical methods are selected for each project. Results are documented within README and notebook documentation.
 
-### Citations
+### Installation and Citations
 
-1. Spatial Data Science with R [textbook](https://rspatial.org/)
+Each project has specific installation instructions and citations within the RREADME document.
