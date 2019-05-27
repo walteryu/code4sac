@@ -16,7 +16,7 @@ Conjecture:
 
 Per discussion with City of Sacramento staff, 311 service calls are a relatively stable source for identify potential issues/needs of neighborhoods. Included are time and location data which will be useful for identifying trends.  
 
-Dataset:
+Dataset:  
 
 311 service call dataset from City of Sacramento; summary statistics for the full and partial datasets are listed below. The data is available in geospatial, tabular or API format; the tabular format is used for this analysis to identify important neighborhoods and trends which are relevant to developing the application.  
 
@@ -45,7 +45,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Install packages with rcran:
 # install.packages("ggcorrplot")
-install.packages("dplyr")
+# install.packages("dplyr")
 
 library(dplyr)
 library(readr)
@@ -113,9 +113,9 @@ Data Manipulation:
 4. Convert categorical variables as factors to facilitate logistic regression  
 5. Factors will be converted to numeric values to facilitate analysis
 
-```{r p1.1}
+```{r p1.1A, eval=FALSE}
 
-# import train_data:
+# Use code below if running for the first time to create 5k dataset:
 train_data <- read.table(
   '311_Calls_OSC_View.csv',
   sep=',',
@@ -124,6 +124,31 @@ train_data <- read.table(
   strip.white=TRUE,
   na.strings='?'
 )
+
+# Use code below if running for the first time to create 5k dataset:
+train_reduced = train_data[1:5000,]
+write.csv(train_reduced, file = "train_5k.csv")
+
+# verify dim:
+dim(train_reduced)
+
+```
+
+```{r p1.1B}
+
+# import reduced dataset:
+train_reduced <- read.table(
+  'train_5k.csv',
+  sep=',',
+  header=TRUE,
+  quote='',
+  strip.white=TRUE,
+  na.strings='?'
+)
+
+# verify dim:
+dim(train_reduced)
+str(train_reduced)
 
 ```
 
@@ -158,13 +183,6 @@ $ GlobalID             : Factor w/ 1225340 levels
 $ ZIP                  : Factor w/ 66 levels  
 
 ```{r p1.2}
-
-# verify dim and drop NA; train_data:
-dim(train_data)
-
-# reduce to smaller sample size to reduce runtime:
-train_reduced = train_data[1:5000,]
-write.csv(train_reduced, file = "train_5k.csv")
 
 # reduce to smaller sample size for relevant data:
 train_col = train_reduced[, c(
