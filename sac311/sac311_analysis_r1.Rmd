@@ -113,9 +113,9 @@ Data Manipulation:
 4. Convert categorical variables as factors to facilitate logistic regression  
 5. Factors will be converted to numeric values to facilitate analysis
 
-```{r p1.1A, eval=FALSE}
+```{r p1.1}
 
-# Use code below if running for the first time to create 5k dataset:
+# import data
 train_data <- read.table(
   '311_Calls_OSC_View.csv',
   sep=',',
@@ -125,30 +125,12 @@ train_data <- read.table(
   na.strings='?'
 )
 
-# Use code below if running for the first time to create 5k dataset:
+# extract first 5k rows for smaller training dataset:
 train_reduced = train_data[1:5000,]
 write.csv(train_reduced, file = "train_5k.csv")
 
 # verify dim:
 dim(train_reduced)
-
-```
-
-```{r p1.1B}
-
-# import reduced dataset:
-train_reduced <- read.table(
-  'train_5k.csv',
-  sep=',',
-  header=TRUE,
-  quote='',
-  strip.white=TRUE,
-  na.strings='?'
-)
-
-# verify dim:
-dim(train_reduced)
-str(train_reduced)
 
 ```
 
@@ -1125,7 +1107,7 @@ number_of_tries = 3
 
 ```
 
-```{r final-p2.4A, results="hide"}
+```{r final-p2.4A, eval=FALSE, results="hide"}
 
 # reduce to smaller sample size to reduce runtime:
 train_scaled[1:5000,]
