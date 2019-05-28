@@ -1,6 +1,6 @@
 # Code for Sacramento
 
-![Sac311](https://github.com/walteryu/code4sac/blob/master/images/code4sac.png)
+![Sac311](https://github.com/walteryu/code4sac/blob/master/sac311/images/sac311_logo.png)
 
 ### Introduction
 
