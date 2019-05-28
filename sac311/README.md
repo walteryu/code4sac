@@ -1,6 +1,6 @@
 # Code for Sacramento - Neighborhood Portal Project
 
-![Sac311](https://github.com/walteryu/code4sac/blob/master/sac311/sac311.png)
+![Sac311](https://github.com/walteryu/code4sac/blob/master/sac311/images/sac311_logo.png)
 
 ### City of Sacramento - 311 Service Call Analysis
 
