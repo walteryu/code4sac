@@ -59,3 +59,9 @@ Another unique values plot was created based on the second category of service c
 
 **Figure 5 - Unique Values Plot of 311 Service Calls (5k Records by Second Category)**
 ![5k_zip_kmeans](https://github.com/walteryu/code4sac/blob/master/sac311/images/sac311_5k_cat2_unique.png)
+
+### Recommendations
+The objective of this study was to identify trends for developing useful features into the Portal application; as a result the follow recommendations are provided based on results of statistical and spatial analysis:
+
+1. Service Call Clusters - Service calls were grouped into the downtown, Pocket and Natomas neighborhoods; as a result, these areas are recommended as focus areas to organize neighborhoods followed by the other groups observed in the spatial analysis plots.
+2. Service Call Categories - Solid waste, trash and dumping-related calls were the majority of calls; as a result, this should be an areas of focus for communities when providing them support of their issues.
