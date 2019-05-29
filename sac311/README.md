@@ -6,6 +6,16 @@
 
 Code for Sacramento is develop a neighborhood portal application; as a result, this notebook evaluates the City of Sacramento 311 service call dataset for insights and trends which may be helpful in developing useful features. This notebook will focus on an initial analysis and identifying potential issues related to users and their neighborhoods.  
 
+## Conjecture:  
+
+Per discussion with City of Sacramento staff, 311 service calls are a relatively stable source for identify potential issues/needs of neighborhoods. Included are time and location data which will be useful for identifying trends.  
+
+## Findings:  
+
+1. Conventional statistical and machine learning methods were not a good fit for analyzing service call data due to its highly categorial nature; almost all variables were categorical with exception of time/location data.  
+2. Exploratory data analysis and logistic regression were used to confirm this finding; spatial analysis was used to yield better results.  
+3. Clustering and density plots were developed in the GeoDa software application to identify natural concentrations of service calls by zipcode.  
+
 ### Dataset
 
 311 service call dataset from City of Sacramento; summary statistics for the full and partial datasets are listed below. The data is available in geospatial, tabular or API format; the tabular format is used for this analysis to identify important neighborhoods and trends which are relevant to developing the application.  
