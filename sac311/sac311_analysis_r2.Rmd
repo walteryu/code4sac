@@ -16,11 +16,17 @@ Conjecture:
 
 Per discussion with City of Sacramento staff, 311 service calls are a relatively stable source for identify potential issues/needs of neighborhoods. Included are time and location data which will be useful for identifying trends.  
 
-Findings:  
+# Findings:  
 
 1. Conventional statistical and machine learning methods were not a good fit for analyzing service call data due to its highly categorial nature; almost all variables were categorical with exception of time/location data.  
 2. Exploratory data analysis and logistic regression were used to confirm this finding; spatial analysis was used to yield better results.  
 3. Clustering and density plots were developed in the GeoDa software application to identify natural concentrations of service calls by zipcode.  
+
+Methodology:  
+
+1. Exploratory data analysis (EDA) and model fits showed that spatial and temporal analysis would be more appropriate methods of analysis.  
+2. As a result, spatial analysis with R and GeoDa were used to identify trends.  
+3. Findings are documented within the notebook; additional analysis was completed in GeoDa.  
 
 Dataset:  
 
@@ -37,10 +43,6 @@ Notes:
 1. All sources are cited accordingly.  
 2. Source dataset is ~1.2M rows, so not included in this repository.  
 3. As a result, please review attached HTML file for analysis/findings.  
-
-To-Do List:
-1. Spatial Analysis - Identify trends from location data using R spatial analysis packages; specifically, are there any specific issues for a neighborhood?  
-2. Time series analysis - Identify trends in service calls over time; identify temporal patterns of calls.  
 
 ** P0 **  
 ** P0 **  
@@ -761,7 +763,14 @@ for ( myMthd in names(whichAll) ) {
 
 ```
 
-# Conclusion
+# Recommendations  
+
+The objective of this study was to identify trends for developing useful features into the Portal application; as a result the follow recommendations are provided based on results of statistical and spatial analysis:  
+
+1. Service Call Clusters - Service calls were grouped into the downtown, Pocket and Natomas neighborhoods; as a result, these areas are recommended as focus areas to organize neighborhoods followed by the other groups observed in the spatial analysis plots.  
+2. Service Call Categories - Solid waste, trash and dumping-related calls were the majority of calls; as a result, this should be an areas of focus for communities when providing them support of their issues.  
+
+# Conclusion  
 
 1. Summary statistics revealed that most variables with categorical; neighborhood/location data is of particular interest and would be useful for developing application features.  
 2. Time/location data will be used for additional analysis (time series/spatial analysis).  
