@@ -31,7 +31,7 @@ Per discussion with City of Sacramento staff, 311 service calls are a relatively
 1. Spatial Data Science with R [textbook](https://rspatial.org/)
 2. GeoDa Spatial Analysis [software](https://geodacenter.github.io/index.html)
 
-### Spatial Analysis
+### Spatial Analysis - Scatterplot and Clustering
 GeoDa is a GUI-based tool which allows users to complete spatial analysis without coding in R or Python. As a result, it is a good analysis tool to create reproducible work with a minimal barrier to entry for the audience. Software installation can be completed on their website (see citations) without executable programs for each major OS.  
 
 Initial plot was completed using a scatterplot of 5k service locations on a basemap as shown below; service calls (shown in green) are clustered in the downtown and Pocket neighborhood areas with smaller clusters in other neighborhoods:
@@ -41,5 +41,21 @@ Initial plot was completed using a scatterplot of 5k service locations on a base
 
 Next, a [KNN cluster](https://en.wikipedia.org/wiki/K-means_clustering) plot was created based on zipcode and confirmed the initial clustering identified in the scatterplot. Again, larger clusters of calls (shown in shades of blue/green) were observed within the downtown and Pocket neighborhood areas:
 
-**Figure 2 - KNN Cluster Plot of 311 Service Calls (5k Records in Green)**
+**Figure 2 - KNN Cluster Plot of 311 Service Calls (5k Records in Blue/Green)**
 ![5k_zip_kmeans](https://github.com/walteryu/code4sac/blob/master/sac311/images/sac311_5k_zip_kmeans.png)
+
+Finally, a [Jenks natural breaks optimization](https://en.wikipedia.org/wiki/Jenks_natural_breaks_optimization) plot was created based on zipcode and confirmed the initial clustering identified in the scatterplot. Again, larger clusters of calls (shown in shades of orange/brown) were observed within the downtown, Pocket and Natomas neighborhood areas:
+
+**Figure 3 - Natural Breaks Plot of 311 Service Calls (5k Records in Orange/Brown)**
+![5k_zip_kmeans](https://github.com/walteryu/code4sac/blob/master/sac311/images/sac311_5k_zip_breaks.png)
+
+### Spatial Analysis - Unique Values
+Additional spatial analysis was completed based on unique values to identify additional trends; specifically, a unique values plot was created based on the first category of service calls which consists of the main categories of calls. The plot density is high and does not show a district pattern; however, the legend reveals that the data distribution is dominated by solid waste/trash/dumping (~4k records) followed by water (~200 records) and animal care (~200 records):
+
+**Figure 4 - Unique Values Plot of 311 Service Calls (5k Records by First Category)**
+![5k_zip_kmeans](https://github.com/walteryu/code4sac/blob/master/sac311/images/sac311_5k_cat1_unique.png)
+
+Another unique values plot was created based on the second category of service calls which the subcategories of calls. The plot density is high and does not show a district pattern; however, the legend reveals that the data distribution is dominated by undefined values (~2k records) followed by several solid waste-related categories (~200 records per category):
+
+**Figure 5 - Unique Values Plot of 311 Service Calls (5k Records by Second Category)**
+![5k_zip_kmeans](https://github.com/walteryu/code4sac/blob/master/sac311/images/sac311_5k_cat2_unique.png)
