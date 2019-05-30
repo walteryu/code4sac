@@ -295,7 +295,7 @@ Observations:
 2. Spearman coefficient (measured between 0 and 1) indicates MONOTONIC (linear or not) correlation; plots showed relative low correlation between most variables  
 3. Although entire variables may have low correlation, there may be individual trends between variables which will be explored in the following sections  
 
-```{r p1.2B, fig.height = 8, fig.width = 8, fig.align = "center"}
+```{r p1.3, fig.height = 8, fig.width = 8, fig.align = "center"}
 
 # create correlation plot:
 corr <- round(cor(train_col_numeric, method="pearson", use="everything"), 4)
@@ -303,7 +303,7 @@ ggcorrplot(corr, title="Correlation Plot - Pearson (Linear)")
 
 ```
 
-```{r p1.2C, fig.height = 8, fig.width = 8, fig.align = "center"}
+```{r p1.4, fig.height = 8, fig.width = 8, fig.align = "center"}
 
 # create correlation plot:
 corr <- round(cor(train_col_numeric, method="spearman", use="everything"), 4)
@@ -326,7 +326,7 @@ Observations:
 1. Categorical variables provide limited use for histogram plots since they are intended for continuous/numeric variables  
 2. However, call frequency by district number histogram showed distribution while the other plots/variables did not convert well or translate into coherent plots  
 
-```{r p1.3}
+```{r p1.5}
 
 # Create historgram to evaluate distribution:
 hist(
@@ -358,7 +358,7 @@ Observations:
 1. Since variables do not appear to have strong correlations and EDA shows that most variables only have an association for individual values/levels  
 2. As a result, explore other analytical methods to identify trends; primarily, time series and geospatial analysis  
 
-```{r p1.3A, fig.height = 6, fig.width = 12, fig.align = "center", eval=FALSE}
+```{r p1.6, fig.height = 6, fig.width = 12, fig.align = "center", eval=FALSE}
 
 # verify data dimensions/columns:
 # str(train_col)
@@ -373,7 +373,7 @@ plot(wrld_simpl, add=TRUE)
 
 ```
 
-```{r p1.3B, fig.height = 8, fig.width = 8, fig.align = "center", eval=FALSE}
+```{r p1.7, fig.height = 8, fig.width = 8, fig.align = "center", eval=FALSE}
 
 # plot service call data on state map:
 counties <- sp_data('counties')
@@ -382,7 +382,7 @@ points(train_col[,c('Longitude', 'Latitude')], col='blue', pch=20)
 
 ```
 
-```{r p1.3C}
+```{r p1.8}
 
 # load rspatial if needed:
 if (!require("rspatial")) devtools::install_github('rspatial/rspatial')
@@ -419,7 +419,7 @@ sd <- sqrt(sum((xy[,1] - mc[1])^2 + (xy[,2] - mc[2])^2) / nrow(xy))
 
 ```
 
-```{r p1.3D, fig.height = 8, fig.width = 8, fig.align = "center"}
+```{r p1.9, fig.height = 8, fig.width = 8, fig.align = "center"}
 
 # plot county:
 counties <- sp_data('counties')
@@ -441,6 +441,29 @@ lines(circle, col='red', lwd=2)
 ```
 
 References:  
+
+Steps:  
+Time series analysis  
+
+Observations:  
+
+```{r p1.11}
+
+# extract time series data from date created:
+ts_5k <- train_reduced[,15]
+head(ts_5k, 5)
+
+# Reference:
+# http://r-statistics.co/Time-Series-Analysis-With-R.html
+decomposed_5k <- decompose(ts_5k, type="mult")
+plot (decomposed_5k)
+stl_5k <- stl(ts_5k, s.window = "periodic")
+
+```
+
+# Part 2 - Logistic Regression, PCA and Subset Selection  
+
+References:  
 1. HES CSCI-E63c Lecture 1, 3 notes; chi-squared test  
 2. ISLR p.67; p-value and significance  
 
@@ -454,7 +477,7 @@ Observations:
 2. T-test for continuous variables; not as effective  
 3. Create plots for significant factors based on p-values  
 
-```{r p1.5, eval=FALSE}
+```{r p2.1, eval=FALSE}
 
 # Chi-Squared test for continuous variables:
 t.test(
@@ -490,7 +513,7 @@ Observations:
 4. However, categorical variables did not translate well to continuous  
 5. As a result, PCA calculates did not identify any useful trends  
 
-```{r p1.6}
+```{r p2.2}
 
 # train_scaled = train_data %>% mutate_if(is.numeric, scale)
 # train_dummy = model.matrix(noyes ~., train_scaled)[,-1]
@@ -554,7 +577,7 @@ Observations:
 2. However, some variables did show significance  
 3. Specifiically, some neighborhoods show relationship with particular call categories  
 
-```{r p1.7}
+```{r p2.3}
 
 # LR model fit:
 
@@ -693,8 +716,6 @@ summary(glm_train)
 
 ```
 
-# Part 2 - Best Variable Subset Selection  
-
 References:  
 1. HES CSCI-E63c Midterm, HW5  
 2. Midterm-P2 and HW5; best subset variable selection  
@@ -713,7 +734,7 @@ Observations:
 2. Results confirm previous findings/analysis/conjecture  
 3. Neighborhood variable showed some association with call category  
 
-```{r p2.2}
+```{r p2.4}
 
 # helper function for best subset selection:
 summaryMetrics <- NULL
