@@ -30,12 +30,12 @@ Per discussion with City of Sacramento staff, 311 service calls are a relatively
 ### Citations
 1. Spatial Data Science with R [textbook](https://rspatial.org/)
 2. GeoDa Spatial Analysis [software](https://geodacenter.github.io/index.html)
-3. HES CSCI E-63c Course Material: https://www.extension.harvard.edu/course-catalog/courses/elements-of-data-science-and-statistical-learning-with-r/15123  
-4. ISLR Textbook: https://www-bcf.usc.edu/~gareth/ISL/  
-5. ESLR Textbook: https://web.stanford.edu/~hastie/ElemStatLearn/  
+3. HES CSCI E-63c [course material](https://www.extension.harvard.edu/course-catalog/courses/elements-of-data-science-and-statistical-learning-with-r/15123)
+4. ISLR [textbook](https://www-bcf.usc.edu/~gareth/ISL/)
+5. ESLR [textbook](https://web.stanford.edu/~hastie/ElemStatLearn/)
 
 ### Spatial Analysis - Scatterplot and Clustering
-GeoDa is a GUI-based tool which allows users to complete spatial analysis without coding in R or Python. As a result, it is a good analysis tool to create reproducible work with a minimal barrier to entry for the audience. Software installation can be completed on their website (see citations) without executable programs for each major OS.  
+[GeoDa](https://geodacenter.github.io/) is a GUI-based tool which allows users to complete spatial analysis without coding in R or Python. As a result, it is a good analysis tool to create reproducible work with a minimal barrier to entry for the audience. Software installation can be completed on their website (see citations) without executable programs for each major OS.  
 
 Initial plot was completed using a scatterplot of 5k service locations on a basemap as shown below; service calls (shown in green) are clustered in the downtown and Pocket neighborhood areas with smaller clusters in other neighborhoods:
 
