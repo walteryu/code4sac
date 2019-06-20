@@ -1,16 +1,16 @@
-# Latin American Indigenous Languages (LAIL) in CA App Project
+# Latin American Indigenous Languages (LAIL) in CA
 
 ![LAIL](https://github.com/walteryu/code4sac/blob/master/lail_schema/images/lail_schema.png)
 
 ### Introduction
 
-This repository contains the initial data model/schema for the LAIL project which was presented at the [Code for Sacramento](https://codeforsacramento.org/) weekly meetup in June 2019.
+This repository contains the initial data model/schema for the LAIL in CA App project which was presented at the [Code for Sacramento](https://codeforsacramento.org/) weekly meetup in June 2019. The project supports the CalEPA Race and Equity project per citation in the section below. This schema is intended to normalize data currently documented in spreadsheets into a machine-readable format.
 
 ### Objectives
 
 The project objectives are as follows:
 
-1. Build data schema and gather data on “communities where indigenous languages from Latin America are aggregated” in CA
+1. Build data schema, gather data and research on “communities where indigenous languages from Latin America are aggregated” in CA
 2. Populate data (base) and publish datasets, documentation, metadata, etc.
 3. Engage with others to improve the data resources
 4. Build or find interface(s) that use this data to integrate with other datasets to convey better information, answer management questions, etc.
@@ -19,9 +19,9 @@ The project objectives are as follows:
 
 This initial schema assumes Latin American languages to be the primary model entity with relationships to Latin American and US Regions as follows:
 
-1. Languages have many-to-many relationships with Latin American and US regions, so joint tables need to be added; schema currently shows one-to-many relationships
-2. Additional tables attributes will be added as information gathering progresses; specifically, Latin American countries and US counties are likely lookup tables which will be needed
-3. Additional data attributes will be added as information gathering progresses; specifically, they will be added with additional research
+1. Languages have many-to-many relationships with Latin American and US regions, so joint tables need to be added; schema currently shows one-to-many relationships.
+2. Additional tables attributes will be added as information gathering progresses; specifically, Latin American countries and US counties are likely lookup tables which will be needed and connected to the regions tables.
+3. Additional data attributes will be added as information gathering progresses; specifically, they will be added with additional research and field interviews.
 
 ### Installation
 
