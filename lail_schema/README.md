@@ -1,23 +1,37 @@
-# Code for Sacramento
+# Latin American Indigenous Languages (LAIL) in CA App Project
 
-![Code4Sac](https://github.com/walteryu/code4sac/blob/master/images/code4sac.png)
+![LAIL](https://github.com/walteryu/code4sac/blob/master/lail_schema/images/lail_schema.png)
 
 ### Introduction
 
-This repository contains my projects for [Code for Sacramento](https://codeforsacramento.org/) with focus on data science and spatial analysis.
+This repository contains the initial data model/schema for the LAIL project which was presented at the [Code for Sacramento](https://codeforsacramento.org/) weekly meetup in June 2019.
 
-Code for Sacramento is a [Code for America](https://www.codeforamerica.org/) brigade which volunteers its time to develop projects for non-profits and local municipalities using open-source technologies.
+### Objectives
 
-### Projects
+The project objectives are as follows:
 
-1. 2019 NSF Civic Innovation Challenge - GIS web application developed to evaluate flood and erosion risk due to climate change in the Sacramento Area. Application was built using the ESRI JS API and Node.JS framework.
-2. Computer Vision Modeling for Litter Detection - Trained models for custom object detection to detect and evaluate trash levels on roads and highways.
-3. City of Sacramento 311 Service Calls - Analysis for the neighborhood portal project with statistical and spatial analysis.
+1. Build data schema and gather data on “communities where indigenous languages from Latin America are aggregated” in CA
+2. Populate data (base) and publish datasets, documentation, metadata, etc.
+3. Engage with others to improve the data resources
+4. Build or find interface(s) that use this data to integrate with other datasets to convey better information, answer management questions, etc.
 
 ### Methodology
 
-Appropriate technologies, tools and analytical methods are selected for each project. Results are documented within README and notebook documentation.
+This initial schema assumes Latin American languages to be the primary model entity with relationships to Latin American and US Regions as follows:
 
-### Installation and Citations
+1. Languages have many-to-many relationships with Latin American and US regions, so joint tables need to be added; schema currently shows one-to-many relationships
+2. Additional tables attributes will be added as information gathering progresses; specifically, Latin American countries and US counties are likely lookup tables which will be needed
+3. Additional data attributes will be added as information gathering progresses; specifically, they will be added with additional research
 
-Each project has specific installation instructions and citations within the RREADME document.
+### Installation
+
+Initial database schema has been created using [MySQL Workbench](https://www.mysql.com/products/workbench/) as a starting point to develop into an actual database once project requirements, field data collection and information gathering is further along. Installation steps are as follows:
+
+1. Download and install the MySQL Workbench from the [website](https://dev.mysql.com/downloads/workbench/)
+2. Clone this repository and open the .mwb file to view the schema
+3. Images of the model may be exported using options in the file tab
+
+### Citations
+
+1. LAIL Project [Presentation](https://docs.google.com/presentation/d/1hciMUyJdT-u6d4VA6AetnbkaosuQFIxMqpMa9P-simI/edit?usp=sharing) - Project vision, objectives and next steps.
+2. CalEPA Race and Equity Project [Presentation](https://docs.google.com/presentation/d/12iTLCcX2qJdTxPP6yveGo46zU45V1huZCJaISqXlAew/edit?usp=sharing) - Project overview and data visualizations.
