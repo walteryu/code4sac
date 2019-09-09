@@ -1,4 +1,5 @@
 # 02C - Summary statistics
 
-# Output summar statistics with one line(!)
-df.describe()
+# Output summary statistics for dataframe
+print('Summary Statistics - Annual VMT Column:')
+df['Annual_VMT'].describe()

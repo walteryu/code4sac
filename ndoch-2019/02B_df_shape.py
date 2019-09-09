@@ -21,7 +21,7 @@ print(df.shape)
 print('')
 
 # Remove outlier values, i.e. outside 3 standard deviations
-df_numeric = df_numeric[np.abs(df_numeric['Number of Incidents']- df_numeric['Number of Incidents'].mean()) <= (3*df_numeric['Number of Incidents'].std())]
+df = df[np.abs(df['Annual_VMT'] - df['Annual_VMT'].mean()) <= (3*df['Annual_VMT'].std())]
 
 print('Column Dimensions - Excluding Outliers:')
-print(df_numeric.shape)
+print(df.shape)

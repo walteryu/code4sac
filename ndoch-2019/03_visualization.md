@@ -18,4 +18,4 @@ Please run code cells below with the "run" button located in the top menu. Cells
 
 * How to create a histogram plot
 * How to sort a DataFrame
-* How to create a chart by x and y-axis
+* How to create a box plot

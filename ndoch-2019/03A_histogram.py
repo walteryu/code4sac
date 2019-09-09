@@ -1,18 +1,8 @@
 # 03A - Histogram plot
 
-# Assign 50 bins to historgram
-num_bins = 50
+# Set plot size and title
+plt.figure(figsize=(16, 8))
+plt.title('Histogram Plot - Annual VMT')
 
-# Create historgram, 50 mins and blue bars
-plt.hist(
-    df[''],
-    num_bins,
-    facecolor='blue',
-    alpha=0.5
-)
-
-# Add title to plot
-plt.title('Histogram Plot')
-
-# Output histogram to cell below
-plt.show()
+# Create historgram for total cost
+sns.distplot(df['Annual_VMT'])
