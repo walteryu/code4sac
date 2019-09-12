@@ -1,4 +1,3 @@
-*.csv
 *.csvt
 *.Rhistory
 *.code-workspace
@@ -6,3 +5,6 @@
 /data
 check_repo.sh
 /ndoch-2019/.ipynb_checkpoints/
+
+/sac311/train_5k.csv
+/sac311/311_Calls_OSC_View.csv
