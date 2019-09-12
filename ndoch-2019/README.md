@@ -13,6 +13,9 @@
 
 This tutorial demonstrates basic Notebook functionality, Python code required to run examples and features for analysis and visualization. It will require some basic understanding of the Python programming language, Jupyter platform and data analysis; however, we will work through these steps in each section so not to worry! After this tutorial, you should have a basic understanding of Notebook, Python and how to get started with your own notebook.
 
-This tutorial focuses on Exploratory Data Analysis (EDA) of annual traffic delay data from the [CA Open Data Portal](https://data.ca.gov/). Description and details about the dataset are available [here](https://data.ca.gov/dataset/caltrans-annual-vehicle-delay).
+This tutorial focuses on Exploratory Data Analysis (EDA) of annual traffic delay data from the [CA Open Data Portal](https://data.ca.gov/). Description and details about the dataset are available [here](https://data.ca.gov/dataset/caltrans-annual-vehicle-delay). Both the original dataset and cleaned dataset (filename ending with "v1") are posted for reference. The v1 dataset was cleaned as follows:
+
+* Abbreviate column names and remove whitespaces
+* Replace null values with 0.01 value for linear regression
 
 Citation: This notebook is based on this Medium article [tutorial](https://medium.com/python-pandemonium/introduction-to-exploratory-data-analysis-in-python-8b6bcb55c190) and [Github Repo](https://github.com/kadnan/EDA_Python/).
