@@ -8,7 +8,7 @@ from sklearn import metrics
 
 # Reshape cost columns as predictor variables
 X = df['Incidents_Per_Million_VMT'].values.reshape(-1,1)
-y = df['VHD_Rank'].values.reshape(-1,1)
+y = df['Annual_VHD_at_35mph'].values.reshape(-1,1)
 
 # Split data into training and test datasets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
@@ -18,6 +18,7 @@ regressor = LinearRegression()
 regressor.fit(X_train, y_train)
 
 # Output the intercept/coefficient
+    # note our coefficients will be different from stats.linregress(), as here we fit on a training *subset* of data
 print('*** Intercept and Coefficient Values ***')
 print('')
 print('Intercept Value (Prediction Model) =', regressor.intercept_)

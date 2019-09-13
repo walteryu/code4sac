@@ -4,9 +4,9 @@
 
 Once we have explored our dataset, examined summary statistics and visualized the dataset, we can analyze the data using statistical functions from the [scipy module](https://www.scipy.org/) and make predictions with the [scikit-learn module](https://scikit-learn.org/stable/). These techniques and models are part of data science, which is a [broad and developing field](https://datascience.berkeley.edu/about/what-is-data-science/) consisting of various steps in managing, storing, analyzing and communicating data.
 
-Statistical and prediction models are typically used to analyze data. For example, the example in this chapter fits IMMS data to a linear regression model to see the change in total cost based on labor cost, and it fits IMMS data to a linear prediction model to predict total cost based on past total and labor cost data. The links below provide additional reading on data science and model, so please review them and complete the exercises as well.
+Statistical and prediction models are typically used to analyze data. For example, in this notebook we fit a linear regression model to analyze the relationship between route incidents and vehicle delay.
 
-Prediction model example in this chapter is based on this Medium article [tutorial](https://towardsdatascience.com/a-beginners-guide-to-linear-regression-in-python-with-scikit-learn-83a8f7ae2b4f)
+The prediction model example in this section is based on this Medium article [tutorial](https://towardsdatascience.com/a-beginners-guide-to-linear-regression-in-python-with-scikit-learn-83a8f7ae2b4f)
 
 ## Exercises
 
