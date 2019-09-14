@@ -1,8 +1,10 @@
 # 4A - Statistical functions with linear regresion
 
-# Linear regression of incidents/million VMT and VHD rank
+# Linear regression of Annual_VHD_at_35mph on Incidents_Per_Million_VMT
+
 x = df['Incidents_Per_Million_VMT']
-y = df['VHD_Rank']
+y = df['Annual_VHD_at_35mph']
+
 slope, intercept, r_value, p_value, std_err = stats.linregress(x,y)
 
 print("*** linear regression results ***")

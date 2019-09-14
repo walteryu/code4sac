@@ -1,8 +1,8 @@
 # 4C - Prediction model with linear regresion:
 # https://towardsdatascience.com/a-beginners-guide-to-linear-regression-in-python-with-scikit-learn-83a8f7ae2b4f
 
-# Plot first 25 values
-df_25 = df_results.head(25)
+# Plot a randomly sampled 25 values
+df_25 = df_results.sample(25)
 df_25.plot(kind='bar',figsize=(16,10))
 
 # Create bar plot of actual and predicted values

@@ -19,13 +19,13 @@ Citation: This notebook is based on this Medium article [tutorial](https://mediu
 
 ## Notebooks for Collaboration
 
-Notebook are a powerful collaborative tool which is open-source and light-weight. It provides all the tools necessary to run data analysis, visualization, statistics and data science [out of the box](https://jupyter.org/jupyter-book/01/what-is-data-science.html). In addition, it has gain acceptance from industry and academia for collaborating on projects and publishing work.
+Notebook is a powerful collaborative tool which is open-source and light-weight. It provides all the tools necessary to run data analysis, visualization, statistics and data science [out of the box](https://jupyter.org/jupyter-book/01/what-is-data-science.html). In addition, it's gained acceptance from industry and academia for collaborating on projects and publishing work.
 
-Notebook is a combination of text and code with the programming run-time built into the platform so there is no need to install additional software. The text is in the markdown file format (similar to HTML), and code in several languages. It is organized by cells which can consist of either text or code; placed together, they can be sent as a single document to share/publish work.
+Notebook is a combination of text and code with the programming run-time built into the platform so there is no need to install additional software. The text is in the markdown file format (similar to HTML), and code supports several languages. It is organized by cells which can consist of either text or code; placed together, they can be sent as a single document to share/publish work.
 
 ## The Python Programming Language
 
-This tutorial will cover some basic programming, so we will focus on learning the Python programming language for this notebook since it is widely used and gain enough traction to be caught in [high school](https://codehs.com/info/curriculum/intropython) and AP Computer Science [courses](https://code.org/educate/curriculum/high-school).
+This tutorial will cover some basic programming, so we will focus on learning the Python programming language for this notebook since it is widely used in industry and has even gained enough traction to be taught in [high school](https://codehs.com/info/curriculum/intropython) and AP Computer Science [courses](https://code.org/educate/curriculum/high-school).
 
 [Notebook](https://jupyter.org/) supports several different languages (R, Scala and Julia); however, Python is the most popular of them and can be used for other tasks, primarily data science and web programming.
 
