@@ -4,11 +4,6 @@ em = pd.read_csv('carb_2017_emissions_sac_v1.csv')
 # print out first 5 lines of dataset below
 print(em.head(5))
 
-print('Data dimensions:')
-print('')
-print(em.shape())
-print('')
-
 # inspect for data types and missing values (note: Pandas stores character strings as type 'object')
 # print('Dataset information:\n')
 # print(em.info())
@@ -38,3 +33,4 @@ plt.title('Box Plot - CO^2 by VMT')
 ax = sns.scatterplot(x="VMT", y="CO2_RUNEX", data=em)
 
 # Pairs plots
+ax = sns.pairplot(em)
