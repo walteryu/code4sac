@@ -9,8 +9,10 @@ check_repo.sh
 /data
 /sac311/*.csvt
 
-/ndoch-2019/*.html
-/ndoch-2019/.ipynb_checkpoints/
+/ndoch_2019/*.html
+/ndoch_2019/.ipynb_checkpoints/
 
-/ndoch-2019/demo/*.html
-/ndoch-2019/demo/.ipynb_checkpoints/
+/ndoch_2019/demo/*.html
+/ndoch_2019/demo/.ipynb_checkpoints/
+
+/open_data/portal/results
