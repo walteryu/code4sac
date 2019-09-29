@@ -1,6 +1,7 @@
 # NDoCH 2019 - Jupyter Notebook Tutorial
 
 ### Code for Sacramento - September 2019
+### Prepared by Walter Yu and Ben Millam
 
 ## Instructions
 
