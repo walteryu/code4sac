@@ -11,6 +11,7 @@ The group demo continued work from the tutorial provided as part of the CA Open 
 The team consisted of the members below and their roles in the demo:
 
 * Dan Fey - Web scraping of CARB website; script attached for reference
+* Ben Millam - Assist with developing notebook, presentation and demo
 * Neil Horning - Data analysis between datasets and notebook preparation on [Github](https://github.com/Nhorning/code4sac/blob/master/ndoch-2019/NDoCH_Notebook_Tutorial.ipynb)
 * Lindsay Poirier - Identify dataset, assist with analysis and documentation
 
