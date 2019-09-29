@@ -2,8 +2,15 @@
 *.Rhistory
 *.code-workspace
 
-/data
 git_stage.sh
+git_cached.sh
 check_repo.sh
+
+/data
+/sac311/*.csvt
+
+/ndoch-2019/*.html
 /ndoch-2019/.ipynb_checkpoints/
+
+/ndoch-2019/demo/*.html
 /ndoch-2019/demo/.ipynb_checkpoints/
