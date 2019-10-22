@@ -15,8 +15,9 @@ check_repo.sh
 /ndoch_2019/demo/*.html
 /ndoch_2019/demo/.ipynb_checkpoints/
 
-/open_data/pge_outage/results
+/open_data/pge_outage/*.html
 /open_data/pge_outage/.ipynb_checkpoints/
 
+/open_data/data_validation/*.html
 /open_data/data_validation/results
 /open_data/data_validation/.ipynb_checkpoints/
