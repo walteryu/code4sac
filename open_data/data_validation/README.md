@@ -1,7 +1,6 @@
-# NDoCH 2019 - Jupyter Notebook Tutorial
+# CA Open Data - Jupyter Notebook Tutorial
 
-### Code for Sacramento - September 2019
-### Prepared by Walter Yu and Ben Millam
+### Data Validation - September 2019
 
 ## Instructions
 
