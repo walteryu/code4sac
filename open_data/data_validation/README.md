@@ -1,12 +1,11 @@
 # CA Open Data - Jupyter Notebook Tutorial
 
-### Data Validation - September 2019
-
+### Data Validation - September
 ## Instructions
 
 1. Install [Jupyter](https://jupyter.org/install) from the command line or with the [Anaconda](https://www.anaconda.com/distribution/) application
 2. Verify that Jupyter Notebook was installed; it should start by running `jupyter notebook` from the command line or be visible from Windows Start menu
-3. Start Jupyter Notebook; save this notebook and CSV data to your "Documents" folder and navigate to it from the Notebook start page
+3. Start Jupyter Notebook; save this notebook and CSV data to your "Documents" folder and navigate to it from the Notebook start 
 4. Open this notebook from the start page; file and cells should be viewable
 
 ## Introduction
