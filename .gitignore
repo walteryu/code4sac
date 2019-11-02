@@ -22,5 +22,5 @@ check_repo.sh
 /open_data/data_validation/results
 /open_data/data_validation/.ipynb_checkpoints/
 
-/gare/pge_outage/*.html
-/gare/pge_outage/.ipynb_checkpoints/
+/gare/*.html
+/gare/.ipynb_checkpoints/
