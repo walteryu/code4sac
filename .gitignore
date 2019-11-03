@@ -22,5 +22,6 @@ check_repo.sh
 /open_data/data_validation/results
 /open_data/data_validation/.ipynb_checkpoints/
 
-/gare/*.html
-/gare/.ipynb_checkpoints/
+/ca_workforce/*.html
+/ca_workforce/workspace.py
+/ca_workforce/.ipynb_checkpoints/
