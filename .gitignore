@@ -24,3 +24,6 @@ check_repo.sh
 
 /gare/*.html
 /gare/.ipynb_checkpoints/
+
+/hmis/*.html
+/hmis/.ipynb_checkpoints/
