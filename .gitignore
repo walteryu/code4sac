@@ -27,3 +27,7 @@ check_repo.sh
 
 /hmis/*.html
 /hmis/.ipynb_checkpoints/
+
+/ca_workforce/*.html
+/ca_workforce/workspace.py
+/ca_workforce/.ipynb_checkpoints/

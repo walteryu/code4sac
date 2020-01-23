@@ -1,8 +1,10 @@
 # Latin American Indigenous Languages (LAIL) in CA
 
+## GARE Data Workgroup - October 2019
+
 ![LAIL](https://github.com/walteryu/code4sac/blob/master/lail_schema/images/lail_schema.png)
 
-### 
+### Introduction
 
 This repository contains the initial data model/schema for the LAIL in CA App project which was presented at the [Code for Sacramento](https://codeforsacramento.org/) weekly meetup in June 2019. The project supports the CalEPA Race and Equity project per citation in the section below. This schema is intended to normalize data currently documented in spreadsheets into a machine-readable format
 
