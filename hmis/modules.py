@@ -1,14 +1,57 @@
-# 02B - Show dataframe shape
+# 02A - Load data into notebook
+
+# load data into notebook; make sure file is in folder as notebook
+df_assessments = pd.read_csv('data/assessments.csv')
+df_clients = pd.read_csv('data/clients.csv')
+df_enrollments = pd.read_csv('data/enrollments.csv')
+df_exits = pd.read_csv('data/exits.csv')
+df_projects = pd.read_csv('data/projects.csv')
+df_services = pd.read_csv('data/services.csv')
+
+# example of converting column data type
+# df['Labor Cost'] = pd.to_numeric(df['Labor Cost'])
 
 # replace white spaces
 # https://stackoverflow.com/questions/13757090/pandas-column-access-w-column-names-containing-spaces
+print("*** column names - assessments ***")
 df_assessments.columns = [c.replace(' ', '_') for c in df_assessments.columns]
+print("")
+print("*** column names - clients ***")
 df_clients.columns = [c.replace(' ', '_') for c in df_clients.columns]
+print("")
+print("*** column names - enrollments ***")
 df_enrollments.columns = [c.replace(' ', '_') for c in df_enrollments.columns]
+print("")
+print("*** column names - exits ***")
 df_exits.columns = [c.replace(' ', '_') for c in df_exits.columns]
+print("")
+print("*** column names - projects ***")
 df_projects.columns = [c.replace(' ', '_') for c in df_projects.columns]
+print("")
+print("*** column names - services ***")
 df_services.columns = [c.replace(' ', '_') for c in df_services.columns]
+print("")
 
+print("*** column names - assessments ***")
+print(list(df_assessments.columns))
+print("")
+print("*** column names - clients ***")
+print(list(df_clients.columns))
+print("")
+print("*** column names - enrollments ***")
+print(list(df_enrollments.columns))
+print("")
+print("*** column names - exits ***")
+print(list(df_exits.columns))
+print("")
+print("*** column names - projects ***")
+print(list(df_projects.columns))
+print("")
+print("*** column names - services ***")
+print(list(df_services.columns))
+print("")
+
+# print out first 5 lines of dataset below
 # print(df_assessments.head(5))
 # print(df_clients.head(5))
 # print(df_enrollments.head(5))
@@ -16,12 +59,14 @@ df_services.columns = [c.replace(' ', '_') for c in df_services.columns]
 # print(df_projects.head(5))
 # print(df_services.head(5))
 
-print(list(df_assessments.columns))
-print(list(df_clients.columns))
-print(list(df_enrollments.columns))
-print(list(df_exits.columns))
-print(list(df_projects.columns))
-print(list(df_services.columns))
+# inspect for data types and missing values (note: Pandas stores character strings as type 'object')
+print('\nOur dataframe\'s column info including data types and null/missing values: \n')
+print(df_assessments.info())
+
+# we see from df.info() that some columns have null/missing values, let's retain only complete records
+# df = df.dropna()
+
+# 02B - Show dataframe shape
 
 # merge clients, entries and exits
 clients_enrollments = pd.merge(df_clients, df_enrollments, on='Personal_ID')
