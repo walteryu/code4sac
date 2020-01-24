@@ -26,6 +26,7 @@ check_repo.sh
 /gare/.ipynb_checkpoints/
 
 /hmis/*.html
+/hmis/modules.py
 /hmis/.ipynb_checkpoints/
 
 /ca_workforce/*.html
