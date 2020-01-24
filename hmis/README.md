@@ -1,8 +1,6 @@
-# Code for Sacramento - Spring 2020
+# Sacramento Homelessness Data Analysis
 
-## Sacramento County Open Data - Homelessness Data Analysis
-
-## Summary
+## Code for Sacramento - Spring 2020
 
 Data analysis of Sacramento homelessness case management; objectives are as follows:
 
@@ -13,6 +11,22 @@ Data analysis of Sacramento homelessness case management; objectives are as foll
 ## Implementation
 This project uses Jupyter Notebook with Python for data analysis; notebook contains
 instructions for running analysis and provides an introduction on data science.
+
+1. Dataset is loaded and analysis begins starting on Section 2
+2. Each section contains explanation followed by code/analysis
+3. Analysis progresses from data cleaning, summary statistics and visualization
+
+## Data Schema and Cleaning
+Data schema is listed below:
+
+1. Dataset contains six tables, each connected via "Personal_ID" field
+2. Each table contains data on a single entity, e.g. clients, projects, etc.
+3. Dataset follows traditional relational schema since it is extracted from RDBMS
+
+Cleaning was performed per steps below:
+
+1. "Personal_ID" column name was made consistent across all tables
+2. "Personal_ID" data type was made consistent across all tables
 
 ## Filenames
 Original data was extracted from an existing case management system, and files were
