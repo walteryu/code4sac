@@ -1,0 +1,299 @@
+,Program Id,Agency Id,Name,Availability Start Date,Availability End Date,Continuum Project,Project Type Code,Affiliated Project Ids,Affiliated with a Residential Project,Tracking Method,Target Population,Victim Service Provider,Housing Type,Added Date,Last Updated Date
+1,5,19,TLCS Carol's Place ES (9),1990-01-01,2012-02-29,1,Emergency Shelter,,,,Not Applicable,,,2014-01-01,2014-01-01
+2,6,42,VOA Aid in Kind ES,1990-01-01,2012-07-22,1,Emergency Shelter,,,,,,,2014-01-01,2014-01-01
+3,7,19,TLCS Palmer Apartments -TH (48),1990-01-01,2016-02-28,1,Transitional Housing,,,Entry/Exit Date,Not Applicable,,,2014-01-01,2016-10-27
+4,8,19,TLCS: New Direction - SSO,1990-01-01,,1,Services Only,"S+C and  PPHP, DREAM, WISH",0,Entry/Exit Date,Not Applicable,0,,2014-01-01,2019-02-20
+5,10,41,DHA Emergency Shelter (0),1990-01-01,2013-12-31,1,Emergency Shelter,,,,Not Applicable,,,2014-01-01,2014-01-01
+6,11,22,SCH Quinn Cottages TH (70),1990-01-01,2012-09-30,1,Transitional Housing,,,,Not Applicable,,,2014-01-01,2014-01-01
+7,12,19,TLCS Adolfo PSH,2002-08-02,2006-06-02,1,PH - Permanent Supportive Housing (disability required),,,,Not Applicable,0,Site-based – single site,2014-01-01,2018-11-05
+8,13,19,TLCS: WORK (Widening Opportunities for Rehabilitation and Knowledge) - HUD PSH,1990-01-01,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Site-based – clustered / multiple sites,2014-01-01,2018-12-21
+9,14,19,TLCS MICA Expansion TH,1990-01-01,2012-07-22,1,Transitional Housing,,,,Not Applicable,,,2014-01-01,2014-01-01
+10,15,6,VOA: Bannon Street Family Emergency Shelter - ES,2009-09-01,,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2019-02-20
+11,16,39,Next Move: Family Shelter - ES,1990-01-01,,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2019-03-25
+12,17,19,TLCS Passages PSH,1990-01-01,2012-07-22,1,PH - Permanent Supportive Housing (disability required),,,,Not Applicable,,,2014-01-01,2014-01-01
+13,18,17,North A Street Shelter ES,1990-01-01,2012-07-22,1,Emergency Shelter,,,,,,,2014-01-01,2014-01-01
+14,20,17,VOA U Street TH,1990-01-01,2012-07-22,1,Transitional Housing,,,,Not Applicable,,,2014-01-01,2014-01-01
+15,21,19,TLCS MICA TH (74),1990-01-01,2013-03-31,1,Transitional Housing,,,,Not Applicable,,,2014-01-01,2014-01-01
+16,22,41,SA Overflow Women's Program ES,1990-01-01,2012-07-22,1,Emergency Shelter,,,,Not Applicable,,,2014-01-01,2014-01-01
+17,23,23,LSS TH Program for Families (THPF) - HUD TH (35),1990-01-01,2016-06-30,1,Transitional Housing,,,Entry/Exit Date,Not Applicable,,,2014-01-01,2017-04-03
+18,25,22,SCH Quinn Cottages Expansion TH,2001-05-10,2008-06-07,1,Transitional Housing,,,,Not Applicable,0,Site-based – clustered / multiple sites,2014-01-01,2018-11-05
+19,26,39,Next Move: Omega - HUD PSH,1990-01-01,,1,Services Only,S+C and others ,1,Entry/Exit Date,Not Applicable,0,,2014-01-01,2018-12-21
+20,27,41,HPRP Homeless Prevention,2009-10-01,2011-09-30,1,RETIRED (HPRP),,,,Not Applicable,,,2014-01-01,2014-01-01
+21,29,30,CDCW Teen Safety Net SSO,2003-04-01,2006-02-28,1,Services Only,,,,Not Applicable,,,2014-01-01,2014-01-01
+22,30,24,TAEAA Families Beyond Transition TH (52),1990-01-01,2016-04-30,1,Transitional Housing,,,Entry/Exit Date,Not Applicable,,,2014-01-01,2016-12-05
+23,31,29,VOA: Open Arms - ES,1990-01-01,,1,Emergency Shelter,,,Entry/Exit Date,Persons with HIV/AIDS,0,Site-based – single site,2014-01-01,2018-12-21
+24,34,37,WSP: Winter Shelter Program - ES,2011-01-01,,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Site-based – clustered / multiple sites,2014-01-01,2018-12-21
+25,36,31,SHRA Shelter Plus Care - HUD TRA PSH,1990-01-01,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2014-01-01,2019-06-06
+26,37,23,LSS Connections - HUD TH,2007-09-01,2016-03-31,1,Transitional Housing,,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2014-01-01,2019-05-06
+27,38,20,VOA 600 Bed Placement ES,1990-01-01,2010-12-31,1,Other,,,,Not Applicable,,,2014-01-01,2014-01-01
+28,39,23,HPRP Rapid Re-Housing,2009-10-01,2011-09-30,1,RETIRED (HPRP),,,Entry/Exit Date,Not Applicable,,,2014-01-01,2016-11-01
+29,41,27,BBCSC Homeless Outreach Program SSO,1990-01-01,2006-06-30,1,Services Only,,,,Not Applicable,,,2014-01-01,2014-01-01
+30,42,41,HPRP Rapid Re-Housing,2009-10-01,2011-09-30,1,RETIRED (HPRP),,,,Not Applicable,,,2014-01-01,2014-01-01
+31,43,38,Saint John's Emergency Shelter Program - ES,1990-01-01,,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2019-02-20
+32,44,23,LSS HOPWA,1990-01-01,2012-07-22,1,Services Only,,,,Persons with HIV/AIDS,,,2014-01-01,2014-01-01
+33,45,23,LSS Adolfo - HUD PSH (24),1990-01-01,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2019-05-01
+34,46,21,VOA ILRP TH (100),1990-01-01,2017-08-31,1,Transitional Housing,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2018-02-27
+35,47,23,LSS: Building Bridges Program - HUD PSH SSO,1990-01-01,,1,Services Only,"36, 157",1,Entry/Exit Date,Not Applicable,0,,2014-01-01,2019-05-03
+36,48,28,SVRC: GPD Men's Transitional Housing - TH,1990-01-01,,1,Transitional Housing,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2019-02-26
+37,49,21,VOA Nova House - HUD PSH (12),1990-01-01,2017-01-31,1,Services Only,S+C and others ,1,Entry/Exit Date,Not Applicable,0,,2014-01-01,2018-02-27
+38,50,33,Shasta SRO PSH (18),1990-01-01,2011-03-31,1,PH - Permanent Supportive Housing (disability required),,,,Not Applicable,,,2014-01-01,2014-01-01
+39,52,38,Saint John's Women And Children ES (Do Not Use After 05.31.16),1990-01-01,2016-06-01,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Site-based – clustered / multiple sites,2014-01-01,2018-11-14
+40,53,38,St John's History ONLY,1990-01-01,2012-07-22,1,Emergency Shelter,,,,Not Applicable,,,2014-01-01,2014-01-01
+41,54,23,LSS: Saybrook - HUD PSH,1990-01-01,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2018-12-21
+42,55,23,LSS Building Bridges Program Expansion,1990-01-01,2012-07-22,1,Services Only,,,,Not Applicable,,,2014-01-01,2014-01-01
+43,56,3,VOA: North A Street Single Adult Emergency Shelter - ES,1990-01-01,,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2019-02-20
+44,57,34,VOA: Adolfo Mather THP Plus Housing for Foster Youth - TH,2008-05-01,,1,Transitional Housing,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2019-03-26
+45,60,25,RIL Transitional Living Center - HUD TH (6),1990-01-01,2016-04-30,1,Transitional Housing,,,Entry/Exit Date,Not Applicable,,,2014-01-01,2017-06-27
+46,63,6,HPRP Homeless Prevention,2009-10-01,2011-09-30,1,RETIRED (HPRP),,,Entry/Exit Date,Not Applicable,,,2014-01-01,2016-01-04
+47,64,39,SAEHC Women's Refuge ES (13),1990-01-01,2008-07-31,1,Emergency Shelter,,,,Not Applicable,,,2014-01-01,2014-01-01
+48,66,41,SA Interim Care Program ES (28),1990-01-01,2015-12-31,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,,,2014-01-01,2016-12-07
+49,67,22,CH: McClellan Park - HUD PSH,1990-01-01,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Site-based – clustered / multiple sites,2014-01-01,2018-12-21
+50,70,32,SCN Sacramento Crisis Nursery SSO (4),1990-01-01,2014-02-28,1,Services Only,,0,Entry/Exit Date,Not Applicable,,,2014-01-01,2014-12-01
+51,71,10,Return to Residence,1990-01-01,2012-07-22,1,Street Outreach,,,,Not Applicable,,,2014-01-01,2014-01-01
+52,72,22,CH: McClellan Park - Non HUD PSH,2002-03-01,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Site-based – clustered / multiple sites,2014-01-01,2018-12-21
+53,73,19,TLCS Cooperative Apartments PSH,1990-01-01,2012-07-22,1,PH - Permanent Supportive Housing (disability required),,,,Not Applicable,,,2014-01-01,2014-01-01
+54,75,20,VOA 700 Bed Placement ES,1990-01-01,2010-12-31,1,Other,,,,Not Applicable,,,2014-01-01,2014-01-01
+55,76,40,SAEHC Women's Refuge (13),1990-01-01,2012-07-22,1,Emergency Shelter,,,,Not Applicable,,,2014-01-01,2014-01-01
+56,77,36,VOA North A Aid in Kind,1990-01-01,2010-06-01,1,Emergency Shelter,,,,,,,2014-01-01,2014-01-01
+57,78,13,CARES STRMU HOPWA - Sacto County,1990-01-01,2030-04-30,1,Other,,,Entry/Exit Date,Persons with HIV/AIDS,0,,2014-01-01,2018-03-30
+58,80,16,Colonia San Martin,1990-01-01,2011-07-01,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Persons with HIV/AIDS,0,Site-based – single site,2014-01-01,2019-08-02
+59,81,26,DYFS Transitional Housing Program TH,1990-01-01,2012-07-22,1,Transitional Housing,,,,Not Applicable,,,2014-01-01,2014-01-01
+60,83,35,VOA: Mather Community Campus (MCC) Singles - HUD TH,1990-01-01,,1,Transitional Housing,,,Entry/Exit Date,Not Applicable,0,Site-based – clustered / multiple sites,2014-01-01,2018-12-21
+61,84,32,SCN Sacramento Crisis Nursery Expansion SSO,1990-01-01,2008-02-29,1,Services Only,,,,Not Applicable,,,2014-01-01,2014-01-01
+62,85,39,Next Move-Motel Voucher Program ES (48),2010-01-01,2016-05-31,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2014-01-01,2018-09-18
+63,86,19,TLCS: PPHP (PACT Perm Housing Program) - Legacy - HUD PSH,1990-01-01,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2019-06-14
+64,87,41,SA Aid in Kind ES,1990-01-01,2012-07-22,1,Emergency Shelter,,,,Not Applicable,,,2014-01-01,2014-01-01
+65,88,35,VOA: Mather Community Campus (MCC) Families - HUD TH,1990-01-01,,1,Transitional Housing,,,Entry/Exit Date,Not Applicable,0,Site-based – clustered / multiple sites,2014-01-01,2018-12-21
+66,90,41,SA Winter Shelter Program ES,1990-01-01,2014-03-31,1,Emergency Shelter,,,,Not Applicable,,,2014-01-01,2014-01-01
+67,91,39,Next Move-Wilma's Place TH (6),1990-01-01,2015-10-31,1,Transitional Housing,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2018-02-27
+68,95,26,DYSF Connections TH,1990-01-01,2012-07-22,1,Transitional Housing,,,,Not Applicable,,,2014-01-01,2014-01-01
+69,96,15,SFAF STRMU HOPWA - Placer County,2007-01-01,2030-04-30,1,Other,,,Entry/Exit Date,Persons with HIV/AIDS,0,,2014-01-01,2018-11-14
+70,98,28,SVRC: GPD Behavioral Health Center - TH,1990-01-01,,1,Transitional Housing,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2019-02-26
+71,101,39,SAEHC Bridge Program ES (8),1990-01-01,2013-01-01,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,,,2014-01-01,2015-03-13
+72,103,25,RIL Shelter Plus Care Case Mgt - HUD SSO (28),1990-01-01,,1,Services Only,36,1,Entry/Exit Date,Not Applicable,0,,2014-01-01,2019-03-11
+73,104,15,SFAF STRMU HOPWA - El Dorado County,2008-03-01,2030-04-30,1,Other,,,Entry/Exit Date,Persons with HIV/AIDS,0,,2014-01-01,2018-11-14
+74,105,5,VOA: Vet Families Non-HUD RRH,1990-01-01,,1,PH - Rapid Re-Housing,,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2014-01-01,2019-02-21
+75,108,39,SAEHC Single Women ES (5),1990-01-01,2014-01-28,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,,,2014-01-01,2015-03-13
+76,109,5,VOA: Vet Families Non-HUD HP,1990-01-01,,1,Homeless Prevention,,,Entry/Exit Date,Not Applicable,0,,2014-01-01,2019-02-21
+77,111,11,SSHH: Friendship Expansion - HUD PSH,1990-01-01,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Site-based – clustered / multiple sites,2014-01-01,2018-12-21
+78,112,18,AHA Avalon,1990-01-01,2012-07-22,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Persons with HIV/AIDS,,,2014-01-01,2014-12-30
+79,113,19,TLCS Shasta SRO PSH (18),1990-01-01,2012-07-22,1,PH - Permanent Supportive Housing (disability required),,,,Not Applicable,,,2014-01-01,2014-01-01
+80,114,34,VOA AHS Yale TH,1990-01-01,2008-05-31,1,Transitional Housing,,,,Not Applicable,,,2014-01-01,2014-01-01
+81,116,18,AHA Cornerstone/Hiddencove,1990-01-01,2012-07-22,1,Transitional Housing,,,Entry/Exit Date,Persons with HIV/AIDS,,,2014-01-01,2014-12-30
+82,117,34,VOA AHS Mather THP ONLY,1990-01-01,2010-07-31,1,Transitional Housing,,,,Not Applicable,,,2014-01-01,2014-01-01
+83,119,34,VOA AHS La Mancha TH,1990-01-01,2007-08-31,1,Transitional Housing,,,,Not Applicable,,,2014-01-01,2014-01-01
+84,120,23,HPRP Homeless Prevention,2009-10-01,2011-09-30,1,RETIRED (HPRP),,,Entry/Exit Date,Not Applicable,,,2014-01-01,2016-11-01
+85,123,39,Next Move-Winter Overflow Shelter Program ES (25),1990-01-01,2016-04-30,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2018-11-28
+86,125,9,MAAP Casa Serenes PSH,1990-01-01,2012-07-22,1,PH - Permanent Supportive Housing (disability required),,,,Not Applicable,,,2014-01-01,2014-01-01
+87,126,18,AHA Steven's Place,1990-01-01,2012-07-22,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Persons with HIV/AIDS,,,2014-01-01,2014-12-30
+88,127,40,Bad Contract - SAEHC Wilma's Place TH (6),1990-01-01,2012-07-22,1,Emergency Shelter,,,,Not Applicable,,,2014-01-01,2014-01-01
+89,128,12,Tubman House - TH,2014-10-01,2018-09-30,1,Transitional Housing,,,Entry/Exit Date,Not Applicable,0,Site-based – clustered / multiple sites,2014-01-01,2019-04-15
+90,129,40,Bad Contract - St John's Women And Children,1990-01-01,2012-07-22,1,Emergency Shelter,,,,Not Applicable,,,2014-01-01,2014-01-01
+91,130,19,TLCS Hope Team SSO (135),1990-01-01,2013-03-31,1,Services Only,,,,Not Applicable,,,2014-01-01,2014-01-01
+92,132,39,SAEHC Children's Protective Services TH,1990-01-01,2007-05-31,1,Transitional Housing,,,,Not Applicable,,,2014-01-01,2014-01-01
+93,133,9,MAAP Casa Esperanza PSH,1990-01-01,2012-07-22,1,PH - Permanent Supportive Housing (disability required),,,,Not Applicable,,,2014-01-01,2014-01-01
+94,134,34,VOA: AHS Scattered Sites - TH,1990-01-01,,1,Transitional Housing,,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2014-01-01,2018-12-21
+95,135,41,SA Adult Protective Services ES,1990-01-01,2012-07-22,1,Emergency Shelter,,,,Not Applicable,,,2014-01-01,2014-01-01
+96,136,11,SSHH Keys to Hope PSH (45),2006-01-26,2012-01-03,1,PH - Permanent Supportive Housing (disability required),,,,Not Applicable,0,Site-based – single site,2014-01-01,2018-11-05
+97,138,23,LSS TH Program for Youth (THPY) - HUD TH (16),1990-01-01,2016-08-31,1,Transitional Housing,,,Entry/Exit Date,Not Applicable,0,Site-based – clustered / multiple sites,2014-01-01,2018-11-28
+98,141,34,VOA: Adolfo Mather (Transitional Housing Program for Emancipated Youth) - HUD TH,2007-12-30,2018-06-12,1,Transitional Housing,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2019-03-22
+99,144,23,LSS FOCUS,1990-01-01,2012-07-22,1,Transitional Housing,,,,Not Applicable,,,2014-01-01,2014-01-01
+100,151,4,SA 30 Day Expansion,1990-01-01,2012-07-22,1,Emergency Shelter,,,,Not Applicable,,,2014-01-01,2014-01-01
+101,153,11,SSHH: Friendship Housing - HUD PSH,1990-01-01,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Site-based – clustered / multiple sites,2014-01-01,2018-12-21
+102,154,24,TAEAA Emergency Motel Vouchers ES (6),1990-01-01,2009-04-30,1,Emergency Shelter,,,,Not Applicable,,,2014-01-01,2014-01-01
+103,155,16,Mercy MLK Village (The King Project) - HUD PSH,1990-01-01,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Site-based – clustered / multiple sites,2014-01-01,2019-02-25
+104,157,23,LSS: Achieving Change Together (ACT) - HUD PSH,2012-12-03,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2014-01-01,2019-04-30
+105,161,8,Public Safety Outreach HO,1990-01-01,2012-07-22,1,Street Outreach,,,,,,,2014-01-01,2014-01-01
+106,162,37,Bad Contract - WINDES,1990-01-01,2012-07-22,1,Emergency Shelter,,,,,,,2014-01-01,2014-01-01
+107,163,16,Mercy Blvd Court - NON S+C PSH,2013-06-01,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2019-02-25
+108,164,39,Next Move: OMEGA Family Expansion - HUD PSH,1990-01-01,,1,Services Only,S+C and Other ,1,Entry/Exit Date,Not Applicable,0,,2014-01-01,2018-12-21
+109,165,38,St John's WSP,1990-01-01,2012-07-22,1,Emergency Shelter,,,,Not Applicable,,,2014-01-01,2014-01-01
+110,166,41,SA Overflow (non-funded) ES,1990-01-01,2012-07-22,1,Emergency Shelter,,,,Not Applicable,,,2014-01-01,2014-01-01
+111,167,31,SHRA: Shasta Hotel - HUD SRA PSH,2002-08-15,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2018-12-21
+112,168,38,Bad Contract,1990-01-01,2012-07-22,1,Emergency Shelter,,,,,,,2014-01-01,2014-01-01
+113,171,38,Saint John's Greenway - HUD PSH (30),1990-01-01,2016-04-30,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,,,2014-01-01,2016-09-30
+114,172,31,SHRA: Mercy Blvd Court (Budget Inn) - HUD PSH,1990-01-01,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2019-02-26
+115,173,41,SA Senior ES (3),2009-09-01,2014-10-18,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2018-11-05
+116,174,39,Next Move: Casas De Esperanza - HUD PSH,1990-01-01,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2018-12-21
+117,175,38,Saint John's Greenway Non-HUD PSH (30),1990-01-01,2013-04-30,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,,,2014-01-01,2016-09-30
+118,176,6,VOA Bannon 90 Day ES,1990-01-01,2009-10-31,1,Emergency Shelter,,,,Not Applicable,,,2014-01-01,2014-01-01
+119,177,28,SVRC: GPD Women's Transitional Housing - TH,1990-01-01,,1,Transitional Housing,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2019-02-26
+120,178,19,TLCS T Street Co-Op PSH (5),1990-01-01,2015-10-31,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Persons with HIV/AIDS,,,2014-01-01,2015-10-27
+121,179,39,Next Move-Casa Serenes PSH (30),1990-01-01,2015-05-31,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,,,2014-01-01,2016-07-12
+122,180,11,SSHH Keys to Hope 2 PSH (15),2009-11-25,2011-12-31,1,PH - Permanent Supportive Housing (disability required),,,,Not Applicable,0,Site-based – single site,2014-01-01,2018-11-05
+123,184,23,LSS: Mutual Housing at Highlands - HUD PSH,1990-01-01,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2018-12-21
+124,187,22,PSH,2002-03-15,2004-04-19,1,PH - Permanent Supportive Housing (disability required),,,,Not Applicable,0,Site-based – single site,2014-01-01,2018-11-05
+125,188,6,HPRP Rapid Re-Housing,2009-10-01,2011-09-30,1,RETIRED (HPRP),,,Entry/Exit Date,Not Applicable,,,2014-01-01,2016-01-04
+126,193,19,TLCS: Co-Ops - PSH,2012-02-11,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Site-based – clustered / multiple sites,2014-01-01,2019-04-03
+127,196,11,SSHH Keys to Hope 3 TH (25),1990-01-01,2012-07-22,1,Transitional Housing,,,,Not Applicable,,,2014-01-01,2014-01-01
+128,199,37,WSP Winter Shelter Program ES (  ),1990-01-01,2012-07-22,1,Emergency Shelter,,,,Not Applicable,,,2014-01-01,2014-01-01
+129,201,5,HPRP Homeless Prevention,1990-01-01,2030-04-30,1,RETIRED (HPRP),,,,Not Applicable,,,2014-01-01,2014-01-01
+130,202,5,HPRP Rapid Re-Housing,1990-01-01,2030-04-30,1,RETIRED (HPRP),,,,Not Applicable,,,2014-01-01,2014-01-01
+131,203,13,CARES HOPWA Suptv Srvc (30),1990-01-01,2030-04-30,1,Other,,,Entry/Exit Date,Persons with HIV/AIDS,0,,2014-01-01,2018-03-30
+132,204,13,CARES HOPWA Suptv Srvc-S+C (30),1990-01-01,2030-04-30,1,Other,,,Entry/Exit Date,Persons with HIV/AIDS,0,,2014-01-01,2018-03-30
+133,206,37,WSP Winter Sanctuary ES (100),2012-11-01,2013-03-31,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,,,2014-01-01,2015-02-06
+134,207,22,CH: Quinn Cottages  - HUD PSH,2012-10-01,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2018-12-21
+135,208,19,TLCS: Hotel Berry - PSH,2012-09-15,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2018-12-21
+136,209,5,VOA - Veterans Supportive Housing - HUD PSH,2013-04-01,2016-03-31,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2018-11-15
+137,210,5,VOA - Coming Home - HUD PSH,2013-04-01,2016-03-31,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2014-01-01,2018-11-15
+138,211,39,SAEHC Spring Motel Voucher Program (30),2013-04-01,2013-08-31,1,Emergency Shelter,,,,Not Applicable,,,2014-01-01,2014-01-01
+139,212,39,SAEHC Spring Shelter Program(20),2013-04-01,2013-08-31,1,Emergency Shelter,,,,Not Applicable,,,2014-01-01,2014-01-01
+140,213,39,Next Move: Home At Last - HUD PSH,2013-03-01,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Site-based – clustered / multiple sites,2014-01-01,2019-02-20
+141,214,41,SA Veteran Emergency Shelter,2005-04-01,,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2019-06-17
+142,215,16,Mercy 7th and H - PSH,2013-01-01,,1,PH - Housing Only,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2019-04-09
+143,217,43,Employment Summit,2013-10-01,2014-06-30,1,Other,,,Entry/Exit Date,Not Applicable,,,2014-01-01,2016-07-12
+144,239,38,St John's HUD2 Greenway,2012-07-01,2013-11-30,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,,,2014-01-01,2015-03-23
+145,245,41,SHRA Emergency Shelter (Lodge),2013-10-01,,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2018-11-28
+146,246,16,Mercy Blvd Court Shelter Plus Care (S+C),2013-07-01,,1,Services Only,36,1,Entry/Exit Date,Not Applicable,0,,2014-01-01,2019-03-25
+147,247,16,Mercy MLK Village Shelter Plus Care (S+C),2013-07-01,2020-09-30,1,Services Only,36,1,Entry/Exit Date,Not Applicable,0,,2014-01-01,2019-03-25
+148,248,16,Ardenaire Apartments - PSH,2008-05-01,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2019-05-01
+149,250,50,Community Outreach Navigator,2013-07-01,2018-02-01,1,Street Outreach,,,Entry/Exit Date,Not Applicable,0,,2014-01-01,2018-09-18
+150,251,51,Winter Sanctuary - ES,2013-11-18,2019-07-03,1,Emergency Shelter,,,Night-by-Night,Not Applicable,0,Site-based – clustered / multiple sites,2014-01-01,2018-12-21
+151,252,19,TLCS Dream Perm Housing Program - HUD PSH (30),2013-10-01,2016-06-30,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2018-11-14
+152,253,19,TLCS Wish Perm Housing Program - HUD PSH (20),2013-10-01,2016-04-30,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2014-01-01,2018-12-06
+153,254,11,Cathedral House ES (8),2014-04-30,2018-04-30,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2018-11-05
+154,255,11,SSHH: Grace House - TH,2013-09-01,,1,Transitional Housing,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2018-12-21
+155,256,5,City ESG RRH - Sacramento,2014-04-01,,1,PH - Rapid Re-Housing,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2018-11-28
+156,257,41,E.Claire Raley Transitional Living Program (TLP) - Non-HUD TH,2013-07-01,,1,Transitional Housing,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-01-01,2018-12-21
+157,259,29,VOA-Cornerstone HOPWA PH,2014-10-01,2014-10-01,1,PH - Housing Only,,,Entry/Exit Date,Persons with HIV/AIDS,,,2014-01-01,2014-01-01
+158,260,29,VOA-Hiddencove HOPWA PH,2014-10-01,2014-10-01,1,PH - Housing Only,,,Entry/Exit Date,Persons with HIV/AIDS,,,2014-01-01,2014-01-01
+159,261,29,VOA-Steven's Place HOPWA PH,2014-10-01,2014-10-01,1,PH - Housing Only,,,Entry/Exit Date,Persons with HIV/AIDS,,,2014-01-01,2014-01-01
+160,262,43,SSF Outreach,2015-01-01,,1,Street Outreach,,,Entry/Exit Date,Not Applicable,0,,2014-01-01,2019-08-21
+161,263,55,RHY Youth Shelter - ES,2014-09-01,,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-12-03,2019-02-26
+162,265,11,SSHH-Interim Houses ES (10),2015-01-01,2017-06-30,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2014-12-18,2019-03-25
+163,266,28,Veterans Coordinated Entry Referrals,2015-01-01,2015-12-31,1,Services Only,,0,Entry/Exit Date,Not Applicable,,,2014-12-22,2016-05-05
+164,271,57,Francis House Motel Program,2015-01-25,2016-04-30,1,Other,,,Entry/Exit Date,Not Applicable,,,2015-03-24,2017-05-26
+165,272,5,VOA: CATC (Comprehensive Alcohol Treatment Center),2015-04-01,2019-03-31,1,Services Only,,0,Entry/Exit Date,Not Applicable,0,,2015-05-11,2019-07-23
+166,273,11,SSHH: Friendship Housing Community - PSH,2015-07-01,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2015-06-30,2018-12-21
+167,274,58,Wind SUS: Single TAY - PSH,2015-06-01,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2015-06-30,2018-12-21
+168,275,58,LSS SUS: Single Adults - PSH,2015-06-01,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2015-07-01,2019-02-04
+169,276,59,Family Promise-HUD Rapid Re-Housing,2015-07-01,2018-06-05,1,PH - Rapid Re-Housing,,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2015-07-01,2018-12-03
+170,277,58,LSS SUS: TAY Families - PSH,2015-06-01,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2015-07-10,2019-02-04
+171,278,58,Next Move SUS: Adult Families - PSH,2015-06-01,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2015-07-10,2018-12-21
+172,279,58,Next Move SUS: Seniors - PSH,2015-06-01,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2015-07-10,2018-12-21
+173,283,60,HSP - RRH,2015-07-01,,1,PH - Rapid Re-Housing,,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2015-08-26,2018-12-21
+174,286,28,Sacramento SSVF - RRH,2014-09-01,,1,PH - Rapid Re-Housing,,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2015-09-29,2018-12-21
+175,288,28,Sacramento SSVF - Prevention,2015-05-01,2025-10-20,1,Homeless Prevention,,,Entry/Exit Date,Not Applicable,0,,2015-10-20,2018-12-21
+176,289,28,Yolo-SSVF-Prevention (Retired),2015-05-01,2017-07-01,1,Homeless Prevention,,,Entry/Exit Date,Not Applicable,0,,2015-10-20,2018-05-22
+177,290,28,Yolo- SSVF-RRH (Retired),2015-05-01,2016-08-31,1,PH - Rapid Re-Housing,,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2015-10-20,2018-05-22
+178,291,39,Next Move-Stepping Stones HUD-RRH,2015-10-01,2018-10-31,1,PH - Rapid Re-Housing,,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2015-10-28,2018-11-28
+179,294,5,VOA: Mather Reallocation HUD Family - RRH,2015-12-01,2019-01-31,1,PH - Rapid Re-Housing,,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2015-11-24,2019-08-05
+180,296,5,VOA: Interim Care Program - ES,2016-01-01,2016-12-31,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2016-01-14,2019-03-18
+181,297,5,VOA: AB109 Shelter,2016-01-01,,1,Services Only,,0,Entry/Exit Date,Not Applicable,0,,2016-01-14,2018-12-21
+182,298,11,Workforce Bridge Housing ES,2016-01-01,2017-06-30,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2016-01-27,2018-02-27
+183,299,5,VOA - Coordinated Exit - Singles RRH,2016-01-01,2017-06-30,1,PH - Rapid Re-Housing,,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2016-01-27,2018-02-27
+184,300,1,Test Eligibility Filter,2015-08-01,2018-09-13,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Site-based – clustered / multiple sites,2016-02-01,2018-11-08
+185,301,5,County PREVENTION - ESG,2015-12-01,,1,Homeless Prevention,,,Entry/Exit Date,Not Applicable,0,,2016-02-05,2018-11-27
+186,302,28,Mather Veteran's Village - HUD CoC PSH,2016-04-01,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2016-02-12,2018-12-21
+187,303,28,Mather Veteran's Village - HUD VASH PSH,2016-04-01,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2016-02-12,2018-12-21
+188,304,28,Mather Veteran's Village - Income Based PSH,2016-04-01,,1,PH - Housing with Services (no disability required),,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2016-02-12,2019-03-19
+189,305,58,Next Move SUS: Single Adults (Overflow) - PSH,2016-02-01,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2016-02-22,2018-12-21
+190,311,58,Next Move - Veterans (18),2016-04-01,2016-04-01,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,,,2016-04-05,2016-08-15
+191,312,38,Saint John's Independent Housing Partnership - RRH,2016-04-01,,1,PH - Rapid Re-Housing,,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2016-04-06,2018-12-21
+192,313,11,SSHH: Meadow House - TH,2015-11-01,,1,Transitional Housing,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2016-05-09,2018-12-21
+193,314,58,Next Move SUS: Omega Collaboration - PSH,2016-05-01,,1,PH - Permanent Supportive Housing (disability required),S+C,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2016-05-10,2018-12-21
+194,315,5,County ESG RRH - Sacramento,2016-01-01,,1,PH - Rapid Re-Housing,,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2016-05-12,2018-11-28
+195,316,64,Bishop Gallegos Maternity Home Shelter - ES,2016-04-15,,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2016-05-16,2018-12-21
+196,320,67,Guest House Connections Lounge,2016-06-01,,1,Street Outreach,,,Entry/Exit Date,Not Applicable,0,,2016-05-27,2019-06-14
+197,321,57,Family Rescue Program - ES (HIC: Emergency Hotel Vouchers),2016-08-01,,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2016-06-03,2019-02-14
+198,322,65,T3 Shelter - ES,2016-01-01,,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2016-07-28,2019-02-26
+199,323,65,Interim Care Program (ICP) - ES,2016-01-01,,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2016-07-28,2019-02-26
+200,324,65,Interim Care Program (ICP) Plus - ES,2016-01-01,,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2016-07-28,2019-02-26
+201,325,55,Doug's Place - TAY ES,2016-08-01,,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2016-07-28,2018-11-27
+202,326,55,Transformational Living Program - TH,2016-08-01,,1,Transitional Housing,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2016-07-28,2018-11-27
+203,327,68,Wind: The Doorway - RRH,2016-08-01,,1,PH - Rapid Re-Housing,,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2016-07-29,2018-12-21
+204,328,68,Waking the Village: The Doorway for Families - RRH,2016-08-01,,1,PH - Rapid Re-Housing,,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2016-07-29,2018-12-21
+205,329,19,TLCS: New Direction Permanent Housing Program - HUD PSH,2016-08-01,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Persons with HIV/AIDS,0,Tenant-based - scattered site,2016-07-29,2018-12-21
+206,330,19,PATH - Palmer - SSO,2016-07-01,,1,Services Only,Palmer,1,Entry/Exit Date,Not Applicable,0,,2016-07-29,2018-12-21
+207,331,5,City PREVENTION - ESG,2016-07-01,,1,Homeless Prevention,,,Entry/Exit Date,Not Applicable,0,,2016-07-29,2018-11-27
+208,333,11,SSHH: New Community - HUD PSH,2016-09-01,,1,PH - Permanent Supportive Housing (disability required),,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2016-08-12,2018-12-21
+209,337,11,SSHH: Citrus Heights Outreach Program,2016-07-01,,1,Street Outreach,,,Entry/Exit Date,Not Applicable,0,,2016-09-20,2018-12-21
+210,341,23,LSS: Connections - HUD RRH,2014-03-29,,1,PH - Rapid Re-Housing,,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2016-10-24,2019-03-26
+211,342,19,TLCS: Palmer Apartments - ES,2016-03-01,,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2016-10-24,2018-12-21
+212,343,55,Wind Street Outreach Program,2016-10-01,,1,Street Outreach,,,Entry/Exit Date,Not Applicable,0,,2016-10-26,2019-05-22
+213,347,5,VOA: SIP,2015-04-01,2020-11-30,1,Services Only,,0,Entry/Exit Date,Not Applicable,0,,2016-11-03,2018-12-21
+214,348,5,VOA: CART,2016-11-01,2018-12-31,1,Services Only,,0,Entry/Exit Date,Not Applicable,0,,2016-11-18,2019-07-23
+215,349,23,LSS: RRH for Youth #1 - HUD,2016-09-01,,1,PH - Rapid Re-Housing,,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2016-11-18,2018-12-21
+216,350,1,Wellness Without Walls,2016-12-01,2031-11-30,1,Street Outreach,,,Entry/Exit Date,Not Applicable,,,2016-12-15,2016-12-15
+217,351,70,Recovery House,2017-02-01,2017-02-28,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2017-02-10,2018-11-28
+218,356,75, Safe Ground Pilgrimage - ES (HIC/PIT Only),2017-03-01,,1,Emergency Shelter,,,Night-by-Night,Not Applicable,0,Site-based – single site,2017-02-23,2019-06-20
+219,362,12,Audre's Emporium of New Tomorrows - TH,2017-02-01,,1,Transitional Housing,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2017-03-07,2018-12-21
+220,366,23,LSS: RRH for Youth #2 - HUD,2017-04-01,,1,PH - Rapid Re-Housing,,,Entry/Exit Date,Not Applicable,0,Tenant-based - scattered site,2017-03-28,2018-12-21
+221,367,43,Diversion,2017-06-30,,1,Street Outreach,,,Entry/Exit Date,Not Applicable,0,,2017-06-30,2019-08-21
+222,368,77,Sac Covered Outreach,2017-07-01,2030-06-30,1,Street Outreach,,,Entry/Exit Date,Not Applicable,0,,2017-07-18,2018-11-07
+223,369,11,SSHH: Elk Grove Outreach Program,2017-01-01,,1,Street Outreach,,,Entry/Exit Date,Not Applicable,0,,2017-08-10,2018-12-21
+224,373,80,Pathways Scattered Site - PSH,2017-10-01,,1,PH - Permanent Supportive Housing (disability required),,,,Not Applicable,0,Tenant-based - scattered site,2017-10-04,2019-03-01
+225,374,80,Cathcart Emergency Shelter - ES,2017-10-01,,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Site-based – clustered / multiple sites,2017-10-06,2019-03-01
+226,375,80,TPCP:  Transitional Housing - TH,2017-10-01,,0,Transitional Housing,,,,Not Applicable,0,Site-based – single site,2017-10-17,2019-03-20
+227,376,80,YWCA - PSH,2017-10-01,,1,PH - Permanent Supportive Housing (disability required),,,,Not Applicable,0,Site-based – single site,2017-10-17,2018-12-21
+228,377,80,Mutual Housing at the Highlands - PSH,2017-10-01,,1,PH - Permanent Supportive Housing (disability required),,,,Not Applicable,0,Site-based – single site,2017-10-17,2018-12-21
+229,378,5,Countywide - State ESG RRH,2017-10-01,,1,PH - Rapid Re-Housing,,,,Not Applicable,0,Site-based – clustered / multiple sites,2017-10-23,2018-11-27
+230,379,11,SSHH: Folsom Outreach Program,2017-10-01,,1,Street Outreach,,,,Not Applicable,0,,2017-10-24,2018-12-21
+231,380,81,Winter Triage Shelter - ES,2017-12-08,2019-04-30,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2017-10-27,2019-04-04
+232,382,82,Roads Home - RRH,2017-10-01,,1,PH - Rapid Re-Housing,,,,Not Applicable,0,Site-based – clustered / multiple sites,2017-11-27,2019-08-05
+233,385,55,Common Ground - ES,2017-12-15,,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2017-12-12,2018-12-21
+234,387,11,SSHH: Building Community - PSH,2017-12-01,,1,PH - Permanent Supportive Housing (disability required),,,,Not Applicable,0,Site-based – clustered / multiple sites,2017-12-27,2018-12-21
+235,388,43,H.R.A.P.,2018-01-01,,1,Street Outreach,,,,Not Applicable,0,,2018-01-02,2019-08-21
+236,389,12,Audre's RHY - TH,2018-01-01,,1,Transitional Housing,,,,Not Applicable,0,Site-based – clustered / multiple sites,2018-01-09,2019-04-15
+237,390,12,Tubman OES - TH,2018-01-01,,1,Transitional Housing,,,,Not Applicable,0,Site-based – clustered / multiple sites,2018-01-09,2019-04-01
+238,391,84,CASH Center for Women,2018-01-16,,1,Day Shelter,,,,Not Applicable,1,,2018-01-16,2018-11-27
+239,394,16,Mercy MLK Village - PSH,2018-01-26,,1,PH - Permanent Supportive Housing (disability required),,,,Not Applicable,0,Site-based – single site,2018-01-26,2019-02-26
+240,395,85,Shasta Hotel-Case Management,2018-02-01,,1,Services Only,63144,1,,Not Applicable,0,,2018-02-01,2018-09-18
+241,396,11,SSHH: Unincorporated Homeless Outreach,2018-02-05,,1,Street Outreach,,,,Not Applicable,0,,2018-02-06,2018-12-21
+242,398,87,Emergency Housing for Victims of Crime - TH,2018-03-09,,1,Transitional Housing,,,,Not Applicable,0,Site-based – single site,2018-02-15,2019-04-30
+243,402,88,Flexible Supportive Rehousing Program - GF,2018-04-01,,1,PH - Housing with Services (no disability required),,,,Not Applicable,0,Tenant-based - scattered site,2018-02-22,2018-11-05
+244,403,11,SSHH: SacPath,2018-02-23,,1,Street Outreach,,,,Not Applicable,0,,2018-02-23,2018-12-21
+245,404,11,SSHH: Ongoing Case Management,2018-02-23,,1,Services Only,SSHH,1,,Not Applicable,0,,2018-02-23,2019-04-04
+246,405,1,2018 Outreach Test,2018-03-01,2018-03-31,1,Street Outreach,,,,Not Applicable,0,,2018-03-02,2018-03-02
+247,406,89,Sacramento Team,2018-03-09,,1,Street Outreach,,,,Not Applicable,0,,2018-03-08,2018-11-07
+248,413,5,ReSTART - PSH,2018-04-01,,1,PH - Permanent Supportive Housing (disability required),,,,Not Applicable,0,Site-based – clustered / multiple sites,2018-04-06,2018-12-21
+249,417,67,Guest House Services (for people living in places fit for habitation),2019-01-01,,1,Services Only,,0,,Not Applicable,0,,2018-04-17,2019-07-29
+250,418,88,Flexible Supportive Rehousing Program - HCV,2018-04-01,,1,PH - Housing with Services (no disability required),,,,Not Applicable,0,Tenant-based - scattered site,2018-04-18,2019-03-18
+251,419,67,Guest House Homeless Clinic,2018-04-20,,1,Street Outreach,,,,Not Applicable,0,,2018-04-20,2018-04-20
+252,420,67,SMART through Guest House Clinic,2018-04-20,,1,Street Outreach,,,,Not Applicable,0,,2018-04-20,2018-04-20
+253,421,92,Re-housing Shelter - ES,2018-03-01,,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Site-based – clustered / multiple sites,2018-05-10,2018-12-21
+254,425,28,Yolo SSVF - RRH,2018-05-22,,0,PH - Rapid Re-Housing,,,,Not Applicable,0,Tenant-based - scattered site,2018-05-22,2018-12-21
+255,426,28,Yolo SSVF - Prevention,2018-05-22,,0,Homeless Prevention,,,,Not Applicable,0,,2018-05-22,2018-12-21
+256,427,11,SSHH: County Rehousing Program,2018-05-01,,0,Services Only,,0,,Not Applicable,0,,2018-05-25,2018-12-21
+257,428,5,Bringing Families Home - RRH,2018-05-01,,1,PH - Rapid Re-Housing,,,,Not Applicable,0,Tenant-based - scattered site,2018-05-30,2018-12-21
+258,431,65,Pathways Health + Home (P2HH) ,2018-06-01,,0,Services Only,,0,,Not Applicable,0,,2018-06-20,2018-11-27
+259,433,43,Phone Triage,2018-06-26,,0,Services Only,,0,,Not Applicable,0,,2018-06-26,2019-08-21
+260,437,82,Roads Home - Prevention,2017-10-01,,1,Homeless Prevention,,,,Not Applicable,1,,2018-09-13,2018-11-28
+261,438,11,SSHH: Rancho Cordova Outreach Program,2018-09-16,,1,Street Outreach,,,,Not Applicable,0,,2018-09-24,2018-12-21
+262,439,98,Possibilities TH Component (Joint RRH/TH Program),2018-11-27,,1,Transitional Housing,,,,Not Applicable,0,Site-based – clustered / multiple sites,2018-09-27,2018-11-29
+263,440,98,Possibilities RRH Component (Joint RRH/TH Program),2018-11-27,,1,PH - Rapid Re-Housing,,,,Not Applicable,0,Site-based – clustered / multiple sites,2018-09-27,2018-11-29
+264,442,87,Emergency Housing Program - ES,2017-10-01,,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2018-10-24,2019-04-30
+265,443,68,Prevention & Intervention,2018-11-01,,0,Homeless Prevention,,,,Not Applicable,0,,2018-11-09,2018-11-27
+266,444,51,North A Street Rehousing Program,2018-11-15,,1,Services Only,,0,,Not Applicable,0,,2018-11-15,2019-08-06
+267,447,101,Carmichael Winter Sanctuary - ES (HIC/PIT Only),2017-12-31,,1,Emergency Shelter,,,Night-by-Night,Not Applicable,0,Site-based – single site,2018-11-29,2019-06-20
+268,448,102,Citrus Heights Winter Sanctuary - ES (HIC/PIT Only),2018-01-01,,1,Emergency Shelter,,,Night-by-Night,Not Applicable,0,Site-based – single site,2018-11-29,2019-06-20
+269,449,103,Elk Grove Winter Sanctuary - ES (HIC/PIT Only),2014-12-14,,1,Emergency Shelter,,,Night-by-Night,Not Applicable,0,Site-based – single site,2018-11-29,2019-06-20
+270,450,104,Folsom Winter Sanctuary - ES (HIC/PIT Only),2017-12-17,,1,Emergency Shelter,,,Night-by-Night,Not Applicable,0,Site-based – single site,2018-11-29,2019-06-20
+271,451,53,Sister Nora's Place - ES (HIC/PIT Only),2005-01-17,,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2018-11-30,2019-06-20
+272,452,105,Rancho Cordova Winter Sanctuary - ES (HIC/PIT Only),2017-11-20,,1,Emergency Shelter,,,Night-by-Night,Not Applicable,0,Site-based – single site,2018-11-30,2019-06-20
+273,453,106,UGM: Emergency Shelter - ES (HIC/PIT Only),1980-01-01,,1,Emergency Shelter,,,Night-by-Night,Not Applicable,0,Site-based – single site,2018-11-30,2019-06-20
+274,456,94,WEAVE: Emergency Shelter Program - ES (HIC/PIT Only),2008-01-01,,1,Emergency Shelter,,,Entry/Exit Date,Domestic Violence victims,1,Site-based – single site,2018-12-21,2019-06-20
+275,457,94,WEAVE: Transitional Housing - TH (HIC/PIT Only),2017-01-01,,1,Transitional Housing,,,,Domestic Violence victims,1,Site-based – single site,2018-12-21,2019-06-20
+276,458,57,H.R.A.P. - Francis House,2018-02-01,,1,Street Outreach,,,,Not Applicable,0,,2019-01-03,2019-01-03
+277,464,35,VOA: GPD Program - TH,2019-01-16,,1,Transitional Housing,,,,Not Applicable,0,Site-based – single site,2019-01-24,2019-01-24
+278,466,67,Guest House Access Point (H.R.A.P.) RETIRED,2019-01-28,,1,Coordinated Assessment,,,,Not Applicable,0,,2019-01-28,2019-02-14
+279,468,67,Guest House Access Point (H.R.A.P.),2019-01-28,,1,Coordinated Assessment,,,,Not Applicable,0,,2019-02-14,2019-05-10
+280,469,59,Family Promise Shelter - ES (HIC/PIT Only),2005-04-01,,1,Emergency Shelter,,,Night-by-Night,Not Applicable,0,Site-based – clustered / multiple sites,2019-02-14,2019-06-20
+281,471,106,New Life Program - TH (HIC/PIT Only),1980-01-01,,1,Transitional Housing,,,,Not Applicable,0,Site-based – single site,2019-02-26,2019-06-20
+282,472,106,Grace Haven Annex - TH (HIC/PIT Only),1980-01-01,,1,Transitional Housing,,,,Not Applicable,0,Site-based – single site,2019-02-26,2019-02-26
+283,477,5,VOA: North 5th Street Shelter Services,2019-02-01,,1,Emergency Shelter,,,Entry/Exit Date,Not Applicable,0,Site-based – single site,2019-03-11,2019-03-11
+284,478,110,Visions Sacramento RST - RRH ,2019-03-15,,1,PH - Rapid Re-Housing,,,,Not Applicable,0,Tenant-based - scattered site,2019-03-15,2019-03-15
+285,479,111,Wellness and Recovery Center - RRH,2019-03-01,,1,PH - Rapid Re-Housing,,,,Not Applicable,0,Tenant-based - scattered site,2019-03-18,2019-03-18
+286,480,112,Capital Stars - RRH,2019-03-01,,1,PH - Rapid Re-Housing,,,,Not Applicable,1,Tenant-based - scattered site,2019-03-18,2019-03-18
+287,482,23,Housing with Dignity,2014-10-01,,0,Transitional Housing,,,,Not Applicable,0,Site-based – single site,2019-03-20,2019-03-20
+288,483,113,VASH Vouchers,2011-01-01,,1,PH - Permanent Supportive Housing (disability required),,,,Not Applicable,0,Tenant-based - scattered site,2019-03-20,2019-06-24
+289,488,55,Xpanding Horizons - TH,2019-04-03,,1,Transitional Housing,,,,Not Applicable,1,Site-based – single site,2019-04-09,2019-04-09
+290,501,28,Mather Veteran's Village 3 - PSH CE,2019-07-01,,1,PH - Permanent Supportive Housing (disability required),,,,Not Applicable,0,Site-based – single site,2019-05-01,2019-05-01
+291,502,28,Mather Veteran's Village 3 SVRC - PSH ,2019-07-01,,1,PH - Permanent Supportive Housing (disability required),,,,Not Applicable,0,Site-based – single site,2019-05-01,2019-05-01
+292,503,72,Bridges SLE - TH,2018-12-18,,1,Transitional Housing,,,,Not Applicable,0,Site-based – clustered / multiple sites,2019-05-15,2019-05-15
+293,509,19,TLCS: PPHP (PACT Perm Housing Program) - Expansion 2018 - HUD PSH,2018-07-01,,1,PH - Permanent Supportive Housing (disability required),,,,Not Applicable,0,Site-based – single site,2019-06-06,2019-06-06
+294,511,88,Intensive Case Management Services - SSO,2018-02-01,,1,Services Only,,0,,Not Applicable,0,,2019-06-20,2019-07-19
+295,525,96,Test Emergency Shelter (Hotel),2019-07-01,2020-10-01,1,Emergency Shelter,,,Night-by-Night,Not Applicable,0,Site-based – single site,2019-07-03,2019-07-03
+296,526,118,Capitol Park Hotel - ES,2019-08-01,,1,Emergency Shelter,,,Night-by-Night,Not Applicable,0,Site-based – single site,2019-08-07,2019-08-27
+297,527,121,Coordinated Entry,2019-09-01,,1,Coordinated Assessment,,,,Not Applicable,0,,2019-08-29,2019-09-03
+298,528,120,Expungement Clinic,2019-09-01,,1,Services Only,,0,,Not Applicable,0,,2019-09-03,2019-09-03
