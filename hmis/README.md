@@ -40,7 +40,11 @@ renamed as listed below for use within Jupyter Notebook:
 6. "Sacramento_County_-_Service_Table_2019-09-05T0301_HZ8K2P" > "services"
 
 ## Citations
-Github Source Data Repo: https://github.com/code4sac/sacramento-county-homeless-hmis-data
+Source data and visualization examples are located here:
+
+1. [Github Source Data Repo](https://github.com/code4sac/sacramento-county-homeless-hmis-data)
+2. [Chicago](https://allchicago.org/dashboard-to-end-homelessness)
+3. [Seattle](http://allhomekc.org/data-overview/)
 
 Original README: "This is a first publishing of data from Sacramento Steps Forward data on
 the Sacramento Regional Homeless population and continuum of Care for dates from
