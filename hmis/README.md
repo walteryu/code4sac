@@ -16,17 +16,20 @@ instructions for running analysis and provides an introduction on data science.
 2. Each section contains explanation followed by code/analysis
 3. Analysis progresses from data cleaning, summary statistics and visualization
 
-## Data Schema and Cleaning
+## Data Schema
 Data schema is listed below:
 
-1. Dataset contains six tables, each connected via "Personal_ID" field
+1. Dataset contains six tables, each connected via personal_id field
 2. Each table contains data on a single entity, e.g. clients, projects, etc.
 3. Dataset follows traditional relational schema since it is extracted from RDBMS
+4. Clients table is main table and connect to others via personal_id
+5. Services table is the largest since it is a one-to-many with clients
 
+## Data Cleaning
 Cleaning was performed per steps below:
 
-1. "Personal_ID" column name was made consistent across all tables
-2. "Personal_ID" data type was made consistent across all tables
+1. Column names were renamed across all tables with lower-case and underscore convention for consistency, i.e. like_this_column_name
+2. Column name data types were manually converted to plain text, numeric and date types since RDBMS/Excel export resulted in formatted data types.
 
 ## Filenames
 Original data was extracted from an existing case management system, and files were
