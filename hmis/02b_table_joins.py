@@ -1,6 +1,6 @@
-# 02B - Show dataframe shape
+# 02B - show dataframe shape
 
-# Remove outlier values, i.e. outside 3 standard deviations
+# remove outlier values, i.e. outside 3 standard deviations
 # VMT_is_within_3_standard_deviations = np.abs(df['Annual_VMT'] - df['Annual_VMT'].mean()) <= (3*df['Annual_VMT'].std())
 # df = df[VMT_is_within_3_standard_deviations]
 # print('Column Dimensions - Excluding Outliers:')
@@ -21,6 +21,14 @@ print('client-enrollments: value counts - client ethnicity:')
 print(clients_enrollments['client_ethnicity'].value_counts())
 print('')
 
+print('client-enrollments: unique values - client race:')
+print(clients_enrollments['client_race'].unique())
+print('')
+
+print('client-enrollments: value counts - client race:')
+print(clients_enrollments['client_race'].value_counts())
+print('')
+
 print('enrollments-exits: unique values - exit reason:')
 print(enrollments_exits['exit_reason'].unique())
 print('')
@@ -35,16 +43,4 @@ print('')
 
 print('enrollments-services: value counts - category type:')
 print(enrollments_services['service_category'].value_counts())
-print('')
-
-print('clients-enrollments: data shape:')
-print(clients_enrollments.shape)
-print('')
-
-print('enrollments-exits: data shape:')
-print(enrollments_exits.shape)
-print('')
-
-print('enrollment-exit-services: data shape:')
-print(ee_services.shape)
 print('')
