@@ -34,7 +34,7 @@ instructions for running analysis and provides an introduction on data science.
 1. [Shelter Listings - Sacramento](https://www.shelterlistings.org/city/sacramento-ca.html)
 2. [Sac 211 - Homelessness](http://www.211sacramento.org/211/online-database/categories/homeless/)
 3. [Sac County Open Data - 311 Service Calls](https://data.cityofsacramento.org/datasets/08794a6695b3483f889e9bef122517e9_0)
-4. [Sac County Open Data - 911 Service Calls]((https://data.cityofsacramento.org/datasets/396e0bc72dcd4b038206f4a7239792bb_0)
+4. [Sac County Open Data - 911 Service Calls](https://data.cityofsacramento.org/datasets/396e0bc72dcd4b038206f4a7239792bb_0)
 5. [HUD Open Data Portal](https://www.huduser.gov/portal/datasets/pdrdatas.html)
 
 ## TODO
