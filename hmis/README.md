@@ -25,10 +25,17 @@ instructions for running analysis and provides an introduction on data science.
 2. Client ID is unique, so same individually is not recorded multiple times
 3. Time enrolled in services is outcome of interest
 
+## Data Exploration Ideas
+1. Compare with Sacramento 311 or 911 data?
+2. How or when do clients drop off once enrolled into services?
+3. What are some factors which affect enrollment/exit duration?
+
 ## TODO
 1. Create additional plots
 2. Identify variables which affect total time enrolled in services
-3. Create forecasts/predictions once variables are identified
+3. Create time series to evaluate case management life cycle
+4. Evaluate data quality and determine whether fit for machine learning
+5. If fit for use, then create predictions once variables are identified
 
 ## Data Schema
 Data schema is listed below:
