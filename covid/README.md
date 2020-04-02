@@ -19,6 +19,11 @@ datasets, portals and open data links for developing analysis and visualizations
 5. [Kaiser Family Foundation Data Portal](https://www.kff.org/health-costs/issue-brief/state-data-and-policy-actions-to-address-coronavirus/#stateleveldata)
 6. [Tableau COVID-19 Data Hub](https://www.tableau.com/covid-19-coronavirus-data-resources)
 
+### github
+1. [NYTimes COVID-19 Data](https://github.com/nytimes/covid-19-data)
+2. [Imperial College COVID-19 Model](https://github.com/ImperialCollegeLondon/covid19model)
+3. [CA COVID-19 Website](https://github.com/cagov/covid19)
+
 ### Kaggle
 * [COVID-19 Community Contributions](https://www.kaggle.com/covid-19-contributions)
 * [COVID-19 Open Research Dataset Challenge](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge)
