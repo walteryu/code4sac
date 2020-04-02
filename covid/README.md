@@ -7,11 +7,15 @@
 This page contains resources which may be useful for Code4Sac hack night; specifically,
 datasets, portals and open data links for developing analysis and visualizations.
 
+### COVID Data
+* [COVID-19 API](https://covid19api.com/)
+
 ### Open Data Portals
 * [CA Open Data Portal](https://data.ca.gov/)
 * [CHHS Open Data Portal](https://data.chhs.ca.gov/)
 
 ### Johns Hopkins University
+* [JHU CSSE Data on Github](https://github.com/CSSEGISandData/COVID-19)
 * [JHU COVID-19 Resource Center](https://coronavirus.jhu.edu/)
 * [JHU Center for Health Security: Ventilator Availability](http://www.centerforhealthsecurity.org/resources/COVID-19/200214-VentilatorAvailability-factsheet.pdf)
 
