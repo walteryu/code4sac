@@ -30,14 +30,7 @@ instructions for running analysis and provides an introduction on data science.
 2. How or when do clients drop off once enrolled into services?
 3. What are some factors which affect enrollment/exit duration?
 
-## Data Portals
-1. [Shelter Listings - Sacramento](https://www.shelterlistings.org/city/sacramento-ca.html)
-2. [Sac 211 - Homelessness](http://www.211sacramento.org/211/online-database/categories/homeless/)
-3. [Sac County Open Data - 311 Service Calls](https://data.cityofsacramento.org/datasets/08794a6695b3483f889e9bef122517e9_0)
-4. [Sac County Open Data - 911 Service Calls](https://data.cityofsacramento.org/datasets/396e0bc72dcd4b038206f4a7239792bb_0)
-5. [HUD Open Data Portal](https://www.huduser.gov/portal/datasets/pdrdatas.html)
-
-## TODO
+## Next Steps
 1. Create additional plots
 2. Identify variables which affect total time enrolled in services
 3. Create time series to evaluate case management life cycle
@@ -66,6 +59,13 @@ Data tables were joined for analysis as follows:
 1. Clients-Enrollments: client_enrollments
 2. Clients-Enrollments-Exits: enrollments_exits
 3. Enrollments-Services: enrollments_services
+
+## Data Portals
+1. [Shelter Listings - Sacramento](https://www.shelterlistings.org/city/sacramento-ca.html)
+2. [Sac 211 - Homelessness](http://www.211sacramento.org/211/online-database/categories/homeless/)
+3. [Sac County Open Data - 311 Service Calls](https://data.cityofsacramento.org/datasets/08794a6695b3483f889e9bef122517e9_0)
+4. [Sac County Open Data - 911 Service Calls](https://data.cityofsacramento.org/datasets/396e0bc72dcd4b038206f4a7239792bb_0)
+5. [HUD Open Data Portal](https://www.huduser.gov/portal/datasets/pdrdatas.html)
 
 ## Known Issues
 1. Since data was manually entered, it contains some typos/errors
