@@ -1,0 +1,41 @@
+# 02B - data clean and output column names
+# Source data: https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv
+
+print("*** convert data types - county cases (before) ***")
+print("")
+print(df_county.info())
+print("")
+
+# convert string to datetime
+# reference: https://stackoverflow.com/questions/32888124/pandas-out-of-bounds-nanosecond-timestamp-after-offset-rollforward-plus-adding-a
+
+# index for plot based by date
+# indexedDataset = dataset.set_index(['SampleDate'])
+
+df_county['date'] = pd.to_datetime(
+    df_county['date'],
+    infer_datetime_format=True,
+    errors = 'coerce'
+)
+
+print("*** convert data types - county cases (after) ***")
+print("")
+print(df_county.info())
+print("")
+
+# example of converting column data type
+# df['cost'] = pd.to_numeric(df['cost'])
+
+# drop null values
+# df = df.dropna()
+
+# Remove outlier values, i.e. outside 3 standard deviations
+# VMT_is_within_3_standard_deviations = np.abs(df['Annual_VMT'] - df['Annual_VMT'].mean()) <= (3*df['Annual_VMT'].std())
+# df = df[VMT_is_within_3_standard_deviations]
+# print('Column Dimensions - Excluding Outliers:')
+# print(df.shape)
+# print("")
+
+# merge clients, entries and exits
+# clients_enrollments = pd.merge(df_clients, df_enrollments, on='personal_id')
+# enrollments_exits = pd.merge(clients_enrollments, df_exits, on='personal_id')
