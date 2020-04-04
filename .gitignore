@@ -9,6 +9,20 @@ check_repo.sh
 /data
 /sac311/*.csvt
 
+/ca_workforce/*.html
+/ca_workforce/workspace.py
+/ca_workforce/.ipynb_checkpoints/
+
+/covid/*.html
+/covid/.ipynb_checkpoints/
+
+/gare/*.html
+/gare/.ipynb_checkpoints/
+
+/hmis/*.html
+/hmis/modules.py
+/hmis/.ipynb_checkpoints/
+
 /ndoch_2019/*.html
 /ndoch_2019/.ipynb_checkpoints/
 
@@ -21,14 +35,3 @@ check_repo.sh
 /open_data/data_validation/*.html
 /open_data/data_validation/results
 /open_data/data_validation/.ipynb_checkpoints/
-
-/gare/*.html
-/gare/.ipynb_checkpoints/
-
-/hmis/*.html
-/hmis/modules.py
-/hmis/.ipynb_checkpoints/
-
-/ca_workforce/*.html
-/ca_workforce/workspace.py
-/ca_workforce/.ipynb_checkpoints/
