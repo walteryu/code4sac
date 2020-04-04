@@ -1,4 +1,4 @@
-# Sacramento Homelessness Data Analysis
+# COVID-19 Data Analysis
 
 ### Code for Sacramento - Spring 2020
 
