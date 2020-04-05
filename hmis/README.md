@@ -60,13 +60,6 @@ Data tables were joined for analysis as follows:
 2. Clients-Enrollments-Exits: enrollments_exits
 3. Enrollments-Services: enrollments_services
 
-## Data Portals
-1. [Shelter Listings - Sacramento](https://www.shelterlistings.org/city/sacramento-ca.html)
-2. [Sac 211 - Homelessness](http://www.211sacramento.org/211/online-database/categories/homeless/)
-3. [Sac County Open Data - 311 Service Calls](https://data.cityofsacramento.org/datasets/08794a6695b3483f889e9bef122517e9_0)
-4. [Sac County Open Data - 911 Service Calls](https://data.cityofsacramento.org/datasets/396e0bc72dcd4b038206f4a7239792bb_0)
-5. [HUD Open Data Portal](https://www.huduser.gov/portal/datasets/pdrdatas.html)
-
 ## Known Issues
 1. Since data was manually entered, it contains some typos/errors
 2. Some columns contain mostly null values, so may not be as useful for Analysis
@@ -82,6 +75,13 @@ renamed as listed below for use within Jupyter Notebook:
 4. "Sacramento_County_-_Exit_Table_2019-09-01T0601_FDwNWs" > "exits"
 5. "Sacramento_County_-_Project_Table_2019-09-05T0200_DdZb5N" > "projects"
 6. "Sacramento_County_-_Service_Table_2019-09-05T0301_HZ8K2P" > "services"
+
+## Data Portals
+1. [Shelter Listings - Sacramento](https://www.shelterlistings.org/city/sacramento-ca.html)
+2. [Sac 211 - Homelessness](http://www.211sacramento.org/211/online-database/categories/homeless/)
+3. [Sac County Open Data - 311 Service Calls](https://data.cityofsacramento.org/datasets/08794a6695b3483f889e9bef122517e9_0)
+4. [Sac County Open Data - 911 Service Calls](https://data.cityofsacramento.org/datasets/396e0bc72dcd4b038206f4a7239792bb_0)
+5. [HUD Open Data Portal](https://www.huduser.gov/portal/datasets/pdrdatas.html)
 
 ## Citations
 Source data and visualization examples are located here:
