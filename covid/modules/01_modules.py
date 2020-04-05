@@ -20,6 +20,14 @@ import matplotlib.pyplot as plt
 # adjust plot settings to output correctly
 %matplotlib inline
 
+# Install a pip package in the current Jupyter kernel; run only for initial install:
+# https://jakevdp.github.io/blog/2017/12/05/installing-python-packages-from-jupyter/
+# import sys
+# !{sys.executable} -m pip install seaborn==0.9.0
+# !{sys.executable} -m pip install --upgrade pip
+
 # seaborn module for plots; built on matplotlib package:
 # https://seaborn.pydata.org/
 import seaborn as sns; sns.set(color_codes=True)
+
+print('done importing modules')
