@@ -2,23 +2,23 @@
 # Source data: https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv
 
 # load data into notebook; make sure file is in folder as notebook
-df_county = pd.read_csv('data/us-counties.csv')
+df_total = pd.read_csv('data/us-counties.csv')
 
-print("*** column names - county cases ***")
-print(df_county.info())
+print("*** dataset info - total cases by US county ***")
+print(df_total.info())
 print("")
 
-print('*** data shape - cases by US county ***')
-print(df_county.shape)
+print('*** data shape - total cases by US county ***')
+print(df_total.shape)
 print('')
 
 print('*** unique values - US state ***')
-print(df_county['state'].unique())
+print(df_total['state'].unique())
 print('')
 
 # df.describe(include='all')
 # note the `include='all'` argument will include non-numeric columns (e.g. # unique)
 
 # Output summary statistics for dataframe
-print('*** summary statistics - daily cases by US county ***')
-df_county['cases'].describe()
+print('*** summary statistics - total cases by US county ***')
+df_total['cases'].describe()

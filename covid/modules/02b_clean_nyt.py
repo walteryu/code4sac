@@ -1,26 +1,21 @@
 # 02B - data clean and output column names
 # Source data: https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv
 
-print("*** convert data types - county cases (before) ***")
-print("")
-print(df_county.info())
-print("")
-
 # convert string to datetime
 # reference: https://stackoverflow.com/questions/32888124/pandas-out-of-bounds-nanosecond-timestamp-after-offset-rollforward-plus-adding-a
 
 # index for plot based by date
 # indexedDataset = dataset.set_index(['SampleDate'])
 
-df_county['date'] = pd.to_datetime(
-    df_county['date'],
+df_total['date'] = pd.to_datetime(
+    df_total['date'],
     infer_datetime_format=True,
     errors = 'coerce'
 )
 
-print("*** convert data types - county cases (after) ***")
+print("*** confirm data types conversion - datetime ***")
 print("")
-print(df_county.info())
+print(df_total.info())
 print("")
 
 # example of converting column data type
