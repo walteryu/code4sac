@@ -1,6 +1,6 @@
 # Code for Sacramento
 
-![Code4Sac](https://github.com/walteryu/code4sac/blob/master/images/code4sac.png)
+![covid](https://github.com/walteryu/code4sac/blob/master/images/covid_countplot.png)
 
 ## COVID-19 Resources
 
