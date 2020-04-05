@@ -34,3 +34,12 @@ print("")
 # merge clients, entries and exits
 # clients_enrollments = pd.merge(df_clients, df_enrollments, on='personal_id')
 # enrollments_exits = pd.merge(clients_enrollments, df_exits, on='personal_id')
+
+# filter by state
+# https://stackoverflow.com/questions/11869910/pandas-filter-rows-of-dataframe-with-operator-chaining
+df_california = df_total[df_total['state'] == 'California']
+
+print("*** dataset info - total cases in CA by county ***")
+print("")
+print(df_california.info())
+print("")
