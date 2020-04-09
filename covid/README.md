@@ -20,8 +20,9 @@ This page contains resources and analysis which may be useful for Code4Sac hack 
 
 ### Github
 1. [NYTimes COVID-19 Data](https://github.com/nytimes/covid-19-data)
-2. [Imperial College COVID-19 Model](https://github.com/ImperialCollegeLondon/covid19model)
-3. [CA COVID-19 Website](https://github.com/cagov/covid19)
+2. [LATimes COVID-19 Data](https://github.com/datadesk/california-coronavirus-data)
+3. [Imperial College COVID-19 Model](https://github.com/ImperialCollegeLondon/covid19model)
+4. [CA COVID-19 Website](https://github.com/cagov/covid19)
 
 ### Kaggle
 * [COVID-19 Community Contributions](https://www.kaggle.com/covid-19-contributions)
