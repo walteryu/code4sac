@@ -18,7 +18,7 @@ import statsmodels.api as sm
 import matplotlib.pyplot as plt
 
 # adjust plot settings to output correctly
-%matplotlib inline
+# %matplotlib inline
 
 # Install a pip package in the current Jupyter kernel; run only for initial install:
 # https://jakevdp.github.io/blog/2017/12/05/installing-python-packages-from-jupyter/
