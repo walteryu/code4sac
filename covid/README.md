@@ -1,5 +1,7 @@
 # Code for Sacramento
 
+## COVID-19 Data Project
+
 ![covid](https://github.com/walteryu/code4sac/blob/master/images/covid_countplot.png)
 
 ## COVID-19 Resources
