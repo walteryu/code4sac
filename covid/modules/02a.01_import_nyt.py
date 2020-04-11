@@ -2,7 +2,12 @@
 # Source data: https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv
 
 # load data into notebook; make sure file is in folder as notebook
-df_total = pd.read_csv('data/nyt_county_cases.csv')
+# df_total = pd.read_csv('data/nyt_county_cases.csv')
+
+# load data via url
+# https://stackoverflow.com/questions/32400867/pandas-read-csv-from-url/41880513#41880513
+url = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv"
+df_total = pd.read_csv(url)
 
 print("*** dataset info - total cases by US county ***")
 print(df_total.info())
