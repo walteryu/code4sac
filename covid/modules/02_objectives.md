@@ -10,7 +10,7 @@ This notebook is organized by analysis of the datasets listed below. Analysis fo
 
 ### [NYTimes Case Data](https://github.com/nytimes/covid-19-data)
 
-Individual cases prepared by NYTimes journalist staff and updated daily by US county. Data is provided in CSV format; it is an effort to clarify the reports by US states and counties on their case count. Dataset contains total cases as of 04-03-2020.
+Individual cases prepared by NYTimes journalist staff and updated daily by US county. Data is provided in CSV format; it is an effort to clarify the reports by US states and counties on their case count. CSV dataset in the data folder contains total cases as of 04-03-2020; otherwise, URL reads from current data.
 
 The source data documentation describes the project is as follows:
 
