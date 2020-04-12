@@ -25,11 +25,17 @@ pip3 install --upgrade sklearn
 # pip3 install geopandas==0.2.1
 # pip3 install geojsonio==0.0.3
 
-pip3 install shapely
+# pip3 install shapely
 pip3 install --upgrade shapely
 
-pip3 install geopandas
+# pip3 install geopandas
 pip3 install --upgrade geopandas
 
-pip3 install geojsonio
+# pip3 install geojsonio
 pip3 install --upgrade geojsonio
+
+pip3 install descartes
+pip3 install --upgrade descartes
+
+pip3 install fiona
+pip3 install --upgrade fiona
