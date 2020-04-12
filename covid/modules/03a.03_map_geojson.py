@@ -16,7 +16,7 @@ df['name']=df['Province/State'].mask(pd.isnull, df['Country/Region'])
 
 # create an empty map
 map = folium.Map(
-    zoom_start=1.2,
+    zoom_start=2,
     width=1000,
     height=750,
     location=[0,0]
