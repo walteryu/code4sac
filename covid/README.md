@@ -9,8 +9,10 @@
 This page contains resources and analysis which may be useful for Code4Sac hack night project ideas; specifically, datasets, portals and open data links for developing analysis and visualizations.
 
 ### COVID Data
-* [COVID-19 API](https://covid19api.com/)
-* [Allen Institute COVID-19 Data](https://pages.semanticscholar.org/coronavirus-research)
+1. [COVID-19 API](https://covid19api.com/)
+2. [Allen Institute COVID-19 Data](https://pages.semanticscholar.org/coronavirus-research)
+3. [COVID-19 Dev Project](https://github.com/soroushchehresa/awesome-coronavirus)
+4. [Corona Data Scraper](https://coronadatascraper.com/#home)
 
 ### Data Portals
 1. [CA Open Data Portal](https://data.ca.gov/)
