@@ -17,8 +17,9 @@ This page contains resources and analysis which may be useful for Code4Sac hack 
 2. [CHHS Open Data Portal](https://data.chhs.ca.gov/)
 3. [CDC Open Data Portal](https://data.cdc.gov/)
 4. [WHO Open Data Portal](https://www.who.int/emergencies/diseases/novel-coronavirus-2019/global-research-on-novel-coronavirus-2019-ncov)
-5. [Kaiser Family Foundation Data Portal](https://www.kff.org/health-costs/issue-brief/state-data-and-policy-actions-to-address-coronavirus/#stateleveldata)
-6. [Tableau COVID-19 Data Hub](https://www.tableau.com/covid-19-coronavirus-data-resources)
+5. [World Bank Portal](http://datatopics.worldbank.org/universal-health-coverage/coronavirus/)
+6. [Kaiser Family Foundation Data Portal](https://www.kff.org/health-costs/issue-brief/state-data-and-policy-actions-to-address-coronavirus/#stateleveldata)
+7. [Tableau COVID-19 Data Hub](https://www.tableau.com/covid-19-coronavirus-data-resources)
 
 ### Github
 1. [NYTimes COVID-19 Data](https://github.com/nytimes/covid-19-data)
