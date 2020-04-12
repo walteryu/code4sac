@@ -35,16 +35,12 @@ Textbooks:
 2. [ISLR - Introductory ML](https://faculty.marshall.usc.edu/gareth-james/ISL/): Free Online Textbook
 3. [ESLR - Intermediate ML](https://web.stanford.edu/~hastie/ElemStatLearn/): Free Online Textbook
 
-### Projects
-
-1. 2019 NSF Civic Innovation Challenge - GIS web application developed to evaluate flood and erosion risk due to climate change in the Sacramento Area. Application was built using the ESRI JS API and Node.JS framework.
-2. Computer Vision Modeling for Litter Detection - Trained models for custom object detection to detect and evaluate trash levels on roads and highways.
-3. City of Sacramento 311 Service Calls - Analysis for the neighborhood portal project with statistical and spatial analysis.
-
 ### Methodology
 
 Appropriate technologies, tools and analytical methods are selected for each project. Results are documented within README and notebook documentation.
 
 ### Installation and Citations
 
-Each project has specific installation instructions and citations within the RREADME document.
+Each project has specific installation instructions and citations within the readme
+document. For Jupyter Notebook projects, package installation script is available in the
+root folder of this repo so please refer to it if running Jupyter on your system.
