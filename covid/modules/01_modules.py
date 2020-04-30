@@ -6,7 +6,7 @@ import pandas as pd
 # used to work with datetime
 from datetime import datetime
 
-# numpy module for scientific computing (math functions, and pandas is built on numpy)
+# numpy module for scientific computing
 import numpy as np
 
 # modules for statistical models
