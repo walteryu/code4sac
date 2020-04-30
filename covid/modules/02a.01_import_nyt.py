@@ -9,21 +9,34 @@
 url = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv"
 df_total = pd.read_csv(url)
 
-print("*** dataset info - total cases by US county ***")
-print(df_total.info())
-print("")
+# output table info
+def data_profile(df, msg):
+    print(msg, '\n')
+    print('dataframe shape: ', df.shape, '\n')
+    print(df.info(), '\n')
+    print('dataframe data types:\n', df.dtypes)
 
-print('*** data shape - total cases by US county ***')
-print(df_total.shape)
-print('')
+data_profile(
+    df_total,
+    '*** Table Info: NYT Dataset - Total Cases by US County ***'
+)
 
-print('*** unique values - US state ***')
-print(df_total['state'].unique())
-print('')
+# output unique values
+def show_unique(col, msg):
+    print('\n', msg, '\n')
+    print(col.unique())
 
-# df.describe(include='all')
-# note the `include='all'` argument will include non-numeric columns (e.g. # unique)
+show_unique(
+    df_total['state'],
+    '*** Unique Values: NYT Dataset - US States ***'
+)
 
-# Output summary statistics for dataframe
-print('*** summary statistics - total cases by US county ***')
-df_total['cases'].describe()
+# output summary stats
+def summary_stats(col, msg):
+    print('\n', msg, '\n')
+    print(col.describe())
+
+summary_stats(
+    df_total['cases'],
+    '*** Summary Stats: NYT Dataset - Total Cases by US County ***'
+)
