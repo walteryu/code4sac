@@ -1,4 +1,4 @@
-# 02B.01 - eda/nytimes 
+# 02B.01 - eda/nytimes
 # Source data: https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv
 
 # convert string to datetime
@@ -6,6 +6,20 @@
 
 # index for plot based by date
 # indexedDataset = dataset.set_index(['SampleDate'])
+
+# convert col to numeric type
+# reference: https://stackoverflow.com/questions/47333227/pandas-valueerror-cannot-convert-float-nan-to-integer
+def convert_num(col):
+    # convert type
+    col = pd.to_numeric(
+        col,
+        errors='coerce'
+    )
+    # print msg in case of error
+    # if col.dtypes != 'int64' or 'float64':
+    #     print('error: numeric conversion not successful')
+
+convert_num(df_1618['DISTRICTID'])
 
 df_total['date'] = pd.to_datetime(
     df_total['date'],
