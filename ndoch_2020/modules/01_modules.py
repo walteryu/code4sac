@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 
 # data visualization module
 # https://seaborn.pydata.org/
-import seaborn as sns; sns.set(color_codes=True)
+# import seaborn as sns; sns.set(color_codes=True)
 
 # geospatial modules
 from shapely.geometry import Point, Polygon
@@ -24,7 +24,6 @@ import geopandas as gpd
 import geojsonio
 from descartes import PolygonPatch
 import fiona
-# import matplotlib.pyplot as plt
 
 # geospatial and geojson modules
 import folium
