@@ -2,7 +2,6 @@
 
 # note: module based on tutorial below
 # https://blog.dominodatalab.com/creating-interactive-crime-maps-with-folium/
-# https://data.sfgov.org/Public-Safety/Police-Department-Incident-Reports-Historical-2003/tmnf-yvry
 
 # function to read csv file
 # https://stackoverflow.com/questions/32400867/pandas-read-csv-from-url/41880513#41880513
@@ -13,15 +12,6 @@ def read_data(path):
 # function to output csv file
 def output_result(df, filepath):
     df.to_csv(filepath)
-
-# note: reduce original file (500mb) by subset first 10k rows and replace file
-# https://datacarpentry.org/python-ecology-lesson/03-index-slice-subset/index.html
-# df_data = read_data("data/sfpd_report_2003-18.csv")
-# df_data = df_data[0:10000]
-# output_result(df_data, "data/sfpd_report_2003-18.csv")
-
-# read in reduced file after processing steps above
-df_data = read_data("data/sfpd_report_2003-18.csv")
 
 # function to show table info
 def data_profile(df, msg):
