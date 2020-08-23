@@ -32,6 +32,8 @@ def data_profile(df, msg):
     print('*** Table Info: Table Dimensions ***', '\n')
     print(df.shape, '\n')
 
+data_profile(df_data, 'SFPD Reports')
+
 # function to show unique value for given column
 def show_unique(df, col):
     # pass in variable into string
