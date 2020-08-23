@@ -19,7 +19,7 @@ This notebook starts with a tutorial using Python mapping tools as a prototype, 
 1. [Folium Tutorial](18)
 2. [SFPD Crime Reports Dataset (2003-18)](19)
 3. [CA Geoportal: Open Datasets](20)
-4. [CA Schools Dataset (2003-18)](21)
+4. [CA Schools Dataset (2019-20)](21)
 
 ## Jupyter Installation
 1. Download and install Jupyter Notebook from their [website](3)
