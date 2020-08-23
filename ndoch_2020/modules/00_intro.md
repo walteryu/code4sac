@@ -34,7 +34,7 @@ Notebooks are organized by cells, which mainly consist of text (in markdown) and
 5. File can be saved by hitting CTRL + "s" or file/save from the pulldown menu above
 
 ## Quick Start
-This notebook will require some Pythong programming, which is widely used and gain enough traction to be taught in [high school][5] and AP Computer Science [courses][6].
+This notebook will require some Python programming, which is widely used and gain enough traction to be taught in [high school][5] and AP Computer Science [courses][6].
 
 [Jupyter][7] supports several different languages (R, Scala and Julia); however, Python is the most popular of them and can be used for other tasks, primarily data science and web programming.
 
