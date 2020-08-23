@@ -2,19 +2,26 @@
 
 # note: module based on tutorial below
 # https://blog.dominodatalab.com/creating-interactive-crime-maps-with-folium/
-
-# load data via url
-# https://stackoverflow.com/questions/32400867/pandas-read-csv-from-url/41880513#41880513
-# url = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv"
-# df_total = pd.read_csv(url)
+# https://data.sfgov.org/Public-Safety/Police-Department-Incident-Reports-Historical-2003/tmnf-yvry
 
 # function to read csv file
+# https://stackoverflow.com/questions/32400867/pandas-read-csv-from-url/41880513#41880513
 def read_data(path):
     df = pd.read_csv(path)
     return(df)
 
-data_url = "https://data.sfgov.org/api/views/tmnf-yvry/rows.csv?accessType=DOWNLOAD"
-df_data = read_data(data_url)
+# function to output csv file
+def output_result(df, filepath):
+    df.to_csv(filepath)
+
+# note: reduce original file (500mb) by subset first 10k rows and replace file
+# https://datacarpentry.org/python-ecology-lesson/03-index-slice-subset/index.html
+# df_data = read_data("data/sfpd_report_2003-18.csv")
+# df_data = df_data[0:10000]
+# output_result(df_data, "data/sfpd_report_2003-18.csv")
+
+# read in reduced file after processing steps above
+df_data = read_data("data/sfpd_report_2003-18.csv")
 
 # function to show table info
 def data_profile(df, msg):
