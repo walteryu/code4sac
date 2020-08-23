@@ -15,14 +15,14 @@ SAC_COORDINATES = (38.575764, -121.478851)
 MAX_RECORDS = 1000
 
 # create empty map zoomed in on San Francisco
-map = folium.Map(location=SF_COORDINATES, zoom_start=16)
+map = folium.Map(location=SAC_COORDINATES, zoom_start=16)
 
 # add a marker for every record in the filtered data, use a clustered view
 for each in df_school[0:MAX_RECORDS].iterrows():
     # note: adjust map settings and update syntax:
     # https://python-visualization.github.io/folium/quickstart.html
     folium.Marker(
-        location = [each[1]['Y'],each[1]['X']],
+        location = [each[1]['Latitude'],each[1]['Longitude']],
         clustered_marker = True,
         popup = 'CA School Location'
     ).add_to(map)
