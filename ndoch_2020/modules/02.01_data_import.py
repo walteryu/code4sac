@@ -63,7 +63,7 @@ df_sfpd = read_data("data/sfpd_report_2003-18.csv")
 df_school = read_data("data/ca_school_2019-20.csv")
 
 # https://opendata.arcgis.com/datasets/f7f818b0aa7a415192eaf66f192bc9cc_0.geojson
-df_school_geojson = read_data("data/ca_school_2019-20.geojson")
+# df_school_geojson = read_data("data/ca_school_2019-20.geojson")
 
 # data profile data after import
 data_profile(df_sfpd, 'SFPD Reports (2003-18)')
