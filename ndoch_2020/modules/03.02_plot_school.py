@@ -3,6 +3,9 @@
 # note: module based on tutorial below
 # https://blog.dominodatalab.com/creating-interactive-crime-maps-with-folium/
 
+# update map settings
+# https://python-visualization.github.io/folium/quickstart.html
+
 # ca geoportal - education dataset (2019-20)
 # https://gis.data.ca.gov/datasets/CDEGIS::california-schools-2019-20
 # https://opendata.arcgis.com/datasets/f7f818b0aa7a415192eaf66f192bc9cc_0.geojson
