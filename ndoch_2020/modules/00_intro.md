@@ -5,7 +5,7 @@
 * 08-21-2020: Baseline Version v0.1
 
 ### Introduction
-This project focuses on the asset map item for the [CFA NDoCH](2) event; it consists of a web application to visualize various assets within the Sacramento area. The data is sourced from various open data portals.
+This project focuses on the asset map item for the [CFA NDoCH][2] event; it consists of a web application to visualize various assets within the Sacramento area. The data is sourced from various open data portals.
 
 Data processing and maps are created using Jupyter Notebook due to its ability to visualize results effectively and efficiently. Listed below are installation instructions and more about Jupyter and the Python programming language.
 
@@ -17,13 +17,13 @@ The CFA-NDoCH instructions are shown below and specify that open data sources sh
 ### Approach
 This notebook starts with a tutorial using Python mapping tools as a prototype, then develops a map for the Sacramento area. Open data sources are listed below and will be added to with additional development.
 
-1. [Folium Tutorial](18)
-2. [SFPD Crime Reports Dataset (2003-18)](19)
-3. [CA Geoportal: Open Datasets](20)
-4. [CA Schools Dataset (2003-18)](21)
+1. [Folium Tutorial][18]
+2. [SFPD Crime Reports Dataset (2003-18)][19]
+3. [CA Geoportal: Open Datasets][20]
+4. [CA Schools Dataset (2019-20)][21]
 
 ## Jupyter Installation
-1. Download and install Jupyter Notebook from their [website](3)
+1. Download and install Jupyter Notebook from their [website][3]
 2. Verify that Jupyter Notebook was installed and visible from Windows Start menu
 3. Start Jupyter Notebook; it will start CMD shell and load in the web browser
 4. Save this notebook and CSV data to your "Documents" folder and navigate to it from the Notebook start page
@@ -86,4 +86,4 @@ If you are new to programming or Markdown, then please review the links below:
 [18]: https://blog.dominodatalab.com/creating-interactive-crime-maps-with-folium/
 [19]: https://data.sfgov.org/Public-Safety/Police-Department-Incident-Reports-Historical-2003/tmnf-yvry
 [20]: https://gis.data.ca.gov/
-[21]: https://gis.data.ca.gov/datasets/CDEGIS::california-schools-2019-20
+[21]: https://gis.data.ca.gov/datasets/CDEGIS::california-schools-2019-20?geometry=-152.476%2C31.022%2C-85.723%2C43.235
