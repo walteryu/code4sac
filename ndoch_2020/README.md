@@ -1,7 +1,7 @@
 ## Code of America - NDoCH 2020
 ### Code for Sacramento - Asset Map
 
-![asset_map](22)
+![asset_map](https://github.com/walteryu/code4sac/blob/master/ndoch_2020/asset_map.PNG)
 
 ### Introduction
 This project focuses on the asset map item for the [CFA NDoCH](2) event; it consists of a web application to visualize various assets within the Sacramento area. The data is sourced from various open data portals.
@@ -86,4 +86,3 @@ If you are new to programming or Markdown, then please review the links below:
 [19]: https://data.sfgov.org/Public-Safety/Police-Department-Incident-Reports-Historical-2003/tmnf-yvry
 [20]: https://gis.data.ca.gov/
 [21]: https://gis.data.ca.gov/datasets/CDEGIS::california-schools-2019-20
-[22]: https://github.com/walteryu/code4sac/blob/master/ndoch_2020/asset_map.PNG
