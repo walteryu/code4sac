@@ -23,5 +23,6 @@ def convert_date(df, col):
 
 # function convert col to string type
 def convert_str(df, col):
+    # convert type
     df[col].astype(str)
     return(df)
