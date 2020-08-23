@@ -27,30 +27,23 @@ for each in df_school_sac[0:MAX_RECORDS].iterrows():
     folium.Marker(
         location = [each[1]['Latitude'],each[1]['Longitude']],
         clustered_marker = True,
-        popup = 'CA School Location (Sac Area)'
+        popup = each[1]['SchoolName'],
+        icon=folium.Icon(color='red', icon='info-sign')
     ).add_to(map)
 
+# add legend; turn on layer control
+# https://stackoverflow.com/questions/37466683/create-a-legend-on-a-folium-map
+map.add_child(folium.map.LayerControl())
+
+# add map title
+# https://stackoverflow.com/questions/61928013/adding-a-title-or-text-to-a-folium-map
+loc = 'NDoCH 2020 Asset Map: Sacramento Area'
+title_html = '''
+             <h3 align="center" style="font-size:16px"><b>{}</b></h3>
+             '''.format(loc)
+
+map.get_root().html.add_child(folium.Element(title_html))
+
+# display and save map
 display(map)
-
-# definition of the boundaries in the map
-# district_geo = r'sfpddistricts.geojson'
-
-# calculating total number of incidents per district
-# crimedata2 = pd.DataFrame(crimedata['PdDistrict'].value_counts().astype(float))
-# crimedata2.to_json('crimeagg.json')
-# crimedata2 = crimedata2.reset_index()
-# crimedata2.columns = ['District', 'Number']
-
-# creation of the choropleth
-# map1 = folium.Map(location=SF_COORDINATES, zoom_start=12)
-# map1.geo_json(geo_path = district_geo,
-#               data_out = 'crimeagg.json',
-#               data = crimedata2,
-#               columns = ['District', 'Number'],
-#               key_on = 'feature.properties.DISTRICT',
-#               fill_color = 'YlOrRd',
-#               fill_opacity = 0.7,
-#               line_opacity = 0.2,
-#               legend_name = 'Number of incidents per district')
-#
-# display(map1)
+map.save('03.02_school_sac.html')
