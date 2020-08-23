@@ -11,12 +11,16 @@ SF_COORDINATES = (37.76, -122.45)
 MAX_RECORDS = 1000
 
 # create empty map zoomed in on San Francisco
-map = folium.Map(location=SF_COORDINATES, zoom_start=12)
+map = folium.Map(location=SF_COORDINATES, zoom_start=16)
 
 # add a marker for every record in the filtered data, use a clustered view
 for each in df_data[0:MAX_RECORDS].iterrows():
-    map.simple_marker(
+    # note: adjust map settings and update syntax:
+    # https://python-visualization.github.io/folium/quickstart.html
+    folium.Marker(
         location = [each[1]['Y'],each[1]['X']],
-        clustered_marker = True)
+        clustered_marker = True,
+        popup = 'SFPD Crime Report'
+    ).add_to(map)
 
 display(map)
