@@ -5,10 +5,22 @@
 * 08-21-2020: Baseline Version v0.1
 
 ### Introduction
-
 This project focuses on the asset map item for the [CFA NDoCH](2) event; it consists of a web application to visualize various assets within the Sacramento area. The data is sourced from various open data portals.
 
 Data processing and maps are created using Jupyter Notebook due to its ability to visualize results effectively and efficiently. Listed below are installation instructions and more about Jupyter and the Python programming language.
+
+### Instructions
+The CFA-NDoCH instructions are shown below and specify that open data sources should be used to visualize resources available to the Sacramento community. This notebook is intended as starting point to visualize such data for further development.
+
+> Asset mapping is an integral part of empowered community building that is based on understanding the strengths and needs of diverse communities. First, use publicly available information about your locale to give a sense of the landscape and demographics. Next, research the location and availability of government programs (e.g. county health and human services offices), community based organizations (like resource centers, food banks, and legal aid clinics) or other resources that are vital to your community. Visually documenting the landscape can help identify what might make your community more equitable and accessible to all who live there.
+
+### Approach
+This notebook starts with a tutorial using Python mapping tools as a prototype, then develops a map for the Sacramento area. Open data sources are listed below and will be added to with additional development.
+
+1. [Folium Tutorial](18)
+2. [SFPD Crime Reports Dataset (2003-18)](19)
+3. [CA Geoportal: Open Datasets](20)
+4. [CA Schools Dataset (2003-18)](21)
 
 ## Jupyter Installation
 1. Download and install Jupyter Notebook from their [website](3)
@@ -71,3 +83,7 @@ If you are new to programming or Markdown, then please review the links below:
 [15]: https://guides.github.com/features/mastering-markdown/
 [16]: https://www.markdownguide.org/getting-started/
 [17]: https://www.markdowntutorial.com/
+[18]: https://blog.dominodatalab.com/creating-interactive-crime-maps-with-folium/
+[19]: https://data.sfgov.org/Public-Safety/Police-Department-Incident-Reports-Historical-2003/tmnf-yvry
+[20]: https://gis.data.ca.gov/
+[21]: https://gis.data.ca.gov/datasets/CDEGIS::california-schools-2019-20
