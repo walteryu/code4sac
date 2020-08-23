@@ -11,27 +11,35 @@ check_repo.sh
 
 /ca_workforce/*.html
 /ca_workforce/workspace.py
+/ca_workforce/archive
 /ca_workforce/.ipynb_checkpoints/
 
 /covid/*.html
+/covid/archive
 /covid/.ipynb_checkpoints/
 
-/gare/*.html
-/gare/.ipynb_checkpoints/
-
 /hmis/*.html
+/hmis/archive
 /hmis/modules.py
 /hmis/.ipynb_checkpoints/
 
 /ndoch_2019/*.html
+/ndoch_2019/archive
 /ndoch_2019/.ipynb_checkpoints/
 
 /ndoch_2019/demo/*.html
+/ndoch_2019/demo/archive
 /ndoch_2019/demo/.ipynb_checkpoints/
 
+/ndoch_2020/*.html
+/ndoch_2020/archive
+/ndoch_2020/.ipynb_checkpoints/
+
 /open_data/pge_outage/*.html
+/open_data/pge_outage/archive
 /open_data/pge_outage/.ipynb_checkpoints/
 
 /open_data/data_validation/*.html
+/open_data/data_validation/archive
 /open_data/data_validation/results
 /open_data/data_validation/.ipynb_checkpoints/
