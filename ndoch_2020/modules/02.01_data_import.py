@@ -64,12 +64,12 @@ df_school = read_data("data/ca_school_2019-20.csv")
 
 # subset dataset by row values; for example, schools by count
 # https://stackoverflow.com/questions/17071871/how-to-select-rows-from-a-dataframe-based-on-column-values
-df_school_sac = df_school_sac[
-    df_school_sac['CountyName'].str.contains('Amador') |
-    df_school_sac['CountyName'].str.contains('Placer') |
-    df_school_sac['CountyName'].str.contains('Sacramento') |
-    df_school_sac['CountyName'].str.contains('Yolo') |
-    df_school_sac['CountyName'].str.contains('Yuba')
+df_school_sac = df_school[
+    df_school['CountyName'].str.contains('Amador') |
+    df_school['CountyName'].str.contains('Placer') |
+    df_school['CountyName'].str.contains('Sacramento') |
+    df_school['CountyName'].str.contains('Yolo') |
+    df_school['CountyName'].str.contains('Yuba')
 ]
 
 # https://opendata.arcgis.com/datasets/f7f818b0aa7a415192eaf66f192bc9cc_0.geojson
