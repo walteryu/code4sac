@@ -22,8 +22,6 @@ def data_profile(df, msg):
     print('*** Table Info: Table Dimensions ***', '\n')
     print(df.shape, '\n')
 
-data_profile(df_data, 'SFPD Reports')
-
 # function to show unique value for given column
 def show_unique(df, col):
     # pass in variable into string
@@ -47,3 +45,26 @@ def rename_col(df, old_col, new_col):
         inplace=True
     )
     return df
+
+# sf open data portal - sfpd reports (2003-2018)
+# https://data.sfgov.org/Public-Safety/Police-Department-Incident-Reports-Historical-2003/tmnf-yvry
+# df_data = read_data("data/sfpd_report_2003-18.csv")
+
+# note: reduce original file (500mb) by subset first 10k rows and replace file
+# https://datacarpentry.org/python-ecology-lesson/03-index-slice-subset/index.html
+# df_data = df_data[0:10000]
+# output_result(df_data, "data/sfpd_report_2003-18.csv")
+
+# read in reduced file after processing steps above
+df_sfpd = read_data("data/sfpd_report_2003-18.csv")
+
+# ca geoportal - education dataset (2019-20)
+# https://gis.data.ca.gov/datasets/CDEGIS::california-schools-2019-20
+df_school = read_data("data/ca_school_2019-20.csv")
+
+# https://opendata.arcgis.com/datasets/f7f818b0aa7a415192eaf66f192bc9cc_0.geojson
+df_school_geojson = read_data("data/ca_school_2019-20.geojson")
+
+# data profile data after import
+data_profile(df_sfpd, 'SFPD Reports (2003-18)')
+data_profile(df_school, 'CA Schools (2019-20)')
