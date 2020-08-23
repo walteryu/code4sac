@@ -85,4 +85,4 @@ If you are new to programming or Markdown, then please review the links below:
 [18]: https://blog.dominodatalab.com/creating-interactive-crime-maps-with-folium/
 [19]: https://data.sfgov.org/Public-Safety/Police-Department-Incident-Reports-Historical-2003/tmnf-yvry
 [20]: https://gis.data.ca.gov/
-[21]: https://gis.data.ca.gov/datasets/CDEGIS::california-schools-2019-20
+[21]: https://gis.data.ca.gov/datasets/CDEGIS::california-schools-2019-20?geometry=-152.476%2C31.022%2C-85.723%2C43.235
