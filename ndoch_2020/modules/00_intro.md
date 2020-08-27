@@ -1,7 +1,7 @@
 ## Code of America - NDoCH 2020
 ### Code for Sacramento - Asset Map
 
-## Change Log
+### Change Log
 * 08-21-2020: Baseline Version v0.1
 
 ### Introduction
