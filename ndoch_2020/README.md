@@ -1,10 +1,13 @@
 ## Code of America - NDoCH 2020
 ### Code for Sacramento - Asset Map
 
-![asset_map][22]
+![asset_map][02.02]
+
+### Change Log
+* 08-21-2020: Baseline Version v0.1
 
 ### Introduction
-This project focuses on the asset map item for the [CFA NDoCH][2] event; it consists of a web application to visualize various assets within the Sacramento area. The data is sourced from various open data portals.
+This project focuses on the asset map item for the [CFA NDoCH][02.01] event; it consists of a web application to visualize various assets within the Sacramento area. The data is sourced from various open data portals.
 
 Data processing and maps are created using Jupyter Notebook due to its ability to visualize results effectively and efficiently. Listed below are installation instructions and more about Jupyter and the Python programming language.
 
