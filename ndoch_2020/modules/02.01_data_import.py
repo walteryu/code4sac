@@ -65,10 +65,18 @@ df_school = read_data("data/ca_school_2019-20.csv")
 # subset dataset by row values; for example, schools by count
 # https://stackoverflow.com/questions/17071871/how-to-select-rows-from-a-dataframe-based-on-column-values
 df_school_sac = df_school[
-    df_school['CountyName'].str.contains('Amador') |
-    df_school['CountyName'].str.contains('Placer') |
-    df_school['CountyName'].str.contains('Sacramento') |
-    df_school['CountyName'].str.contains('Yolo') |
+    df_school['CountyName'].str.contains('Sacramento')
+]
+df_school_amador = df_school[
+    df_school['CountyName'].str.contains('Amador')
+]
+df_school_placer = df_school[
+    df_school['CountyName'].str.contains('Placer')
+]
+df_school_yolo = df_school[
+    df_school['CountyName'].str.contains('Yolo')
+]
+df_school_yuba = df_school[
     df_school['CountyName'].str.contains('Yuba')
 ]
 
