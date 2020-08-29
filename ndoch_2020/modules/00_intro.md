@@ -54,45 +54,54 @@ Notebooks are organized by cells, which mainly consist of text (in markdown) and
 4. Output from each cell will appear below; if an error occurs, please read and try to debug it(!)
 5. File can be saved by hitting CTRL + "s" or file/save from the pulldown menu above
 
-## Quick Start
-This notebook will require some Python programming, which is widely used and gain enough traction to be taught in [high school][5] and AP Computer Science [courses][6].
+### Quick Start
+This notebook will require some Python programming, which is widely used and gain enough traction to be taught in [high school][01.03] and AP Computer Science [courses][01.04].
 
-[Jupyter][7] supports several different languages (R, Scala and Julia); however, Python is the most popular of them and can be used for other tasks, primarily data science and web programming.
+[Jupyter][01.05] supports several different languages (R, Scala and Julia); however, Python is the most popular of them and can be used for other tasks, primarily data science and web programming.
 
-## Exercises
+### Exercises
 If you are new to Jupyter, then please review the links below:
-1. [Intro Guide from DataQuest][8]
-2. [Intro Guide from DataCamp][9]
-3. [Notebook Intro from Medium][10]
-4. [Data Science Tutorial][11]
+1. [Intro Guide (DataQuest)][01.06]
+2. [Intro Guide (DataCamp)][01.07]
+3. [Notebook Intro (Medium)][01.08]
+4. [Intro Guide (Jupyter)][01.09]
 
 If you are new to programming or Python, then please review the links below:
-1. [Quick Start][12]
-2. [Intro Tutorials][13]
-3. [Free Code Camp Guide][14]
+1. [Quick Start (Official)][01.10]
+2. [Intro Tutorials (Real Python)][01.11]
+3. [Quick Start (FCC)][01.12]
 
 If you are new to programming or Markdown, then please review the links below:
-1. [Quick Start from Github][15]
-2. [Quick Start Guide][16]
-3. [Quick Start Tutorial][17]
+1. [Quick Start (Github)][01.13]
+2. [Quick Start Guide (Markdown)][01.14]
+3. [Quick Start Tutorial (Markdown)][01.15]
 
-[2]: https://www.codeforamerica.org/events/national-day-of-civic-hacking-2020
-[3]: https://jupyter.org/install
-[4]: https://jupyter.org/jupyter-book/01/what-is-data-science.html
-[5]: https://codehs.com/info/curriculum/intropython
-[6]: https://code.org/educate/curriculum/high-school
-[7]: https://jupyter.org/
-[8]: https://www.dataquest.io/blog/jupyter-notebook-tutorial/
-[9]: https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook
-[10]: https://towardsdatascience.com/a-beginners-tutorial-to-jupyter-notebooks-1b2f8705888a
-[11]: https://jupyter.org/jupyter-book/01/what-is-data-science.html
-[12]: https://www.python.org/about/gettingstarted/
-[13]: https://realpython.com/learning-paths/python3-introduction/
-[14]: https://guide.freecodecamp.org/python/
-[15]: https://guides.github.com/features/mastering-markdown/
-[16]: https://www.markdownguide.org/getting-started/
-[17]: https://www.markdowntutorial.com/
-[18]: https://blog.dominodatalab.com/creating-interactive-crime-maps-with-folium/
-[19]: https://data.sfgov.org/Public-Safety/Police-Department-Incident-Reports-Historical-2003/tmnf-yvry
-[20]: https://gis.data.ca.gov/
-[21]: https://gis.data.ca.gov/datasets/CDEGIS::california-schools-2019-20?geometry=-152.476%2C31.022%2C-85.723%2C43.235
+[01.01]: https://jupyter.org/install
+[01.02]: https://jupyter.org/jupyter-book/01/what-is-data-science.html
+[01.03]: https://codehs.com/info/curriculum/intropython
+[01.04]: https://code.org/educate/curriculum/high-school
+[01.05]: https://jupyter.org/
+[01.06]: https://www.dataquest.io/blog/jupyter-notebook-tutorial/
+[01.07]: https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook
+[01.08]: https://towardsdatascience.com/a-beginners-tutorial-to-jupyter-notebooks-1b2f8705888a
+[01.09]: https://jupyter.org/jupyter-book/01/what-is-data-science.html
+[01.10]: https://www.python.org/about/gettingstarted/
+[01.11]: https://realpython.com/learning-paths/python3-introduction/
+[01.12]: https://guide.freecodecamp.org/python/
+[01.13]: https://guides.github.com/features/mastering-markdown/
+[01.14]: https://www.markdownguide.org/getting-started/
+[01.15]: https://www.markdowntutorial.com/
+
+[02.01]: https://www.codeforamerica.org/events/national-day-of-civic-hacking-2020
+
+[03.01]: https://blog.dominodatalab.com/creating-interactive-crime-maps-with-folium/
+[03.02]: https://data.sfgov.org/Public-Safety/Police-Department-Incident-Reports-Historical-2003/tmnf-yvry
+[03.03]: https://github.com/python-visualization/folium/blob/master/examples/MarkerCluster.ipynb
+[03.04]: https://www.jpytr.com/post/analysinggeographicdatawithfolium/
+[03.05]: https://medium.com/@rohanguptha.bompally/python-data-visualization-using-folium-and-geopandas-981857948f02
+
+[04.01]: https://gis.data.ca.gov/
+[04.02]: https://gis.data.ca.gov/datasets/CDEGIS::california-schools-2019-20?geometry=-152.476%2C31.022%2C-85.723%2C43.235
+[04.03]: https://gis.data.ca.gov/datasets/CHHSAgency::health-professional-shortage-area-primary-care?geometry=-146.864%2C31.069%2C-91.141%2C43.275
+[04.04]: https://gis.data.ca.gov/datasets/CHHSAgency::health-professional-shortage-area-mental-health?geometry=-146.864%2C31.049%2C-91.141%2C43.257
+[04.05]: https://gis.data.ca.gov/datasets/CHHSAgency::health-professional-shortage-area-dental?geometry=-147.022%2C31.077%2C-91.300%2C43.281
