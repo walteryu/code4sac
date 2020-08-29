@@ -27,6 +27,7 @@ import fiona
 
 # geospatial and geojson modules
 import folium
+from folium.plugins import MarkerCluster
 import os
 import json
 
