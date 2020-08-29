@@ -26,3 +26,4 @@ for each in df_sfpd[0:MAX_RECORDS].iterrows():
     ).add_to(map)
 
 display(map)
+map.save('03.01_sfpd_reports.html')
