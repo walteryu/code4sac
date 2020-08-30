@@ -105,7 +105,6 @@ If you are new to programming or Markdown, then please review the links below:
 [01.15]: https://www.markdowntutorial.com/
 
 [02.01]: https://www.codeforamerica.org/events/national-day-of-civic-hacking-2020
-[02.02]: https://github.com/walteryu/code4sac/blob/master/ndoch_2020/asset_map.PNG
 
 [03.01]: https://blog.dominodatalab.com/creating-interactive-crime-maps-with-folium/
 [03.02]: https://data.sfgov.org/Public-Safety/Police-Department-Incident-Reports-Historical-2003/tmnf-yvry
@@ -118,3 +117,10 @@ If you are new to programming or Markdown, then please review the links below:
 [04.03]: https://gis.data.ca.gov/datasets/CHHSAgency::health-professional-shortage-area-primary-care?geometry=-146.864%2C31.069%2C-91.141%2C43.275
 [04.04]: https://gis.data.ca.gov/datasets/CHHSAgency::health-professional-shortage-area-mental-health?geometry=-146.864%2C31.049%2C-91.141%2C43.257
 [04.05]: https://gis.data.ca.gov/datasets/CHHSAgency::health-professional-shortage-area-dental?geometry=-147.022%2C31.077%2C-91.300%2C43.281
+
+[05.01]: https://data.sacog.org/datasets/d37cca2c798b48b9966b62e4bb1f380d_0
+[05.02]: http://data.sacog.org/datasets/high-frequency-transit-area-mtp-scs-2020
+[05.03]: http://data.sacog.org/datasets/high-quality-transit-2036?geometry=-123.179%2C38.303%2C-119.697%2C39.053
+
+[06.01]: http://data.cityofsacramento.org/datasets/15f8e048d9ad4442a3e12b6182bcd4f2_1?geometry=-121.899%2C38.464%2C-121.028%2C38.652
+[06.02]: http://data.cityofsacramento.org/datasets/8439c4e091a2434aafee1cf888b061f0_0?geometry=-122.330%2C38.373%2C-120.589%2C38.749
