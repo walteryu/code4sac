@@ -1,8 +1,7 @@
 ## Code of America - NDoCH 2020
 ### Code for Sacramento - Asset Map
 
-![asset_map][02.xx]
-[02.xx]: https://github.com/walteryu/code4sac/blob/master/ndoch_2020/asset_map.PNG
+![asset_map][99.01]
 
 ### Change Log
 * 08-21-2020: Baseline Version v0.1
@@ -124,3 +123,5 @@ If you are new to programming or Markdown, then please review the links below:
 
 [06.01]: http://data.cityofsacramento.org/datasets/15f8e048d9ad4442a3e12b6182bcd4f2_1?geometry=-121.899%2C38.464%2C-121.028%2C38.652
 [06.02]: http://data.cityofsacramento.org/datasets/8439c4e091a2434aafee1cf888b061f0_0?geometry=-122.330%2C38.373%2C-120.589%2C38.749
+
+[99.01]: https://github.com/walteryu/code4sac/blob/master/ndoch_2020/asset_map.PNG
