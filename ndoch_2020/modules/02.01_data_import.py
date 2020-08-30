@@ -10,6 +10,7 @@
 # output_result(df_data, "data/sfpd_report_2003-18.csv")
 
 # read in reduced file after processing steps above
+# https://data.sfgov.org/Public-Safety/Police-Department-Incident-Reports-Historical-2003/tmnf-yvry
 df_sfpd = read_data("data/sfpd_report_2003-18.csv")
 
 # ca geoportal - education dataset (2019-20)
