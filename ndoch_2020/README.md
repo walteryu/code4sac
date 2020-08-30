@@ -1,7 +1,7 @@
 ## Code of America - NDoCH 2020
 ### Code for Sacramento - Asset Map
 
-![asset_map][99.01]
+![asset_map][99.06]
 
 ### Change Log
 * 08-21-2020: Baseline Version v0.1
@@ -124,4 +124,9 @@ If you are new to programming or Markdown, then please review the links below:
 [06.01]: http://data.cityofsacramento.org/datasets/15f8e048d9ad4442a3e12b6182bcd4f2_1?geometry=-121.899%2C38.464%2C-121.028%2C38.652
 [06.02]: http://data.cityofsacramento.org/datasets/8439c4e091a2434aafee1cf888b061f0_0?geometry=-122.330%2C38.373%2C-120.589%2C38.749
 
-[99.01]: https://github.com/walteryu/code4sac/blob/master/ndoch_2020/asset_map.PNG
+[99.01]: https://github.com/walteryu/code4sac/blob/master/ndoch_2020/images/03.01_sfpd_reports.png
+[99.02]: https://github.com/walteryu/code4sac/blob/master/ndoch_2020/images/03.02_plot_sac_lihm_school.png
+[99.03]: https://github.com/walteryu/code4sac/blob/master/ndoch_2020/images/03.03_sac_lihm_bike.png
+[99.04]: https://github.com/walteryu/code4sac/blob/master/ndoch_2020/images/03.04_sac_lihm_transit.png
+[99.05]: https://github.com/walteryu/code4sac/blob/master/ndoch_2020/images/03.05_sac_lihm_pollution.png
+[99.06]: https://github.com/walteryu/code4sac/blob/master/ndoch_2020/images/03.05_sac_lihm_pollution_mini.png
