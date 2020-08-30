@@ -1,7 +1,8 @@
 ## Code of America - NDoCH 2020
 ### Code for Sacramento - Asset Map
 
-![asset_map][02.02]
+![asset_map][02.xx]
+[02.xx]: https://github.com/walteryu/code4sac/blob/master/ndoch_2020/asset_map.PNG
 
 ### Change Log
 * 08-21-2020: Baseline Version v0.1
@@ -32,6 +33,15 @@ This notebook starts with a tutorial using Python mapping tools as a prototype, 
 3. [CA Healthcare Shortage (Primary Care)][04.03]
 4. [CA Healthcare Shortage (Mental Health)][04.04]
 5. [CA Healthcare Shortage (Dental Care)][04.05]
+
+*SACOG Data*
+1. [Sac Region LIHM Communities (2016)][05.01]
+2. [Sac Region High Transit Frequency Areas (2020)][05.02]
+3. [Sac Region High Quality Transit Areas (2017)][05.03]
+
+*City of Sacramento Data*
+1. [City of Sacramento Bike Facilities (2018)][06.01]
+2. [City of Sacramento Bike Opportunity Areas (2016)][06.02]
 
 ### Jupyter Installation
 1. Download and install Jupyter Notebook from their [website][01.01]
