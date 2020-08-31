@@ -1,6 +1,6 @@
 ## Code of America - NDoCH 2020
 
-![03.05_sac_lihm_pollution_mini][99.06]
+![03.05_sac_lihm_pollution][99.05]
 
 ### Code for Sacramento - Asset Map
 
