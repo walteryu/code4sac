@@ -23,10 +23,10 @@ df_school_yuba = df_school[
 # df_school_geojson = read_data("data/ca_school_2019-20.geojson")
 
 # data profile data after import
-data_profile(df_sfpd, 'SFPD Reports (2003-18)')
-data_profile(df_school, 'CA Schools (2019-20)')
-data_profile(df_school_sac, 'CA Schools: Sacramento County (2019-20)')
-data_profile(df_school_amador, 'CA Schools: Amador County (2019-20)')
-data_profile(df_school_placer, 'CA Schools: Placer County (2019-20)')
-data_profile(df_school_yolo, 'CA Schools: Yolo County (2019-20)')
-data_profile(df_school_yuba, 'CA Schools: Yuba County (2019-20)')
+# data_profile(df_sfpd, 'SFPD Reports (2003-18)')
+# data_profile(df_school, 'CA Schools (2019-20)')
+# data_profile(df_school_sac, 'CA Schools: Sacramento County (2019-20)')
+# data_profile(df_school_amador, 'CA Schools: Amador County (2019-20)')
+# data_profile(df_school_placer, 'CA Schools: Placer County (2019-20)')
+# data_profile(df_school_yolo, 'CA Schools: Yolo County (2019-20)')
+# data_profile(df_school_yuba, 'CA Schools: Yuba County (2019-20)')
