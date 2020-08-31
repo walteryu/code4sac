@@ -166,15 +166,16 @@ Asset maps are summarized below and organized into separate modules within the n
 5. Open this notebook from the start page; file and cells should be viewable
 
 ### Jupyter Introduction
-This notebook will require some basic understanding of the Python programming language, Jupyter platform and data analysis concepts.
+This notebook will require some basic understanding of the Python programming language, Jupyter platform and data analysis concepts. It is based on this [tutorial][01.02] and [Github Repo][01.03].
 
-Jupyter is a powerful collaborative tool which is open-source and light-weight. It provides all the tools necessary to run data analysis, visualization, statistics and data science [out of the box][01.02]. In addition, it has gain acceptance from industry and academia for collaborating on projects and publishing work.
+Jupyter is a powerful collaborative tool which is open-source and light-weight. It provides all the tools necessary to run data analysis, visualization, statistics and data science [out of the box][01.04]. In addition, it has gain acceptance from industry and academia for collaborating on projects and publishing work.
 
 Jupyter is a combination of text and code with the programming run-time built into the platform so there is no need to install additional software. The text is in the markdown file format (similar to HTML), and code in several languages. It is organized by cells which can consist of either text or code; placed together, they can be sent as a single document to share/publish work.
 
 ### Jupyter Notebook
 Notebooks are organized by cells, which mainly consist of text (in markdown) and code (Python). It operations like a hybrid between MS Word and Excel file; whereas the entire file is like a document, the cells operate like a spreadsheet. For getting started, feel free to scroll down each cell and navigate around the cells for a quick tour. Here is a breakdown of how to view/edit cells:
 
+*Navigation*
 1. Each cell may be edited by hitting ENTER; toggle between cells using the arrow keys or mouse/scroller
 2. When editing a cell, be sure to select "markdown" for text or "code" before writing into it
 3. Each cell can be run by hitting CTRL + ENTER or the "run" button form the menu bar
@@ -182,42 +183,48 @@ Notebooks are organized by cells, which mainly consist of text (in markdown) and
 5. File can be saved by hitting CTRL + "s" or file/save from the pulldown menu above
 
 ### Quick Start
-This notebook will require some Python programming, which is widely used and gain enough traction to be taught in [high school][01.03] and AP Computer Science [courses][01.04].
 
-[Jupyter][01.05] supports several different languages (R, Scala and Julia); however, Python is the most popular of them and can be used for other tasks, primarily data science and web programming.
+*Notes*
+1. This notebook will require some Python programming
+2. It is widely used and taught in [high school][01.05] and AP Computer Science [courses][01.06]
+3. [Jupyter][01.07] supports many other languages, including R, Scala and Julia
+4. Python is the most popular of them and can be used for other tasks, primarily data science and web applications
 
 ### Exercises
-If you are new to Jupyter, then please review the links below:
-1. [Intro Guide (DataQuest)][01.06]
-2. [Intro Guide (DataCamp)][01.07]
-3. [Notebook Intro (Medium)][01.08]
-4. [Intro Guide (Jupyter)][01.09]
 
-If you are new to programming or Python, then please review the links below:
-1. [Quick Start (Official)][01.10]
-2. [Intro Tutorials (Real Python)][01.11]
-3. [Quick Start (FCC)][01.12]
+*Jupyter*
+1. [Intro Guide (DataQuest)][01.08]
+2. [Intro Guide (DataCamp)][01.09]
+3. [Notebook Intro (Medium)][01.10]
+4. [Data Science Tutorial (Jupyter)][01.11]
 
-If you are new to programming or Markdown, then please review the links below:
-1. [Quick Start (Github)][01.13]
-2. [Quick Start Guide (Markdown)][01.14]
-3. [Quick Start Tutorial (Markdown)][01.15]
+*Python*
+1. [Quick Start][01.12]
+2. [Intro Tutorials][01.13]
+3. [Quick Start (FCC)][01.14]
+
+*Markdown*
+1. [Quick Start (Github)][01.15]
+2. [Quick Start Guide (Markdown)][01.16]
+3. [Quick Start Tutorial (Markdown)][01.17]
 
 [01.01]: https://jupyter.org/install
-[01.02]: https://jupyter.org/jupyter-book/01/what-is-data-science.html
-[01.03]: https://codehs.com/info/curriculum/intropython
-[01.04]: https://code.org/educate/curriculum/high-school
-[01.05]: https://jupyter.org/
-[01.06]: https://www.dataquest.io/blog/jupyter-notebook-tutorial/
-[01.07]: https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook
-[01.08]: https://towardsdatascience.com/a-beginners-tutorial-to-jupyter-notebooks-1b2f8705888a
-[01.09]: https://jupyter.org/jupyter-book/01/what-is-data-science.html
-[01.10]: https://www.python.org/about/gettingstarted/
-[01.11]: https://realpython.com/learning-paths/python3-introduction/
-[01.12]: https://guide.freecodecamp.org/python/
-[01.13]: https://guides.github.com/features/mastering-markdown/
-[01.14]: https://www.markdownguide.org/getting-started/
-[01.15]: https://www.markdowntutorial.com/
+[01.02]: https://medium.com/python-pandemonium/introduction-to-exploratory-data-analysis-in-python-8b6bcb55c190
+[01.03]: https://github.com/kadnan/EDA_Python/
+[01.04]: https://jupyter.org/jupyter-book/01/what-is-data-science.html
+[01.05]: https://codehs.com/info/curriculum/intropython
+[01.06]: https://code.org/educate/curriculum/high-school
+[01.07]: https://jupyter.org/
+[01.08]: https://www.dataquest.io/blog/jupyter-notebook-tutorial/
+[01.09]: https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook
+[01.10]: https://towardsdatascience.com/a-beginners-tutorial-to-jupyter-notebooks-1b2f8705888a
+[01.11]: https://jupyter.org/jupyter-book/01/what-is-data-science.html
+[01.12]: https://www.python.org/about/gettingstarted/
+[01.13]: https://realpython.com/learning-paths/python3-introduction/
+[01.14]: https://guide.freecodecamp.org/python/
+[01.15]: https://guides.github.com/features/mastering-markdown/
+[01.16]: https://www.markdownguide.org/getting-started/
+[01.17]: https://www.markdowntutorial.com/
 
 [02.01]: https://www.codeforamerica.org/events/national-day-of-civic-hacking-2020
 
