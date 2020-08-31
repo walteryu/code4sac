@@ -3,11 +3,7 @@
 from azure.cognitiveservices.vision.customvision.training import CustomVisionTrainingClient
 from azure.cognitiveservices.vision.customvision.training.models import ImageFileCreateEntry, Region
 
-ENDPOINT = "https://southcentralus.api.cognitive.microsoft.com"
-
-# Replace with a valid key
-training_key = "<your training key>"
-prediction_key = "<your prediction key>"
+# note: needs example update from official website
 
 trainer = CustomVisionTrainingClient(training_key, endpoint=ENDPOINT)
 
