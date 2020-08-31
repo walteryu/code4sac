@@ -52,7 +52,7 @@ map_sac_lihm_school = plot_cluster(
     df_school_yolo.Latitude,
     df_school_yolo.Longitude,
     'orange',
-    'CA Schools: Yolo County, 2019-20 (Oranage)',
+    'CA Schools: Yolo County, 2019-20 (Orange)',
     map_sac_lihm_school
 )
 map_sac_lihm_school = plot_cluster(
