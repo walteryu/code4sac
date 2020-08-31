@@ -95,14 +95,68 @@ Asset maps are summarized below and organized into separate modules within the n
 4. [CA Healthcare Shortage (Mental Health)][04.04]
 5. [CA Healthcare Shortage (Dental Care)][04.05]
 
+### Map 3: SACOG LIHM Communities and Sac Area Bike Facilities
+
+![03.03_sac_lihm_bike][99.03]
+
+*Map Legend*
+1. SACOG LIHM Communities, 2016 (Orange Polygon)
+2. City of Sacramento Bike Facilities, 2018 (Green Line)
+3. City of Sacramento Bike Opportunity Areas, 2016 (Purple Polygon)
+
+*Results*
+1. Map starts with SACOG Low Income High Minority (LIHM) Communities
+2. City of Sacramento bike facility data was added to map
+3. Map shows good access in downtown and expanding in opportunity areas
+4. LIHM communities outside of downtown may have less access to bike facilities
+
 *SACOG Data*
-1. [Sac Region LIHM Communities (2016)][05.01]
-2. [Sac Region High Transit Frequency Areas (2020)][05.02]
-3. [Sac Region High Quality Transit Areas (2017)][05.03]
+* [Sac Region LIHM Communities (2016)][05.01]
 
 *City of Sacramento Data*
 1. [City of Sacramento Bike Facilities (2018)][06.01]
 2. [City of Sacramento Bike Opportunity Areas (2016)][06.02]
+
+### Map 4: SACOG LIHM Communities and Public Transit
+
+![03.04_sac_lihm_transit][99.04]
+
+*Map Legend*
+1. SACOG LIHM Communities, 2016 (Orange Polygon)
+2. Sac Region High Transit Frequency Areas, 2020 (Purple Polygon)
+3. Sac Region High Quality Transit, 2017 (Green Line)
+
+*Results*
+1. Map starts with SACOG Low Income High Minority (LIHM) Communities
+2. SACOG transportation quality data added to map
+3. Map shows good access in downtown and along major corridors
+4. LIHM communities outside of downtown may have less access to transit
+
+*SACOG Data*
+1. [Sac Region LIHM Communities (2016)][05.01]
+2. [Sac Region High Transit Frequency Areas (2020)][05.02]
+3. [Sac Region High Quality Transit (2017)][05.03]
+
+### Map 5: SACOG LIHM Communities and Pollution Levels
+
+![03.05_sac_lihm_pollution][99.05]
+
+*Map Legend*
+1. SACOG LIHM Communities, 2016 (Orange Polygon)
+2. SACOG Air Pollution PM 2.5 Planning Areas, 2018 (Purple Polygon)
+3. SACOG CalEnviroScreen 3.0, Top 25% Tracts (Green Line)
+
+*Results*
+1. Map starts with SACOG Low Income High Minority (LIHM) Communities
+2. SACOG pollution level data was added to map
+3. Some LIHM communities are within CalEnviroScreen areas
+4. Most of Sacramento area is within the PM 2.5 pollution planning area
+5. Additional analysis needed to evaluate CalEnviroScreen overlap
+
+*SACOG Data*
+1. [Sac Region LIHM Communities (2016)][05.01]
+2. [SACOG Air Pollution PM 2.5 Planning Areas, 2018][07.02]
+3. [SACOG CalEnviroScreen 3.0, Top 25% Tracts][07.01]
 
 ### Jupyter Installation
 1. Download and install Jupyter Notebook from their [website][01.01]
