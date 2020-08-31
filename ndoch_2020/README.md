@@ -2,13 +2,13 @@
 
 ![03.05_sac_lihm_pollution][99.05]
 
-### Code for Sacramento - Asset Map
+### Code for Sacramento: Equity Asset Map Project
 
 *Change Log*
 * 08-21-2020: Baseline Version v0.1
 
 ### Introduction
-This project focuses on the asset map item for the [CFA NDoCH][02.01] event; it consists of this notebook to visualize various assets within the Sacramento area. The data is sourced from various open data portals and provides the deliverables listed below.
+This project focuses on the asset map item for the Code for America (CFA) National Day of Civic Hacking (NDocH) [event][02.01]; it consists of this notebook to visualize various assets within the Sacramento area. The data is sourced from various open data portals and provides the deliverables listed below.
 
 *Deliverables*
 1. Asset Maps: Shared as HTML files in maps folder and within notebook
