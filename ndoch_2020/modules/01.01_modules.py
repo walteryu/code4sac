@@ -16,10 +16,10 @@ import scipy
 import pandas as pd
 
 # data visualization module
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 # adjust plot settings
-%matplotlib inline
+# %matplotlib inline
 
 # data visualization module
 # https://seaborn.pydata.org/
@@ -32,9 +32,9 @@ import os
 import json
 
 # geospatial data modules
-from shapely.geometry import Point, Polygon
-from shapely.geometry import shape, LineString, Point
+# from shapely.geometry import Point, Polygon
+# from shapely.geometry import shape, LineString, Point
+# import geojsonio
+# from descartes import PolygonPatch
 import geopandas as gpd
-import geojsonio
-from descartes import PolygonPatch
 import fiona
