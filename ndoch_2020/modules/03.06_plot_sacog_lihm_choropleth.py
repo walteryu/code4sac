@@ -31,6 +31,6 @@ map_sacog_lihm_choro = plot_choropleth(
 # call function to add map controls and title
 plot_map(
     'City Sacramento Asset Map: LIHM Communities by Poverty Level',
-    'maps/03.06_plot_sacog_lihm_choropleth.html',
+    'maps/03.06_sacog_lihm_choropleth.html',
     map_sacog_lihm_choro
 )
