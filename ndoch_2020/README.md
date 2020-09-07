@@ -1,6 +1,6 @@
 ## Code of America - NDoCH 2020
 
-![03.05_sac_lihm_pollution][99.05]
+![03.06_sac_lihm_choropleth][99.06]
 
 ### Code for Sacramento: Equity Asset Map Project
 
@@ -255,4 +255,4 @@ Notebooks are organized by cells, which mainly consist of text (in markdown) and
 [99.03]: https://github.com/walteryu/code4sac/blob/master/ndoch_2020/images/03.03_sac_lihm_bike.png
 [99.04]: https://github.com/walteryu/code4sac/blob/master/ndoch_2020/images/03.04_sac_lihm_transit.png
 [99.05]: https://github.com/walteryu/code4sac/blob/master/ndoch_2020/images/03.05_sac_lihm_pollution.png
-[99.06]: https://github.com/walteryu/code4sac/blob/master/ndoch_2020/images/03.05_sac_lihm_pollution_mini.png
+[99.06]: https://github.com/walteryu/code4sac/blob/master/ndoch_2020/images/03.06_sac_lihm_choropleth.png
