@@ -22,6 +22,31 @@ def plot_cluster(col1, col2, icon_color, cluster_name, map):
     map.add_child(cluster)
     return(map)
 
+# function to create choropleth plot
+# usage: input json and csv data; outputs map object, then pass to plot func
+def plot_choropleth(data_json, data_csv, col_array, col_key, fill, name, map):
+    # choropleth plot with settings
+    choropleth = folium.Choropleth(
+        geo_data=data_json,
+        name='choropleth',
+        data=data_csv,
+        # columns=['OBJECTID', 'Minority'],
+        columns=col_array,
+        # key_on='feature.properties.OBJECTID',
+        key_on=col_key,
+        fill_color=fill,
+        fill_opacity=0.7,
+        line_opacity=0.2,
+        legend_name=name,
+        highlight=True,
+        line_color='black'
+    ).add_to(map)
+    # add hover-over tooltip
+    choropleth.geojson.add_child(
+        folium.features.GeoJsonTooltip(['OBJECTID'],labels=False)
+    )
+    return(map)
+
 # function to add map controls and title
 # https://stackoverflow.com/questions/37466683/create-a-legend-on-a-folium-map
 # https://stackoverflow.com/questions/61928013/adding-a-title-or-text-to-a-folium-map

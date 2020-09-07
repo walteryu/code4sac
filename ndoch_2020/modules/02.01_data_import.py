@@ -16,3 +16,7 @@ df_sfpd = read_data("data/sfpd_report_2003-18.csv")
 # ca geoportal - education dataset (2019-20)
 # https://gis.data.ca.gov/datasets/CDEGIS::california-schools-2019-20
 df_school = read_data("data/ca_school_2019-20.csv")
+
+# sacog - lihm community dataset (2016)
+# https://data.sacog.org/datasets/d37cca2c798b48b9966b62e4bb1f380d_0
+sacog_lihm_csv = read_data("data/sacog_lihm_areas_2016.csv")
