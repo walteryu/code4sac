@@ -31,6 +31,8 @@ df_school_yuba = df_school[
 # data_profile(df_school_yolo, 'CA Schools: Yolo County (2019-20)')
 # data_profile(df_school_yuba, 'CA Schools: Yuba County (2019-20)')
 
+# rename col for table join
 rename_col(ca_county_csv, 'Name', 'county')
+# join tables and verify results
 ca_covid_county_csv = merge_table(ca_covid_homeless_csv, ca_county_csv, 'county', 'right')
 data_profile(ca_covid_county_csv, "ca covid homeless and county")
