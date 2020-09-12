@@ -69,3 +69,9 @@ def convert_str(df, col):
     # convert type
     df[col].astype(str)
     return(df)
+
+# function to join tables and return results
+def merge_table(df_left, df_right, col, method):
+    # pd.merge(ca_covid_homeless_csv, ca_county_csv, on='county', how='right')
+    df_join = pd.merge(df_left, df_right, on=col, how=method)
+    return(df_join)
