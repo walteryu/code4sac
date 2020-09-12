@@ -21,7 +21,10 @@ df_school = read_data("data/ca_school_2019-20.csv")
 # https://data.sacog.org/datasets/d37cca2c798b48b9966b62e4bb1f380d_0
 sacog_lihm_csv = read_data("data/sacog_lihm_areas_2016.csv")
 
-ca_county_csv = read_data("data/California_Counties.csv")
 ca_covid_homeless_csv = read_data("data/homeless_impact.csv")
-data_profile(ca_county_csv, "ca county")
+ca_county_csv = read_data("data/California_Counties.csv")
+
 data_profile(ca_covid_homeless_csv, "ca covid homeless")
+data_profile(ca_county_csv, "ca county")
+print(ca_covid_homeless_csv.head(5), '\n')
+print(ca_county_csv.head(5), '\n')
