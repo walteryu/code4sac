@@ -29,3 +29,7 @@ ca_county_csv = read_data("data/California_Counties.csv")
 # data_profile(ca_county_csv, "ca county")
 # print(ca_covid_homeless_csv.head(5), '\n')
 # print(ca_county_csv.head(5), '\n')
+
+# scag - communities of concern dataset (2020)
+# https://gisdata-scag.opendata.arcgis.com/datasets/communities-of-concern
+scag_coc_csv = read_data("data/scag_coc_2020.csv")

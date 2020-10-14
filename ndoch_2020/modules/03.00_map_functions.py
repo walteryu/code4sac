@@ -115,3 +115,7 @@ sacog_calenv_json = geojson2json('data/sacog_calenv_top25.geojson')
 # sacog - air pollution, pm2.5 planning areas (2018)
 # http://data.sacog.org/datasets/sacramento-pm-2-5-planning-area-
 sacog_pm25_json = geojson2json('data/sacog_pm25_2018.geojson')
+
+# scag - communities of concern dataset (2020)
+# https://gisdata-scag.opendata.arcgis.com/datasets/communities-of-concern
+scag_coc_json = geojson2json('data/scag_coc_2020.geojson')
