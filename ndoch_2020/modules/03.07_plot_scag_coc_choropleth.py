@@ -18,19 +18,19 @@ map_scag_coc_choro = folium.Map(
 # data_profile(sacog_lihm_csv, 'SACOG LIHM Data - 2016')
 
 # create/plot map
-map_sacog_lihm_choro = plot_choropleth(
-    sacog_lihm_json,
-    sacog_lihm_csv,
-    ['OBJECTID', 'Minority'],
-    'feature.properties.OBJECTID',
+map_scag_coc_choro = plot_choropleth(
+    scag_coc_json,
+    scag_coc_csv,
+    ['OBJECTID_1', 'Minority'],
+    'feature.properties.OBJECTID_1',
     'YlGn',
-    'SACOG LIHM Communities, 2016 (Green)',
-    map_sacog_lihm_choro
+    'SCAG COC Communities, 2020 (Green)',
+    map_scag_coc_choro
 )
 
 # call function to add map controls and title
 plot_map(
-    'City Sacramento Asset Map: LIHM Communities by Poverty Level',
-    'maps/03.06_sacog_lihm_choropleth.html',
-    map_sacog_lihm_choro
+    'Equity Map Prototype: SCAG Communities of Concern by Poverty Level (2020)',
+    'maps/03.07_scag_coc_choropleth.html',
+    map_scag_coc_choro
 )
