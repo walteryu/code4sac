@@ -10,8 +10,20 @@ latlong_socal = (34.052235, -118.243683)
 # create map
 map_scag_coc_choro = folium.Map(
     location=latlong_socal,
-    zoom_start=12,
+    zoom_start=9,
     tiles='cartodbpositron'
+)
+
+# add caltrans shn overlay
+style_shn_line = {
+    'fillColor': '#254e73',
+    'color': '#254e73'
+}
+map_scag_coc_choro = plot_geojson(
+    caltrans_tsn_json,
+    'Caltrans: State Highway Network, 2019 (Blue)',
+    style_shn_line,
+    map_scag_coc_choro
 )
 
 # call function to show table info
