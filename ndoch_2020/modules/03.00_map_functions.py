@@ -119,3 +119,7 @@ sacog_pm25_json = geojson2json('data/sacog_pm25_2018.geojson')
 # scag - communities of concern dataset (2020)
 # https://gisdata-scag.opendata.arcgis.com/datasets/communities-of-concern
 scag_coc_json = geojson2json('data/scag_coc_2020.geojson')
+
+# caltrans - highway routes dataset (2019)
+# https://gisdata-caltrans.opendata.arcgis.com/datasets/77f2d7ba94e040a78bfbe36feb6279da_0
+caltrans_tsn_json = geojson2json('data/caltrans_shn_lines_2019.geojson')
