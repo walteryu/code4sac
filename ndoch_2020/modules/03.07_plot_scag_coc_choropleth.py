@@ -33,7 +33,7 @@ map_scag_coc_choro = plot_geojson(
 map_scag_coc_choro = plot_choropleth(
     scag_coc_json,
     scag_coc_csv,
-    ['OBJECTID_1', 'Minority'],
+    ['OBJECTID_1', 'Poverty'],
     'feature.properties.OBJECTID_1',
     'YlGn',
     'SCAG COC Communities, 2020 (Green)',
