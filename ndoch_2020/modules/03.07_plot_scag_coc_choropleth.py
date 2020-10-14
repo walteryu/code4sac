@@ -4,12 +4,12 @@
 # https://www.nagarajbhat.com/post/folium-visualization/
 
 # set origin
-# https://www.latlong.net/place/sacramento-ca-usa-1079.html
-latlong_socal = (38.575764, -121.478851)
+# https://www.latlong.net/place/los-angeles-ca-usa-1531.html
+latlong_socal = (34.052235, -118.243683)
 
 # create map
-map_sacog_lihm_choro = folium.Map(
-    location=latlong_sac,
+map_scag_coc_choro = folium.Map(
+    location=latlong_socal,
     zoom_start=12,
     tiles='cartodbpositron'
 )
